@@ -1,3 +1,8 @@
+*{
+    cursor: url('https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/mouse.cur '),auto;
+}
+  
+
 .aplayer-container {
     position: absolute;
     bottom: 0;
@@ -7886,3 +7891,4 @@ td.hljs-ln-numbers {
   color: #808080;
   cursor: pointer;
 }
+

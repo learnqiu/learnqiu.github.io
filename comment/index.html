@@ -48,7 +48,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://i.loli.net/2020/12/19/iDyzT2xQ1CeOMSH.jpg".split(",");
+  var bg = "https://i.loli.net/2020/12/19/iDyzT2xQ1CeOMSH.jpg,https://i.loli.net/2020/12/24/sgdHX3WzflNymKL.png".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -541,6 +541,10 @@
 
 <!-- //learnqiu：20201216优化-->
 <footer id="colophon" class="site-footer" role="contentinfo">
+  <!-- //learnqiu：20201224优化 访客地图-->
+  <div id="qiu-tools" class="site-content">
+    <script type="text/javascript" src="//rf.revolvermaps.com/0/0/5.js?i=5spb8mvksme&amp;m=0&amp;c=ff8a00&amp;cr1=ffffff" async="async"></script>
+  </div>
   <div class="site-info">
     <div class="footertext">
       <div class="img-preload">
@@ -556,7 +560,7 @@
       </p>
     </div> -->
     <!-- <i class="fa fa-fire" aria-hidden="true"></i> -->
-    <span style="color: #ccc;padding-left: 20px;">
+    <span style="color: #666666;padding-left: 20px;">
       <i class="fa fa-clock-o" aria-hidden="true"></i>
       <span id="time" align="center">载入时间中...</span>
       <script>
@@ -577,11 +581,11 @@
 
        <!--不蒜子网页计数器-->
        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-       <span style="color:#ccc;padding-left: 20px;"><i class="fa fa-eye" aria-hidden="true"></i>访问量: <span id="busuanzi_value_site_pv"></span>次</span>
+       <span style="color:#666666;padding-left: 20px;"><i class="fa fa-eye" aria-hidden="true"></i>访问量: <span id="busuanzi_value_site_pv"></span>次</span>
       </span>
-
   </div><!-- .site-info -->
-  <!--壁纸切换-->
+  <!--天气插件 20201224加入-->
+  <iframe width="350"  height="25" frameborder="0" scrolling="no" hspace="0" src="https://i.tianqi.com/?c=code&id=40"></iframe>  <!--壁纸切换-->
   <div class="skin-menu no-select" id="mainskin"  style="position: fixed">
       <div class="theme-controls row-container">
           <ul class="menu-list">
