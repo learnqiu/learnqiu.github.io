@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">对hexo-sakura主题的鼠标指针图案进行自定义 | learnQIU</title>
+  <title itemprop="name">Tag: 随想 | learnQIU</title>
   
     <link rel="shortcut icon" href="/img/custom/Q.ico">
   
@@ -418,190 +418,64 @@
   </div>
 </header>
 
-      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+      
 <div class="pattern-center-blank"></div>
-
-  <div class="pattern-center single-center">
-    <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png);" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-    </div>
-    <header class="pattern-header single-header">
-      <h1 class="entry-title">
-      对hexo-sakura主题的鼠标指针图案进行自定义</h1>
-      <p class="entry-census">
-        <span>
-          <a href="learnqiu.top">
-            <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/custom/minecraft.jpg">
-          </a>
-        </span>
-        <span>
-          <a href="learnqiu.top">learnqiu</a>
-        </span>
-        <span class="bull">
-        ·</span>
-        2020-12-25<span class="bull">
-        ·</span>
-      <span id="busuanzi_value_page_pv"></span>次阅读</p>
-       <!--20201222 开始添加字数统计-->
-       
-         <!--1222安装新增 文章字数统计-->
-<div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <!--1222安装 安装插件npm install hexo-wordcount --save -->
-        <span class="post-count">472字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-
-       
-      <!-- 添加完成 --> 		
-    
-    </header>
+<div class="pattern-center ">
+  <div class="pattern-attachment-img">
+    <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="随想.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
   </div>
-
+  <header class="pattern-header ">
+    <h1 class="cat-title">随想</h1>
+  </header>
+</div>
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-        <div class="toc"></div>
-        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
-        
-        <div class="entry-content">
-          <h1 id="对hexo-sakura主题的鼠标指针图案进行自定义"><a href="#对hexo-sakura主题的鼠标指针图案进行自定义" class="headerlink" title="对hexo-sakura主题的鼠标指针图案进行自定义"></a>对hexo-sakura主题的鼠标指针图案进行自定义</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文主要介绍如何自定义hexo-sakura主题的鼠标指针图案</p>
-<h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p>首先hexo-sakura主题自带的鼠标指针方案是黑猫的指针，首先我们找到定义鼠标样式的位置</p>
-<p>打开博客根目录/themes/source/css/style.css文件，用ctrl+F 全局搜索“img/cursor/”(第一次可以这样搜索)或者”.cur“（修改后可以用这个定位）</p>
-<p>通过查看发现，网站用的图标样式都是调用的cur图标的cdn文件链接</p>
-<p><strong>要对光标进行自定义，只用将对于位置的cur文件进行替换就可以了</strong></p>
-<p><img src="https://i.loli.net/2020/12/25/9cJQ76bnX4WvCtx.png" alt="image-20201225173405256"></p>
-<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><p>1.网络下载<strong>静态光标文件</strong>（.cur）,经过测试<strong>不支持动态光标文件</strong>（.ani）</p>
-<p>这里提供我在网上找到的静态光标文件（链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1TC8EHD2Wb6CLZv6R0wAvqw">https://pan.baidu.com/s/1TC8EHD2Wb6CLZv6R0wAvqw</a>  提取码：tvnb ），需要的可以自行下载</p>
-<p>2.将需要使用的光标文件上传到你的图床</p>
-<p>3.将style.css文件中的链接换成你需要使用的cur文件链接</p>
-<p>如：<img src="https://i.loli.net/2020/12/25/pYKirsy7b4Exh9l.png" alt="image-20201225174224555"></p>
-<p>4.这里说明一下，自定义鼠标光标有两种方式：</p>
-<p>   <strong>方式一</strong>：深度定义。实现不同场景展示不同鼠标图案。这种方式需要将style.css文件中的所有cur链接进行自定义替换，替换方法见步骤3。</p>
-<p>   <strong>方式二</strong>：全局定义，即所有场景只使用一种鼠标图案。这种方式步骤如下：   </p>
-<p>​    1.将styles.css中所有”.cur“图床链接处所在的cursor:…这行删除</p>
-<p>​    2.在css中加入如下代码，其中链接填你需要全局定义的鼠标光标链接：</p>
-<pre><code>*&#123;
-
-cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur),auto
-
-&#125;</code></pre>
-<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p>见本站的鼠标光标样式</p>
-
-        </div>
-        <!-- .entry-content -->
-        <div class="single-reward">
-          <div class="reward-open">赏
-            <div class="reward-main">
-              <ul class="reward-row">
-                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/donate/AliPayQR1.jpg"></li>
-                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/donate/WeChanSQ.png"></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- begin learnqiu: 20201215新增 文章末尾版权信息添加-->
-        
-        <!-- end -->
-        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-        <footer class="post-footer">
-          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-          <div class="post-tags">
-          </div>
-          <div class="post-share">
-            <div class="social-share sharehidden share-component"></div>
-            <i class="iconfont show-share icon-forward"></i>
-          </div>
-        </footer><!-- .entry-footer -->
-      </article>
-      <!-- #post-## -->
-      <div class="toc" style="background: none;"></div>
-      <section class="post-squares nextprev">
-        
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/posts/archives/45480.html/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                2021 考研加油</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-        
-          
-            <div class="post-nepre half next">
-          
-            <a href="/posts/archives/48697.html/" rel="next">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-              </div>
-              <span class="label">
-              Next Post</span>
-              <div class="info">
-                <h3>
-                hexo博客优化记录</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-      </section>
       
-<div id="vcomments"></div>
-<script>
-  window.onload = function(){
-      var valine = new Valine();
-      valine.init({
-        el: '#vcomments',
-        appId: "5OP5QaruBdEJ4SL0Xx4j3oEk-gzGzoHsz",
-        appKey: "pjqBQAhK38HG6fE4Sg2YHjsw",
-        path: window.location.pathname,
-        placeholder: "你是我一生只会遇见一次的惊喜 ..."
-      })
-  }
-</script>
-
-      <section class="author-profile">
-        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="learnqiu.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/custom/minecraft.jpg" itemprop="image" alt="learnqiu" height="70" width="70"></a>
-          <div class="meta">
-            <span class="title">Author</span>
-            <h3 itemprop="name">
-            <a href="learnqiu.top" itemprop="url" rel="author">learnqiu</a>
-            </h3>
-          </div>
+  <!-- 首页默认取最最新文章集 -->
+  
+    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <div class="post-entry">
+    <div class="feature">
+      <a href="/posts/archives/45480.html/">
+        <div class="overlay">
+          <i class="iconfont icon-text">
+          </i>
         </div>
-        <hr>
-        <p><i class="iconfont icon-write"></i>冷秋</p>
-      </section>
-    </main><!-- #main -->
-  </div><!-- #primary -->
+        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
+      </a>
+    </div>
+    <h1 class="entry-title">
+    <a href="/posts/archives/45480.html/">
+    2021 考研加油</a>
+    </h1>
+    <div class="p-time">
+      <i class="iconfont icon-time">
+      </i>
+    2020-12-26</div>
+    <p>
+    </p>
+    <footer class="entry-footer">
+      <div class="post-more">
+        <a href="/posts/archives/45480.html/">
+          <i class="iconfont icon-caidan">
+          </i>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <hr>
+</article>
+  
+
+
+      <div class="clearer">
+      </div>
+    </main>
+    <!--  -->
+    
+  </div>
 </div>
-
-
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
