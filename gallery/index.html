@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">这是我的书单 | learnQIU</title>
+  <title itemprop="name">gallery | learnQIU</title>
   
     <link rel="shortcut icon" href="/img/custom/Q.ico">
   
@@ -425,168 +425,167 @@
   </div>
 </header>
 
-      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-<div class="pattern-center-blank"></div>
+      <!-- 增加相册显示的特效样式  -->
+<style>
+    .photo {
+        padding: 0 40px!important;
+        display: inline-block;
+        position: relative;
+        transition: all .6s;
+    }
+    .biaotiss {
+        padding: 8px 10px;
+        color: #4c4c4e;
+        text-align: center;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    .img-item {
+        padding: .2rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 1px 2px 2px 0 #aaa;
+        transition: all .4s cubic-bezier(.63,.15,.03,1.12);
+        margin-bottom: 20px;
+    }
+    .photo:nth-child(odd) {
+        transform: rotateZ(-5deg);
+    }    
+    .photo:nth-child(even) {
+        transform: rotateZ(5deg);
+    }
+    .text_des{
+        position: absolute;
+        width: 92%;
+        height: 100%;
+        top: 0;
+        color: #000;
+        overflow: hidden;
+    }
+    .text_des h3{
+        margin: 5px 0 8px 0px;
+        right: 40px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+        position: absolute;
+        top: 10%;
+        font-style: italic;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        /*transform: translateX(200px);  */
+    }
+    .text_des p{
+        left: 15px;
+        position: absolute;
+        top: 50%;
+    /*    transform: translateX(-200px); 
+        transition-delay: 0.2s;    */
+    }
+    .my-gallery .photo img {
+        border-radius: 10px;
+        height: 240px;
+    }
+    .card .card-content {
+        padding: 24px 24px 24px 24px;
+    }
+    .miaoshus {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 95%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+        font-size: 16px;
+        margin: 12px auto;
+    }
+    body.dark .miaoshus {
+        background: 0 0;
+        border: 1px dashed #888;
+    }
+    .img-item {
+            transition: all 0.4s ease-out;
+        }
+        .img-item a img{
+            opacity: 1;
+            transition: all 0.4s ease-out;
+        }
+        .img-item a:hover img{
+            opacity: 0.8;
+        }   
+        .biaotiss {
+            font-family: MV Boli;
+        }   
+        .miaoshus .title {
+        font-family: MV Boli;
+    } 
+    /*大屏幕下(桌面类)的样式*/
+    @media only screen and (min-width: 993px) {
+        .text_des h3{
+            transform: translateX(200px);
+        }
+        .text_des p{
+            transform: translateX(-200px); 
+            transition-delay: 0.2s;
+        }
+        .animate-text {
+            opacity: 0;
+            transition: all 0.6s ease-in-out; 
+        }
+    }
+    /*小屏幕下(桌面类)的样式*/
+    @media only screen and (max-width: 500px) {
+        .my-gallery .photo img {
+            height: 186px;
+        }
+    }
 
-  <div class="pattern-center single-center">
-    <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png);" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-    </div>
-    <header class="pattern-header single-header">
-      <h1 class="entry-title">
-      这是我的书单</h1>
-      <p class="entry-census">
-        <span>
-          <a href="learnqiu.top">
-            <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/custom/minecraft.jpg">
-          </a>
-        </span>
-        <span>
-          <a href="learnqiu.top">learnqiu</a>
-        </span>
-        <span class="bull">
-        ·</span>
-        2020-12-17<span class="bull">
-        ·</span>
-      <span id="busuanzi_value_page_pv"></span>次阅读</p>
-       <!--20201222 开始添加字数统计-->
-       
-         <!--1222安装新增 文章字数统计-->
-<div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <!--1222安装 安装插件npm install hexo-wordcount --save -->
-        <span class="post-count">10字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-
-       
-      <!-- 添加完成 --> 		
-    
-    </header>
-  </div>
-
-<div id="content" class="site-content">
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
-      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-        <div class="toc"></div>
-        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
-        
-        <div class="entry-content">
-          <h1 id="这是我的书单"><a href="#这是我的书单" class="headerlink" title="这是我的书单"></a>这是我的书单</h1><p><strong>未完待续。。。</strong></p>
-
-        </div>
-        <!-- .entry-content -->
-        <div class="single-reward">
-          <div class="reward-open">赏
-            <div class="reward-main">
-              <ul class="reward-row">
-                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/donate/AliPayQR1.jpg"></li>
-                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/donate/WeChanSQ.png"></li>
-              </ul>
+</style>
+<main class="content">
+    <div class="container chip-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <div class="miaoshus">
+                        <div class="title center-align">“ 光影流年 ”</div>
+                        “ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”                      
+                    </div>
+                </div>
+                <div class="my-gallery">
+                    <div class="row">
+                    
+                </div>
             </div>
-          </div>
         </div>
-        <!-- begin learnqiu: 20201215新增 文章末尾版权信息添加-->
-        
-        <!-- end -->
-        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-        <footer class="post-footer">
-          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-          <div class="post-tags">
-          </div>
-          <div class="post-share">
-            <div class="social-share sharehidden share-component"></div>
-            <i class="iconfont show-share icon-forward"></i>
-          </div>
-        </footer><!-- .entry-footer -->
-      </article>
-      <!-- #post-## -->
-      <div class="toc" style="background: none;"></div>
-      <section class="post-squares nextprev">
-        
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/posts/archives/41636.html/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                这是我的图集</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-        
-          
-            <div class="post-nepre half next">
-          
-            <a href="/posts/archives/7629.html/" rel="next">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2187344896,279852558&fm=15&gp=0.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2187344896,279852558&fm=15&gp=0.jpg">
-              </div>
-              <span class="label">
-              Next Post</span>
-              <div class="info">
-                <h3>
-                Typora：推荐一款简洁的Markdown编辑器</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-      </section>
-      
-<div id="vcomments"></div>
-<script>
-  window.onload = function(){
-      var valine = new Valine();
-      valine.init({
-        el: '#vcomments',
-        appId: "5OP5QaruBdEJ4SL0Xx4j3oEk-gzGzoHsz",
-        appKey: "pjqBQAhK38HG6fE4Sg2YHjsw",
-        path: window.location.pathname,
-        placeholder: "你是我一生只会遇见一次的惊喜 ..."
-      })
-  }
-</script>
-
-      <section class="author-profile">
-        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="learnqiu.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/custom/minecraft.jpg" itemprop="image" alt="learnqiu" height="70" width="70"></a>
-          <div class="meta">
-            <span class="title">Author</span>
-            <h3 itemprop="name">
-            <a href="learnqiu.top" itemprop="url" rel="author">learnqiu</a>
-            </h3>
-          </div>
-        </div>
-        <hr>
-        <p><i class="iconfont icon-write"></i>冷秋</p>
-      </section>
-    </main><!-- #main -->
-  </div><!-- #primary -->
-</div>
-
+    </div>
+    <script>
+        start()
+            $(window).on('scroll', function(){
+            start();
+        })
+        function start(){
+              //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
+            $('.container img').not('[data-isLoaded]').each(function(){
+                var $node = $(this)
+                if( isShow($node) ){
+                    loadImg($node);
+                }
+            });
+        }
+        //判断一个元素是不是出现在窗口(视野)
+        function isShow($node){
+            return $node.offset().top <= $(window).height() + $(window).scrollTop();
+        }
+        //加载图片
+        function loadImg($img){
+        //.attr(值)
+        //.attr(属性名称,值)
+            $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
+            $img.attr('data-isLoaded', 1);//已加载的图片做标记
+        }
+    </script>
+</main>
 
     </div>    
     <div class="ins-search">

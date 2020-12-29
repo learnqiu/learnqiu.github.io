@@ -322,6 +322,13 @@
                         </a>
                       </li>
                     
+                      <li>
+                        <a href="/gallery/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          相册
+                        </a>
+                      </li>
+                    
                   </ul>
                 
               </li>
@@ -452,7 +459,7 @@
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
         <!--1222安装 安装插件npm install hexo-wordcount --save -->
-        <span class="post-count">105字</span>
+        <span class="post-count">512字</span>
       </span>
     </span>
 
@@ -461,7 +468,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -492,6 +499,54 @@
 <p><img src="https://i.loli.net/2020/12/23/UixMs4klbFc3oe5.png" alt="image-20201223215556308"></p>
 <p><strong>若不能正常生成，执行</strong></p>
 <pre><code>hexo clean</code></pre>
+<h1 id="2-Hexo-Sakura实现文章插入b站视频插件"><a href="#2-Hexo-Sakura实现文章插入b站视频插件" class="headerlink" title="2.Hexo Sakura实现文章插入b站视频插件"></a>2.Hexo Sakura实现文章插入b站视频插件</h1><h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h2><p>由于b站视频的av号不够用了，现在很多视频都是bv号，sakura自带的hexo-tag-bili只支持av号的视频，插件也没有进行更新，下面说一下怎么实现插入b站的视频插件。</p>
+<h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><p>b站视频的分享按钮有生成分享插件代码的功能</p>
+<p><img src="https://i.loli.net/2020/12/29/AIbt8lGePRDBS5Y.png" alt="image-20201229174819323"></p>
+<p>初始插件代码为:</p>
+<pre><code class="html">&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=330803387&amp;bvid=BV1KA411x7YS&amp;cid=272300009&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;</code></pre>
+<p>但是这个插件的尺寸比较小，我们需要对其大小进行定义</p>
+<p><strong>在博客根目录\themes\Sakura\source\css\style.css文件中加入以下代码</strong>:</p>
+<pre><code class="css">/*哔哩哔哩视频适配 */
+
+.bilibili &#123;
+
+  position: relative;
+
+  width: 100%;
+
+&#125;
+
+@media only screen and (max-width: 767px) &#123;
+
+  .bilibili &#123;height: 15em;max-width: 25em;&#125;
+
+&#125;
+
+@media only screen and (min-width: 768px) and (max-width: 991px) &#123;
+
+  .bilibili &#123;height: 20em;max-width: 30em;&#125;
+
+&#125;
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) &#123;
+
+  .bilibili &#123;height: 30em;max-width: 40em;&#125;
+
+&#125;
+
+@media only screen and (min-width: 1200px) &#123;
+
+  .bilibili &#123;height: 40em;max-width: 50em;&#125;
+
+&#125;</code></pre>
+<p>这样的话，在插件中使用这个css样式就可以了</p>
+<pre><code>&lt;iframe class=&quot;bilibili&quot; src=&quot;//player.bilibili.com/player.html?aid=330803387&amp;bvid=BV1KA411x7YS&amp;cid=272300009&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;</code></pre>
+<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><p>1.前往b站视频，点击分享按钮，复制插件代码</p>
+<p>2.在插件代码中加入 </p>
+<pre><code>class=&quot;bilibili&quot;</code></pre>
+<p>调用css样式</p>
+<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p><img src="https://i.loli.net/2020/12/29/7lORLYtqBHcZjEb.png" alt="image-20201229180715813"></p>
+<p><a target="_blank" rel="noopener" href="http://localhost:4000/posts/archives/36200.html/">案例链接</a></p>
 
         </div>
         <!-- .entry-content -->
@@ -734,9 +789,9 @@
 <script type="text/javascript">
 /* <![CDATA[ */
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.1/img/custom","name":"prepage01.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.5/img/custom","name":"prepage01.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
 } else {
-  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.1/img/custom","name":"prepage01.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.5/img/custom","name":"prepage01.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
 }
 /* ]]> */
 
@@ -917,6 +972,13 @@ $(document).ready(function() {
                 <a href="/tags/%E5%9B%BE%E9%9B%86/">
                   <i class="fa fa-photo" aria-hidden="true"></i>
                   图集
+                </a>
+              </li>
+            
+              <li>
+                <a href="/gallery/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  相册
                 </a>
               </li>
             
