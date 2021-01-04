@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">tags | learnQIU</title>
+  <title itemprop="name">转载：将hexo博客部署到CentOS个人云服务器 | learnQIU</title>
   
     <link rel="shortcut icon" href="/img/custom/Q.ico">
   
@@ -425,387 +425,276 @@
   </div>
 </header>
 
-      <!--learnqiu: 20201215新增 添加优美的标签页-->
-<header class="site-header no-select gizle sabit" role="banner">
-  <div class="site-top">
-    <div class="site-branding">
-      <span class="site-title">
-        <span class="logolink moe-mashiro">
-          <a href="/">
-            <span class="sakurasono"></span>
-            <span class="shironeko"><!--冷秋--></span>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png);" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      转载：将hexo博客部署到CentOS个人云服务器</h1>
+      <p class="entry-census">
+        <span>
+          <a href="learnqiu.top">
+            <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/custom/minecraft.jpg">
           </a>
-          <a target="_blank" rel="noopener" href="https://www.learnqiu.top"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.4.5/img/custom/sitelogo2.png"></a>
         </span>
+        <span>
+          <a href="learnqiu.top">learnqiu</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-1-4<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+       <!--20201222 开始添加字数统计-->
+       
+         <!--1222安装新增 文章字数统计-->
+<div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <!--1222安装 安装插件npm install hexo-wordcount --save -->
+        <span class="post-count">1.5k字</span>
       </span>
-    </div>
-    <div class="searchbox search-form-submit">
-      <i class="iconfont js-toggle-search iconsearch icon-search">
-      </i>
-    </div>
-    <div id="show-nav" class="showNav mobile-fit">
-      <div class="line line1">
-      </div>
-      <div class="line line2">
-      </div>
-      <div class="line line3">
-      </div>
-    </div>
-    <div class="lower-cantiner">
-      <div class="lower">
-        <nav class="mobile-fit-control hide">
-          <ul id="menu-new" class="menu">
-            
-              <li>
-                <a href="/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
-                    首页
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="/archives">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
-                    归档
-                  </span>
-                </a>
-                
-                  <ul class="sub-menu">
-                    
-                      <li>
-                        <a href="/categories/%E6%8A%80%E6%9C%AF/">
-                          <i class="fa fa-code" aria-hidden="true"></i>
-                          技术
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/%E7%94%9F%E6%B4%BB/">
-                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                          生活
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/%E8%B5%84%E6%BA%90/">
-                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
-                          资源
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/%E9%9A%8F%E6%83%B3/">
-                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
-                          随想
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/%E8%BD%AC%E8%BD%BD/">
-                          <i class="fa fa-book" aria-hidden="true"></i>
-                          转载
-                        </a>
-                      </li>
-                    
-                  </ul>
-                
-              </li>
-            
-              <li>
-                <a href="javascript:;">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
-                    清单
-                  </span>
-                </a>
-                
-                  <ul class="sub-menu">
-                    
-                      <li>
-                        <a href="/tags/">
-                          <i class="fa fa-tag" aria-hidden="true"></i>
-                          标签
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/categories/">
-                          <i class="fa fa-bookmark" aria-hidden="true"></i>
-                          分类
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/tags/%E6%82%A6%E8%AF%BB/">
-                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
-                          书单
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/bangumi/">
-                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
-                          番组
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/music/">
-                          <i class="fa fa-headphones" aria-hidden="true"></i>
-                          歌单
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/tags/%E5%9B%BE%E9%9B%86/">
-                          <i class="fa fa-photo" aria-hidden="true"></i>
-                          图集
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/gallery/">
-                          <i class="fa fa-photo" aria-hidden="true"></i>
-                          相册
-                        </a>
-                      </li>
-                    
-                  </ul>
-                
-              </li>
-            
-              <li>
-                <a href="/comment/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
-                    留言板
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="/links/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-                    友人帐
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="/donate/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
-                    赞赏
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
-                    关于
-                  </span>
-                </a>
-                
-                  <ul class="sub-menu">
-                    
-                      <li>
-                        <a href="/about/">
-                          <i class="fa fa-meetup" aria-hidden="true"></i>
-                          我？
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/theme-sakura/">
-                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
-                          主题
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/lab/">
-                          <i class="fa fa-cogs" aria-hidden="true"></i>
-                          Lab
-                        </a>
-                      </li>
-                    
-                  </ul>
-                
-              </li>
-            
-              <li>
-                <a href="/shuoshuo/">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-commenting-o fa-commenting" aria-hidden="true"></i>
-                    说说
-                  </span>
-                </a>
-                
-              </li>
-            
-              <li>
-                <a href="/atom.xml">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
-                    RSS
-                  </span>
-                </a>
-                
-              </li>
-            
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
-</header>
+    </span>
 
- 
-<main class="content">
- 
-    <!--learnqiu: 20201215新增 添加优美的标签页-->
-
- 
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fa fa-tags"></i>&nbsp;&nbsp;文章标签
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/%E6%82%A6%E8%AF%BB/" title="悦读: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="悦读" style="background-color: #F9EBEA;">悦读
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%9A%8F%E6%83%B3/" title="随想: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="随想" style="background-color: #F5EEF8;">随想
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/" title="博客如何正确使用图片: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="博客如何正确使用图片" style="background-color: #D5F5E3;">博客如何正确使用图片
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%89%A7%E9%9B%86/" title="剧集: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="剧集" style="background-color: #E8F8F5;">剧集
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%9B%BE%E9%9B%86/" title="图集: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="图集" style="background-color: #FEF9E7;">图集
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="hexo博客搭建: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="hexo博客搭建" style="background-color: #F8F9F9;">hexo博客搭建
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" title="hexo博客美化: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="hexo博客美化" style="background-color: #82E0AA;">hexo博客美化
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/hexo%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/" title="hexo博客写作: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="hexo博客写作" style="background-color: #D7BDE2;">hexo博客写作
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Markdown/" title="Markdown: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Markdown" style="background-color: #A3E4D7;">Markdown
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Typora/" title="Typora: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Typora" style="background-color: #85C1E9;">Typora
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-            </div>
-        </div>
-    </div>
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">6分</span>
+      </span>
+    </span>
 </div>
 
- 
-    <!--learnqiu: 20201215新增 添加优美的标签页-->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/wallleap/cdn/css/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
- 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/jqcloud-1.0.4.js"></script>
-<script type="text/javascript">
+       
+      <!-- 添加完成 --> 		
     
- 
-    $('#tag-wordcloud').jQCloud([{"text":"悦读","weight":1,"link":"http://example.com/tags/%E6%82%A6%E8%AF%BB/"},{"text":"随想","weight":1,"link":"http://example.com/tags/%E9%9A%8F%E6%83%B3/"},{"text":"博客如何正确使用图片","weight":1,"link":"http://example.com/tags/%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/"},{"text":"剧集","weight":3,"link":"http://example.com/tags/%E5%89%A7%E9%9B%86/"},{"text":"图集","weight":1,"link":"http://example.com/tags/%E5%9B%BE%E9%9B%86/"},{"text":"hexo博客搭建","weight":3,"link":"http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"},{"text":"hexo博客美化","weight":3,"link":"http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/"},{"text":"hexo博客写作","weight":4,"link":"http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/"},{"text":"Markdown","weight":2,"link":"http://example.com/tags/Markdown/"},{"text":"Typora","weight":2,"link":"http://example.com/tags/Typora/"}], {
-        autoResize: true
-    });
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="转载：将hexo博客部署到CentOS个人云服务器"><a href="#转载：将hexo博客部署到CentOS个人云服务器" class="headerlink" title="转载：将hexo博客部署到CentOS个人云服务器"></a>转载：将hexo博客部署到CentOS个人云服务器</h1><p><strong>转载来源</strong>:<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/70bf58c48010">HEXO 部署到云服务器详细指南</a></p>
+<p>我是按照下面内容进行操作的，最终成功部署到了个人云服务器上。</p>
+<p>原文如下：</p>
+<p>前段时间薅羊毛了腾讯云的羊毛，花了360软妹纸买了6年的云服务。。。<br>打算把以前托管在github上的hexo部署到个人云服务器。折腾了良久，便有了以下的文章。</p>
+<h1 id="一、环境安装"><a href="#一、环境安装" class="headerlink" title="一、环境安装"></a>一、环境安装</h1><h2 id="1-1-node-js-安装"><a href="#1-1-node-js-安装" class="headerlink" title="1.1 node js 安装"></a>1.1 node js 安装</h2><pre><code class="shell">yum install gcc-c++ make
+yum -y install nodejs</code></pre>
+<p>验证：</p>
+<pre><code class="undefined">node -v 
+npm -v</code></pre>
+<h2 id="1-2-安装git、nginx"><a href="#1-2-安装git、nginx" class="headerlink" title="1.2 安装git、nginx"></a>1.2 安装git、nginx</h2><p>Git 用于版本管理和部署，Nginx 用于静态博客托管。</p>
+<pre><code class="undefined">yum install git nginx -y</code></pre>
+<h2 id="1-3-安装hexo"><a href="#1-3-安装hexo" class="headerlink" title="1.3 安装hexo"></a>1.3 安装hexo</h2><p>我们使用 Node.js 的包管理器 npm 安装 hexo-cli 和 hexo-server</p>
+<pre><code class="undefined">npm install hexo-cli hexo-server -g</code></pre>
+<p>hexo-cli 是 Hexo 的命令行工具，可用于快速新建、发布、部署博客；hexo-server 是 Hexo 的内建服务器，可用于部署前的预览和测试。-g 选项，表示全局安装。</p>
+<p>验证</p>
+<pre><code class="undefined">hexo</code></pre>
+<h1 id="二、创建git环境"><a href="#二、创建git环境" class="headerlink" title="二、创建git环境"></a>二、创建git环境</h1><p><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8">参考地址</a></p>
+<h2 id="2-1-在云服务器上创建一个-GIT-用户，用来运行-GIT-服务"><a href="#2-1-在云服务器上创建一个-GIT-用户，用来运行-GIT-服务" class="headerlink" title="2.1 在云服务器上创建一个 GIT 用户，用来运行 GIT 服务"></a>2.1 在云服务器上创建一个 GIT 用户，用来运行 GIT 服务</h2><ul>
+<li>创建用户：<code>adduser git</code></li>
+<li>设置密码：<code>passwd git</code></li>
+</ul>
+<h2 id="2-2-创建证书"><a href="#2-2-创建证书" class="headerlink" title="2.2 创建证书"></a>2.2 创建证书</h2><ul>
+<li>切换到git用户：<code>su git</code></li>
+<li>创建.ssh目录：<code>mkdir .ssh &amp;&amp; chmod 700 .ssh</code></li>
+<li>然后在云服务创建<code>authorized_keys</code>公钥保存文件：<code>touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys</code><br> __ tip: __ 公钥保存文件<code>authorized_keys</code>是一行添加一个</li>
+</ul>
+<h2 id="2-3-创建git仓库目录"><a href="#2-3-创建git仓库目录" class="headerlink" title="2.3 创建git仓库目录"></a>2.3 创建git仓库目录</h2><p>创建一个名为blog的git仓库</p>
+<pre><code class="kotlin">mkdir /var/repo
+cd /var/repo
+git init --bare blog.git</code></pre>
+<h2 id="2-4-配置-GIT-HOOKS"><a href="#2-4-配置-GIT-HOOKS" class="headerlink" title="2.4 配置 GIT HOOKS"></a>2.4 配置 <a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90">GIT HOOKS</a></h2><pre><code class="csharp">vim /var/repo/blog.git/hooks/post-receive</code></pre>
+<p>添加</p>
+<pre><code class="bash">#!/bin/sh
+git --work-tree=/var/www/hexo --git-dir=/var/repo/blog.git checkout -f</code></pre>
+<p>然后保存退出，并设置权限</p>
+<pre><code class="csharp">chmod +x /var/repo/blog.git/hooks/post-receive</code></pre>
+<h2 id="2-5-改变-BLOG-GIT-目录的拥有者为-GIT-用户"><a href="#2-5-改变-BLOG-GIT-目录的拥有者为-GIT-用户" class="headerlink" title="2.5 改变 BLOG.GIT 目录的拥有者为 GIT 用户"></a>2.5 改变 BLOG.GIT 目录的拥有者为 GIT 用户</h2><pre><code class="css">chown -R git:git blog.git</code></pre>
+<h2 id="2-6-创建静态文件目录并将2-3步骤生成的git仓库链接到静态文件目录下"><a href="#2-6-创建静态文件目录并将2-3步骤生成的git仓库链接到静态文件目录下" class="headerlink" title="2.6 创建静态文件目录并将2.3步骤生成的git仓库链接到静态文件目录下"></a>2.6 创建静态文件目录并将<code>2.3步骤</code>生成的git仓库链接到静态文件目录下</h2><ul>
+<li>创建静态文件目录（文章网页）：<code>mkdir /var/www/hexo</code></li>
+<li>链接git仓库：<code>chown -R git:git /var/www/hexo</code></li>
+<li>配置权限：<code>chmod -R 755 /var/www/hexo</code><br> 这样git仓库更新便会自动同步到hexo目录下</li>
+</ul>
+<h2 id="2-7、为了安全考虑，禁用GIT用户的SHELL-登录权限配置（下面两个步骤非常重要，否则客户端总是提示密码错误！！！）"><a href="#2-7、为了安全考虑，禁用GIT用户的SHELL-登录权限配置（下面两个步骤非常重要，否则客户端总是提示密码错误！！！）" class="headerlink" title="2.7、为了安全考虑，禁用GIT用户的SHELL 登录权限配置（下面两个步骤非常重要，否则客户端总是提示密码错误！！！）"></a>2.7、为了安全考虑，禁用GIT用户的SHELL 登录权限配置（下面两个步骤非常重要，否则客户端总是提示密码错误！！！）</h2><ul>
+<li><p>首先你必须确保 git-shell 已存在于 /etc/shells 文件中</p>
+<ul>
+<li><p>使用命令which git-shell判断系统是否安装了git-shell。如果已经安装，则返回git-shell的安装目录，如：<code>/usr/bin/git-shell</code>；如果未安装则需要安装git-shell命令，安装命令：<code>yum install git</code></p>
+</li>
+<li><p>判断shells文件是否存在，判断命令：<code>cat /etc/shells</code></p>
+</li>
+<li><p>如果文件不存在或没有</p>
+<pre><code>/usr/bin/git-shell</code></pre>
+<p>，则需要使用vim增加这个路径：</p>
+<pre><code>sudo vim /etc/shells</code></pre>
+<p>，在最后一行添加git-shell路径</p>
+<pre><code class="bash"># /etc/shells: valid login shells </code></pre>
+</li>
+</ul>
+<p>/bin/sh<br> /bin/dash<br> /bin/bash<br> /bin/rbash<br> /usr/bin/tmux<br> /usr/bin/screen<br> /usr/bin/git-shell # 添加你的git-shell<br> ```</p>
+</li>
+<li><p>现在你可以使用 chsh 命令修改任一系统用户的shell权限了<br> 现在我们修改第一步中创建的git用户的登录权限，禁止git用户使用shell权限：<br> 终端中输入<code>sudo chsh git</code><br> [图片上传失败…(image-86e8df-1521642804894)]</p>
+<p>然后在<code>Login Shell [/bin/bash]</code>: 后输入git-shell路径<code>/usr/bin/git-shell</code></p>
+</li>
+</ul>
+<p><strong>修改完成后验证：</strong> <code>vim /etc/passwd</code>找到类似<code>git:x:1000:1000:,,,:/home/git:/usr/bin/git-shell</code>，看看git用户是否是以git-shell结尾</p>
+<ul>
+<li>这样，git用户就只能使用SSH连接对Git仓库进行推送和拉取操作，而不能登录机器并取得普通shell命令</li>
+</ul>
+<h2 id="2-8-测试"><a href="#2-8-测试" class="headerlink" title="2.8 测试"></a>2.8 测试</h2><p>当上述步骤都完成后，我们就可以测试下git服务器是否部署成功，最简单的方法便是使用clone来校验<br> 用户电脑（window or mac）git客户端执行clone操作<code>git clone git@服务器ip:/var/repo/blog.git</code><br> 当出现下面这种框，然后输入我们在第一步时创建git这个用户的密码就能成功clone了。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1824042-a80d2b2916ff46de?imageMogr2/auto-orient/strip%7CimageView2/2/w/316/format/webp" alt="img"></p>
+<p>​                                                                               git_server</p>
+<p>或</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1824042-464f38b182ea17a4?imageMogr2/auto-orient/strip%7CimageView2/2/w/557/format/webp" alt="img"></p>
+<p>​                                                                               git_server</p>
+<p>如果clone成功，表示git服务器搭建成功</p>
+<h1 id="三、hexo配置"><a href="#三、hexo配置" class="headerlink" title="三、hexo配置"></a>三、hexo配置</h1><p>打开hexo博客目录，编辑<code>_config.yml</code>文件<br> 修改repository为：</p>
+<pre><code class="ruby">deploy:
+  type: git
+  repository: git@ip或域名:/var/repo/blog.git
+  branch: master</code></pre>
+<p>然后执行<code>hexo g -d</code>将文件上传到你部署的服务器上，如果上传成功，将如下图所示：<br> article_upload_finish.png</p>
+<h1 id="四、nginx配置"><a href="#四、nginx配置" class="headerlink" title="四、nginx配置"></a>四、nginx配置</h1><p>最后，为了能让浏览器能直接访问静态页面，需要使用nginx将端口或域名指向hexo静态文件目录</p>
+<h2 id="4-1-修改-NGINX-的-DEFAULT-设置"><a href="#4-1-修改-NGINX-的-DEFAULT-设置" class="headerlink" title="4.1 修改 NGINX 的 DEFAULT 设置"></a>4.1 修改 NGINX 的 DEFAULT 设置</h2><ul>
+<li><p>ubuntu</p>
+<pre><code class="shell">vim /etc/nginx/sites-available/default</code></pre>
+</li>
+<li><p>centos</p>
+<pre><code class="undefined">vim /etc/nginx/conf.d/blog.conf</code></pre>
+</li>
+</ul>
+<p><strong>注意</strong>：不同版本的nginx或系统，nginx的配置文件不一定相同，根据具体情况来修改配置</p>
+<h2 id="4-2-将其中的-ROOT-指令指向-var-www-hexo-目录（也就是GIT钩子目录）"><a href="#4-2-将其中的-ROOT-指令指向-var-www-hexo-目录（也就是GIT钩子目录）" class="headerlink" title="4.2 将其中的 ROOT 指令指向 /var/www/hexo 目录（也就是GIT钩子目录）"></a>4.2 将其中的 ROOT 指令指向 <code>/var/www/hexo</code> 目录（也就是GIT钩子目录）</h2><pre><code class="php">server &#123;
+    listen 80;
+    listen [::]:80;
+    root /var/www/hexo; # 修改的地方
+    server_name laoyuyu.me www.laoyuyu.me; # 如果需要改域名访问，修改server_name 为域名便可
+    location / &#123;
+            # First attempt to serve request as file, then
+            # as directory, then fall back to displaying a 404.
+            try_files $uri $uri/ =404;
+    &#125;
+&#125;</code></pre>
+<h2 id="4-3-最后重启服务，让NGINX生效"><a href="#4-3-最后重启服务，让NGINX生效" class="headerlink" title="4.3 最后重启服务，让NGINX生效"></a>4.3 最后重启服务，让NGINX生效</h2><pre><code class="undefined">service nginx restart </code></pre>
+<h2 id="4-4-nginx-常见错误"><a href="#4-4-nginx-常见错误" class="headerlink" title="4.4 nginx 常见错误"></a>4.4 nginx 常见错误</h2><p>我在配置完Nginx后，启动的时候总是无法正常访问到我的web应用，查看日志文件（/var/log/nginx/error.log）后发现：</p>
+<pre><code class="css">connect() to 127.0.0.1:8080 failed (13: Permission denied)</code></pre>
+<p>从这个错误信息中可以看出是访问权限的问题，解决办法如下：</p>
+<pre><code class="bash">vi /etc/nginx/nginx.conf
+#user nginx;
+user root;</code></pre>
+<p>其实就是将nginx的用户修改为root用户即可，当然也可以为nginx用户增加相应的权限。</p>
+<h1 id="我部署在虚拟机上的个人网站"><a href="#我部署在虚拟机上的个人网站" class="headerlink" title="我部署在虚拟机上的个人网站"></a>我部署在虚拟机上的<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://www.laoyuyu.me">个人网站</a></h1>
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/donate/AliPayQR1.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/donate/WeChanSQ.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- begin learnqiu: 20201215新增 文章末尾版权信息添加-->
+        
+        <!-- end -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/posts/archives/41181.html/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                致2020</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/posts/archives/36200.html/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                晚归记-冷秋的第一个Vlog</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "5OP5QaruBdEJ4SL0Xx4j3oEk-gzGzoHsz",
+        appKey: "pjqBQAhK38HG6fE4Sg2YHjsw",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
 </script>
 
- 
-</main>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="learnqiu.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/custom/minecraft.jpg" itemprop="image" alt="learnqiu" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="learnqiu.top" itemprop="url" rel="author">learnqiu</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>冷秋</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
 
     </div>    
     <div class="ins-search">

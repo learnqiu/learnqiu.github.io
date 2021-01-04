@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-12-29T08:56:17.072Z</updated>
+  <updated>2021-01-04T12:20:18.416Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>致2020</title>
+    <link href="http://example.com/posts/archives/41181.html/"/>
+    <id>http://example.com/posts/archives/41181.html/</id>
+    <published>2021-01-04T12:01:55.000Z</published>
+    <updated>2021-01-04T12:20:18.416Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;致2020&quot;&gt;&lt;a href=&quot;#致2020&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="http://example.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="剧集" scheme="http://example.com/tags/%E5%89%A7%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>转载：将hexo博客部署到CentOS个人云服务器</title>
+    <link href="http://example.com/posts/archives/48313.html/"/>
+    <id>http://example.com/posts/archives/48313.html/</id>
+    <published>2021-01-04T11:43:29.000Z</published>
+    <updated>2021-01-04T12:15:41.696Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;转载：将hexo博客部署到CentOS个人云服务器&quot;&gt;&lt;a href=&quot;#转载：将hexo博客部署到CentOS个人云服务器&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="hexo博客搭建" scheme="http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>晚归记-冷秋的第一个Vlog</title>
     <link href="http://example.com/posts/archives/36200.html/"/>
     <id>http://example.com/posts/archives/36200.html/</id>
     <published>2020-12-29T08:28:49.000Z</published>
-    <updated>2020-12-29T08:56:17.072Z</updated>
+    <updated>2021-01-04T12:14:28.014Z</updated>
     
     
       
@@ -36,6 +86,8 @@
     
     <category term="生活" scheme="http://example.com/categories/%E7%94%9F%E6%B4%BB/"/>
     
+    
+    <category term="剧集" scheme="http://example.com/tags/%E5%89%A7%E9%9B%86/"/>
     
   </entry>
   
@@ -119,7 +171,7 @@
     <link href="http://example.com/posts/archives/60549.html/"/>
     <id>http://example.com/posts/archives/60549.html/</id>
     <published>2020-12-23T11:22:01.000Z</published>
-    <updated>2020-12-23T13:58:12.642Z</updated>
+    <updated>2021-01-04T12:00:50.184Z</updated>
     
     
       
@@ -413,56 +465,6 @@
     
     
     <category term="悦读" scheme="http://example.com/tags/%E6%82%A6%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Typora：推荐一款简洁的Markdown编辑器</title>
-    <link href="http://example.com/posts/archives/7629.html/"/>
-    <id>http://example.com/posts/archives/7629.html/</id>
-    <published>2020-12-17T06:15:12.000Z</published>
-    <updated>2020-12-23T13:47:26.884Z</updated>
-    
-    
-    <summary type="html">Typora：推荐一款简洁的Markdown编辑器</summary>
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="hexo博客写作" scheme="http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/"/>
-    
-    <category term="Markdown" scheme="http://example.com/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用hexo编写文章，来学学简单的Markdown语法吧</title>
-    <link href="http://example.com/posts/archives/7188.html/"/>
-    <id>http://example.com/posts/archives/7188.html/</id>
-    <published>2020-12-16T12:42:36.000Z</published>
-    <updated>2020-12-23T13:47:26.868Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本文主要介绍hexo简单的Markdown语法&lt;/p&gt;
-&lt;p&gt;这是本站第一篇文章，如有疏漏，可随时指正哦&lt;/p&gt;
-&lt;h1 id=&quot;hexo简单的Markdown语法&quot;&gt;&lt;a href=&quot;#hexo简单的Markdown语法&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="hexo博客写作" scheme="http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/"/>
-    
-    <category term="Markdown" scheme="http://example.com/tags/Markdown/"/>
     
   </entry>
   
