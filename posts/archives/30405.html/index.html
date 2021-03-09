@@ -506,10 +506,7 @@
 <li>mv: 移动文件与目录，或修改文件与目录的名称</li>
 </ul>
 <p>你可以使用 <em>man [命令]</em> 来查看各个命令的使用文档，如 ：man cp。</p>
-<blockquote>
-<p>ls （列出目录）</p>
-</blockquote>
-<p>在Linux系统当中， ls 命令可能是最常被运行的。</p>
+<h3 id="ls-（列出目录）"><a href="#ls-（列出目录）" class="headerlink" title="ls （列出目录）"></a>ls （列出目录）</h3><p>在Linux系统当中， ls 命令可能是最常被运行的。</p>
 <p>语法：</p>
 <pre><code>[root@www ~]# ls [-aAdfFhilnrRSt] 目录名称</code></pre>
 <p>选项与参数：</p>
@@ -519,10 +516,7 @@
 </ul>
 <p>将目录下的所有文件列出来(含属性与隐藏档)</p>
 <pre><code>[root@www ~]# ls -al ~</code></pre>
-<blockquote>
-<p>cd （切换目录）</p>
-</blockquote>
-<p>cd是Change Directory的缩写，这是用来变换工作目录的命令。</p>
+<h3 id="cd-（切换目录）"><a href="#cd-（切换目录）" class="headerlink" title="cd （切换目录）"></a>cd （切换目录）</h3><p>cd是Change Directory的缩写，这是用来变换工作目录的命令。</p>
 <p>语法：</p>
 <pre><code>cd [相对路径或绝对路径]</code></pre>
 <p>测试：</p>
@@ -544,10 +538,7 @@
 # 表示回到自己的家目录，亦即是 /root 这个目录
 [root@kuangshen kuangstudy]# cd ~</code></pre>
 <p>接下来大家多操作几次应该就可以很好的理解 cd 命令的。</p>
-<blockquote>
-<p>pwd ( 显示目前所在的目录 )</p>
-</blockquote>
-<p>pwd 是 <strong>Print Working Directory</strong> 的缩写，也就是显示目前所在目录的命令。</p>
+<h3 id="pwd-显示目前所在的目录"><a href="#pwd-显示目前所在的目录" class="headerlink" title="pwd ( 显示目前所在的目录 )"></a>pwd ( 显示目前所在的目录 )</h3><p>pwd 是 <strong>Print Working Directory</strong> 的缩写，也就是显示目前所在目录的命令。</p>
 <pre><code>[root@kuangshen kuangstudy]#pwd [-P]</code></pre>
 <p>选项与参数：**-P** ：显示出确实的路径，而非使用连接(link) 路径。</p>
 <p>测试：</p>
@@ -559,10 +550,7 @@
 [root@kuangshen /]# cd bin
 [root@kuangshen bin]# pwd -P
 /usr/bin</code></pre>
-<blockquote>
-<p>mkdir （创建新目录）</p>
-</blockquote>
-<p>如果想要创建新的目录的话，那么就使用mkdir (make directory)吧。</p>
+<h3 id="mkdir-（创建新目录）"><a href="#mkdir-（创建新目录）" class="headerlink" title="mkdir （创建新目录）"></a>mkdir （创建新目录）</h3><p>如果想要创建新的目录的话，那么就使用mkdir (make directory)吧。</p>
 <pre><code>mkdir [-mp] 目录名称</code></pre>
 <p>选项与参数：</p>
 <ul>
@@ -590,10 +578,7 @@ No such file or directory  # &lt;== 没办法直接创建此目录啊！
 drwxr-xr-x 2 root root  4096 Mar 12 21:55 test
 drwxr-xr-x 3 root root  4096 Mar 12 21:56 test1
 drwx--x--x 2 root root  4096 Mar 12 21:58 test2</code></pre>
-<blockquote>
-<p>rmdir ( 删除空的目录 )</p>
-</blockquote>
-<p>语法：</p>
+<h3 id="rmdir-删除空的目录"><a href="#rmdir-删除空的目录" class="headerlink" title="rmdir ( 删除空的目录 )"></a>rmdir ( 删除空的目录 )</h3><p>语法：</p>
 <pre><code>rmdir [-p] 目录名称</code></pre>
 <p>选项与参数：**-p ：**连同上一级『空的』目录也一起删除</p>
 <p>测试：</p>
@@ -613,10 +598,7 @@ rmdir: failed to remove ‘test1’: Directory not empty
 # 利用 -p 这个选项，立刻就可以将 test1/test2/test3/test4 依次删除。
 [root@kuangshen home]# rmdir -p test1/test2/test3/test4</code></pre>
 <p>注意：这个 rmdir 仅能删除空的目录，你可以使用 rm 命令来删除非空目录，后面我们会将！</p>
-<blockquote>
-<p>cp ( 复制文件或目录 )</p>
-</blockquote>
-<p>语法：</p>
+<h3 id="cp-复制文件或目录"><a href="#cp-复制文件或目录" class="headerlink" title="cp ( 复制文件或目录 )"></a>cp ( 复制文件或目录 )</h3><p>语法：</p>
 <pre><code>[root@www ~]# cp [-adfilprsu] 来源档(source) 目标档(destination)
 [root@www ~]# cp [options] source1 source2 source3 .... directory</code></pre>
 <p>选项与参数：</p>
@@ -646,10 +628,7 @@ install.sh
 # 再次复制，加上-i参数，增加覆盖询问？
 [root@kuangshen home]# cp -i /root/install.sh /home
 cp: overwrite ‘/home/install.sh’? y # n不覆盖，y为覆盖</code></pre>
-<blockquote>
-<p>rm ( 移除文件或目录 )</p>
-</blockquote>
-<p>语法：</p>
+<h3 id="rm-移除文件或目录"><a href="#rm-移除文件或目录" class="headerlink" title="rm ( 移除文件或目录 )"></a>rm ( 移除文件或目录 )</h3><p>语法：</p>
 <pre><code>rm [-fir] 文件或目录</code></pre>
 <p>选项与参数：</p>
 <ul>
@@ -664,10 +643,7 @@ rm: remove regular file ‘install.sh’? y
 # 如果加上 -i 的选项就会主动询问喔，避免你删除到错误的档名！
 
 # 尽量不要在服务器上使用 rm -rf /</code></pre>
-<blockquote>
-<p>mv  ( 移动文件与目录，或修改名称 )</p>
-</blockquote>
-<p>语法：</p>
+<h3 id="mv-移动文件与目录，或修改名称"><a href="#mv-移动文件与目录，或修改名称" class="headerlink" title="mv  ( 移动文件与目录，或修改名称 )"></a>mv  ( 移动文件与目录，或修改名称 )</h3><p>语法：</p>
 <pre><code>[root@www ~]# mv [-fiu] source destination
 [root@www ~]# mv [options] source1 source2 source3 .... directory</code></pre>
 <p>选项与参数：</p>
@@ -724,14 +700,11 @@ mvtest</code></pre>
 <p>文件所有者以外的用户又可以分为文件所有者的同组用户和其他用户。</p>
 <p>因此，Linux系统按文件所有者、文件所有者同组用户和其他用户来规定了不同的文件访问权限。</p>
 <p>在以上实例中，boot 文件是一个目录文件，属主和属组都为 root。</p>
-<h2 id="修改文件属性"><a href="#修改文件属性" class="headerlink" title="修改文件属性"></a>修改文件属性</h2><p><strong>1、chgrp：更改文件属组</strong></p>
-<pre><code>chgrp [-R] 属组名 文件名</code></pre>
+<h2 id="修改文件属性"><a href="#修改文件属性" class="headerlink" title="修改文件属性"></a>修改文件属性</h2><h3 id="1、chgrp：更改文件属组"><a href="#1、chgrp：更改文件属组" class="headerlink" title="1、chgrp：更改文件属组"></a><strong>1、chgrp：更改文件属组</strong></h3><pre><code>chgrp [-R] 属组名 文件名</code></pre>
 <p>-R：递归更改文件属组，就是在更改某个目录文件的属组时，如果加上-R的参数，那么该目录下的所有文件的属组都会更改。</p>
-<p><strong>2、chown：更改文件属主，也可以同时更改文件属组</strong></p>
-<pre><code>chown [–R] 属主名 文件名
+<h3 id="2、chown：更改文件属主，也可以同时更改文件属组"><a href="#2、chown：更改文件属主，也可以同时更改文件属组" class="headerlink" title="2、chown：更改文件属主，也可以同时更改文件属组"></a><strong>2、chown：更改文件属主，也可以同时更改文件属组</strong></h3><pre><code>chown [–R] 属主名 文件名
 chown [-R] 属主名：属组名 文件名</code></pre>
-<p><strong>3、chmod：更改文件9个属性</strong></p>
-<pre><code>chmod [-R] xyz 文件或目录</code></pre>
+<h3 id="3、chmod：更改文件9个属性"><a href="#3、chmod：更改文件9个属性" class="headerlink" title="3、chmod：更改文件9个属性"></a><strong>3、chmod：更改文件9个属性</strong></h3><pre><code>chmod [-R] xyz 文件或目录</code></pre>
 <p>Linux文件属性有两种设置方法，一种是数字，一种是符号。</p>
 <p>Linux文件的基本权限就有九个，分别是owner/group/others三种身份各有自己的read/write/execute权限。</p>
 <p>先复习一下刚刚上面提到的数据：文件的权限字符为：『-rwxrwxrwx』， 这九个权限是三个三个一组的！其中，我们可以使用数字来代表各个权限，各权限的分数对照表如下：</p>
@@ -755,10 +728,7 @@ chown [-R] 属主名：属组名 文件名</code></pre>
 <li>tail 只看尾巴几行</li>
 </ul>
 <p>你可以使用 *man [命令]*来查看各个命令的使用文档，如 ：man cp。</p>
-<blockquote>
-<p>cat 由第一行开始显示文件内容</p>
-</blockquote>
-<p>语法：</p>
+<h3 id="cat-由第一行开始显示文件内容"><a href="#cat-由第一行开始显示文件内容" class="headerlink" title="cat 由第一行开始显示文件内容"></a>cat 由第一行开始显示文件内容</h3><p>语法：</p>
 <pre><code>cat [-AbEnTv]</code></pre>
 <p>选项与参数：</p>
 <ul>
@@ -775,18 +745,12 @@ chown [-R] 属主名：属组名 文件名</code></pre>
 DEVICE=eth0
 BOOTPROTO=dhcp
 ONBOOT=yes</code></pre>
-<blockquote>
-<p>tac</p>
-</blockquote>
-<p>tac与cat命令刚好相反，文件内容从最后一行开始显示，可以看出 tac 是 cat 的倒着写！如：</p>
+<h3 id="tac"><a href="#tac" class="headerlink" title="tac"></a>tac</h3><p>tac与cat命令刚好相反，文件内容从最后一行开始显示，可以看出 tac 是 cat 的倒着写！如：</p>
 <pre><code>[root@kuangshen ~]# tac /etc/sysconfig/network-scripts/ifcfg-eth0
 ONBOOT=yes
 BOOTPROTO=dhcp
 DEVICE=eth0</code></pre>
-<blockquote>
-<p>nl  显示行号</p>
-</blockquote>
-<p>语法：</p>
+<h3 id="nl-显示行号"><a href="#nl-显示行号" class="headerlink" title="nl  显示行号"></a>nl  显示行号</h3><p>语法：</p>
 <pre><code>nl [-bnw] 文件</code></pre>
 <p>选项与参数：</p>
 <ul>
@@ -799,10 +763,7 @@ DEVICE=eth0</code></pre>
 1DEVICE=eth0
 2BOOTPROTO=dhcp
 3ONBOOT=yes</code></pre>
-<blockquote>
-<p>more  一页一页翻动</p>
-</blockquote>
-<p>在 more 这个程序的运行过程中，你有几个按键可以按的：</p>
+<h3 id="more-一页一页翻动"><a href="#more-一页一页翻动" class="headerlink" title="more  一页一页翻动"></a>more  一页一页翻动</h3><p>在 more 这个程序的运行过程中，你有几个按键可以按的：</p>
 <ul>
 <li>空白键 (space)：代表向下翻一页；</li>
 <li>Enter   ：代表向下翻『一行』；</li>
@@ -814,10 +775,7 @@ DEVICE=eth0</code></pre>
 <pre><code>[root@kuangshen etc]# more /etc/csh.login
 ....(中间省略)....
 --More--(28%) # 重点在这一行喔！你的光标也会在这里等待你的命令</code></pre>
-<blockquote>
-<p>less  一页一页翻动，以下实例输出/etc/man.config文件的内容：</p>
-</blockquote>
-<p>less运行时可以输入的命令有：</p>
+<h3 id="less-一页一页翻动，以下实例输出-etc-man-config文件的内容："><a href="#less-一页一页翻动，以下实例输出-etc-man-config文件的内容：" class="headerlink" title="less  一页一页翻动，以下实例输出/etc/man.config文件的内容："></a>less  一页一页翻动，以下实例输出/etc/man.config文件的内容：</h3><p>less运行时可以输入的命令有：</p>
 <ul>
 <li>空白键  ：向下翻动一页；</li>
 <li>[pagedown]：向下翻动一页；</li>
@@ -831,18 +789,12 @@ DEVICE=eth0</code></pre>
 <pre><code>[root@kuangshen etc]# more /etc/csh.login
 ....(中间省略)....
 :   # 这里可以等待你输入命令！</code></pre>
-<blockquote>
-<p>head  取出文件前面几行</p>
-</blockquote>
-<p>语法：</p>
+<h3 id="head-取出文件前面几行"><a href="#head-取出文件前面几行" class="headerlink" title="head  取出文件前面几行"></a>head  取出文件前面几行</h3><p>语法：</p>
 <pre><code>head [-n number] 文件</code></pre>
 <p>选项与参数：**-n** 后面接数字，代表显示几行的意思！</p>
 <p>默认的情况中，显示前面 10 行！若要显示前 20 行，就得要这样：</p>
 <pre><code>[root@kuangshen etc]# head -n 20 /etc/csh.login</code></pre>
-<blockquote>
-<p>tail  取出文件后面几行</p>
-</blockquote>
-<p>语法：</p>
+<h3 id="tail-取出文件后面几行"><a href="#tail-取出文件后面几行" class="headerlink" title="tail  取出文件后面几行"></a>tail  取出文件后面几行</h3><p>语法：</p>
 <pre><code>tail [-n number] 文件</code></pre>
 <p>选项与参数：</p>
 <ul>
