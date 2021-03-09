@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-14T10:55:48.260Z</updated>
+  <updated>2021-03-09T12:55:49.319Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,95 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>tech-kuang-linux-02</title>
+    <link href="http://example.com/posts/archives/30405.html/"/>
+    <id>http://example.com/posts/archives/30405.html/</id>
+    <published>2021-03-08T12:46:56.000Z</published>
+    <updated>2021-03-09T12:55:49.319Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;常用的基本命令（必掌握）&quot;&gt;&lt;a href=&quot;#常用的基本命令（必掌握）&quot; class=&quot;headerlink&quot; title=&quot;常用的基本命令（必掌握）&quot;&gt;&lt;/a&gt;常用的基本命令（必掌握）&lt;/h1&gt;&lt;h1 id=&quot;目录管理&quot;&gt;&lt;a href=&quot;#目录管理&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tech-kuang-linux-01</title>
+    <link href="http://example.com/posts/archives/30597.html/"/>
+    <id>http://example.com/posts/archives/30597.html/</id>
+    <published>2021-03-08T11:32:56.000Z</published>
+    <updated>2021-03-08T12:46:42.010Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Linux01：概述及环境搭建&quot;&gt;&lt;a href=&quot;#Linux01：概述及环境搭建&quot; class=&quot;headerlink&quot; title=&quot;Linux01：概述及环境搭建&quot;&gt;&lt;/a&gt;&lt;strong&gt;Linux01：概述及环境搭建&lt;/strong&gt;&lt;/h1&gt;&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tech-juc-01</title>
+    <link href="http://example.com/posts/archives/31029.html/"/>
+    <id>http://example.com/posts/archives/31029.html/</id>
+    <published>2021-03-05T11:13:55.000Z</published>
+    <updated>2021-03-05T11:15:30.528Z</updated>
+    
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tech-sql-02</title>
+    <link href="http://example.com/posts/archives/42373.html/"/>
+    <id>http://example.com/posts/archives/42373.html/</id>
+    <published>2021-01-16T06:20:57.000Z</published>
+    <updated>2021-01-16T08:27:52.876Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;数据库三范式&quot;&gt;&lt;a href=&quot;#数据库三范式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title></title>
-    <link href="http://example.com/posts/archives/0.html/"/>
-    <id>http://example.com/posts/archives/0.html/</id>
+    <link href="http://example.com/posts/archives/1.html/"/>
+    <id>http://example.com/posts/archives/1.html/</id>
     <published>2021-01-11T05:19:51.000Z</published>
-    <updated>2021-01-14T10:55:48.260Z</updated>
+    <updated>2021-01-14T11:12:39.197Z</updated>
     
     
     <summary type="html">30道SQL作业题</summary>
@@ -393,84 +477,6 @@
     <category term="hexo博客写作" scheme="http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/"/>
     
     <category term="Typora" scheme="http://example.com/tags/Typora/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在Typora中如何配置图片插入自动存放到指定位置并生成图片代码</title>
-    <link href="http://example.com/posts/archives/40059.html/"/>
-    <id>http://example.com/posts/archives/40059.html/</id>
-    <published>2020-12-18T05:55:56.000Z</published>
-    <updated>2020-12-23T13:47:26.910Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;在Typora中如何配置图片插入自动存放到指定位置并生成图片代码&quot;&gt;&lt;a href=&quot;#在Typora中如何配置图片插入自动存放到指定位置并生成图片代码&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="hexo博客写作" scheme="http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C/"/>
-    
-    <category term="Typora" scheme="http://example.com/tags/Typora/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这是我的转载</title>
-    <link href="http://example.com/posts/archives/29603.html/"/>
-    <id>http://example.com/posts/archives/29603.html/</id>
-    <published>2020-12-17T12:48:21.000Z</published>
-    <updated>2020-12-23T13:47:26.681Z</updated>
-    
-    
-    <summary type="html">未完待续</summary>
-    
-    
-    
-    <category term="转载" scheme="http://example.com/categories/%E8%BD%AC%E8%BD%BD/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>这是我的随想</title>
-    <link href="http://example.com/posts/archives/18029.html/"/>
-    <id>http://example.com/posts/archives/18029.html/</id>
-    <published>2020-12-17T12:47:30.000Z</published>
-    <updated>2020-12-23T13:47:26.799Z</updated>
-    
-    
-    <summary type="html">未完待续</summary>
-    
-    
-    
-    <category term="随想" scheme="http://example.com/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>这是我的资源</title>
-    <link href="http://example.com/posts/archives/64744.html/"/>
-    <id>http://example.com/posts/archives/64744.html/</id>
-    <published>2020-12-17T12:46:17.000Z</published>
-    <updated>2020-12-23T13:47:26.699Z</updated>
-    
-    
-    <summary type="html">未完待续</summary>
-    
-    
-    
-    <category term="资源" scheme="http://example.com/categories/%E8%B5%84%E6%BA%90/"/>
-    
     
   </entry>
   

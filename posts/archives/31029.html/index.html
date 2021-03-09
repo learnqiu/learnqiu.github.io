@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">learnQIU</title>
+  <title itemprop="name">tech-juc-01 | learnQIU</title>
   
     <link rel="shortcut icon" href="/img/custom/Q.ico">
   
@@ -435,7 +435,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      </h1>
+      tech-juc-01</h1>
       <p class="entry-census">
         <span>
           <a href="learnqiu.top">
@@ -447,7 +447,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2021-1-11<span class="bull">
+        2021-3-5<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
        <!--20201222 开始添加字数统计-->
@@ -459,7 +459,7 @@
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
         <!--1222安装 安装插件npm install hexo-wordcount --save -->
-        <span class="post-count">3.2k字</span>
+        <span class="post-count">0字</span>
       </span>
     </span>
 
@@ -468,7 +468,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">15分</span>
+        <span class="post-count">1分</span>
       </span>
     </span>
 </div>
@@ -487,270 +487,7 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="34道SQL作业题"><a href="#34道SQL作业题" class="headerlink" title="34道SQL作业题"></a>34道SQL作业题</h1><h2 id="表结构"><a href="#表结构" class="headerlink" title="表结构"></a>表结构</h2><h3 id="员工表"><a href="#员工表" class="headerlink" title="员工表"></a>员工表</h3><p><img src="https://i.loli.net/2021/01/14/R9ioN5OWsjEBXg1.png" alt="image-20210114185257840"></p>
-<h3 id="部门表"><a href="#部门表" class="headerlink" title="部门表"></a>部门表</h3><p><img src="https://i.loli.net/2021/01/14/PfXAjWHh1vRgpT6.png" alt="image-20210114185331481"></p>
-<h3 id="薪资等级表"><a href="#薪资等级表" class="headerlink" title="薪资等级表"></a>薪资等级表</h3><p><img src="https://i.loli.net/2021/01/14/l2NbI95kBmZaMdn.png" alt="image-20210114185509154"></p>
-<h2 id="–-1、取得每个部门最高薪水的人员名称"><a href="#–-1、取得每个部门最高薪水的人员名称" class="headerlink" title="– 1、取得每个部门最高薪水的人员名称"></a>– 1、取得每个部门最高薪水的人员名称</h2><p>– STEP1 取得每个部门最高薪水（按照部门编号编组，找出每一组最大值）</p>
-<pre><code class="sql">SELECT DEPTNO,MAX(SAL) MAXSAL FROM EMP GROUP BY DEPTNO;</code></pre>
-<p>– STEP2 与人员表连接，连接条件：where t.DEPTNO = e.DEPTNO AND t.MAXSAL = e.SAL</p>
-<pre><code class="sql">SELECT 
-    e.ename,e.sal,e.DEPTNO 
-from 
-    (SELECT DEPTNO,MAX(SAL) MAXSAL FROM EMP GROUP BY DEPTNO) t
-join 
-    EMP e
-on 
-    t.DEPTNO = e.DEPTNO AND t.MAXSAL = e.SAL;</code></pre>
-<p>– STEP2 与人员表连接，连接条件：where t.DEPTNO = e.DEPTNO AND t.MAXSAL = e.SAL</p>
-<pre><code class="sql">SELECT 
-    e.ename,e.sal,e.DEPTNO 
-from 
-    (SELECT DEPTNO,MAX(SAL) MAXSAL FROM EMP GROUP BY DEPTNO) t
-join 
-    EMP e
-on 
-    t.DEPTNO = e.DEPTNO AND t.MAXSAL = e.SAL;</code></pre>
-<h2 id="–-2、哪些人的薪水在部门的平均薪水之上"><a href="#–-2、哪些人的薪水在部门的平均薪水之上" class="headerlink" title="– 2、哪些人的薪水在部门的平均薪水之上"></a>– 2、哪些人的薪水在部门的平均薪水之上</h2><p>– STEP1 找出每个部门平均薪水</p>
-<pre><code class="sql">SELECT DEPTNO,AVG(SAL) AVGSAL FROM EMP GROUP BY DEPTNO;</code></pre>
-<p>– STEP2 与人员表连接，连接条件：where t.DEPTNO = e.DEPTNO AND t.AVGSAL &lt; e.SAL</p>
-<pre><code class="sql">SELECT 
-    e.ename,e.sal,e.DEPTNO,t.AVGSAL 
-from 
-    (SELECT DEPTNO,AVG(SAL) AVGSAL FROM EMP GROUP BY DEPTNO) t
-join 
-    EMP e
-on 
-    t.DEPTNO = e.DEPTNO AND t.AVGSAL &lt; e.SAL;</code></pre>
-<h2 id="–-3、取得部门中（所有人的）平均的薪水等级"><a href="#–-3、取得部门中（所有人的）平均的薪水等级" class="headerlink" title="– 3、取得部门中（所有人的）平均的薪水等级"></a>– 3、取得部门中（所有人的）平均的薪水等级</h2><p>– STEP1 取得部门中（所有人的）的薪水等级<br>– 与等级表连接，连接条件：where e.SAL &gt;= s.LOSAL AND e.SAL &lt;= s.HISAL<br>– 也可使用连接条件：e.SAL BETWEEN  s.LOSAL AND s.HISAL</p>
-<pre><code class="sql">SELECT 
-    s.GRADE,e.*
-from
-    EMP e join SALGRADE s
-on 
-    e.SAL &gt;= s.LOSAL AND e.SAL &lt;= s.HISAL;</code></pre>
-<p>– STEP2 取得部门中（所有人的）平均的薪水等级</p>
-<pre><code class="sql">SELECT 
-    t.DEPTNO,AVG(t.GRADE) AVGGRADE 
-FROM
-    (SELECT s.GRADE,e.* from EMP e join SALGRADE s on e.SAL &gt;= s.LOSAL AND e.SAL &lt;= s.HISAL)t 
-group by  
-    t.DEPTNO;</code></pre>
-<p>– STEP2 取得部门中（所有人的）平均的薪水等级</p>
-<pre><code class="sql">SELECT 
-    t.DEPTNO,AVG(t.GRADE) AVGGRADE 
-FROM
-    (SELECT s.GRADE,e.* from EMP e join SALGRADE s on e.SAL &gt;= s.LOSAL AND e.SAL &lt;= s.HISAL)t 
-group by  
-    t.DEPTNO;</code></pre>
-<p>– STEP2 直接使用group by和分组函数 不使用临时表</p>
-<pre><code class="sql">SELECT 
-    DEPTNO,AVG(GRADE) AVGGRADE 
-FROM
-    EMP e 
-join 
-    SALGRADE s 
-on 
-    e.SAL  BETWEEN s.LOSAL AND s.HISAL
-group by  
-    DEPTNO;</code></pre>
-<p>​    </p>
-<p>​    </p>
-<h2 id="–-4、不准用组函数（Max），取得最高薪水"><a href="#–-4、不准用组函数（Max），取得最高薪水" class="headerlink" title="– 4、不准用组函数（Max），取得最高薪水"></a>– 4、不准用组函数（Max），取得最高薪水</h2><p>– 方案一 采用SAL排序,取第一行rownum=1</p>
-<pre><code class="sql">SELECT sal from (SELECT * from emp  order by SAL desc) t where rownum=1;</code></pre>
-<p>– 方案二 表的自连接 注意思路</p>
-<pre><code class="sql">select sal from emp where sal not in (SELECT distinct a.sal from emp a join emp b on a.sal &lt; b.sal);</code></pre>
-<p>– 方案三 MAX</p>
-<pre><code class="sql">SELECT MAX(sal) from emp;</code></pre>
-<h2 id="–-5、取得平均薪水最高的部门的部门编号"><a href="#–-5、取得平均薪水最高的部门的部门编号" class="headerlink" title="– 5、取得平均薪水最高的部门的部门编号"></a>– 5、取得平均薪水最高的部门的部门编号</h2><p>– 方案一：降序取第一个</p>
-<pre><code class="sql">SELECT * FROM (SELECT * from  (SELECT DEPTNO,AVG(SAL) AVGSAL FROM EMP GROUP BY DEPTNO) t ORDER BY AVGSAL DESC) m where rownum = 1;</code></pre>
-<p>– 方案二：MAX 注意having后面跟着AVG(SAL)，mysql可以直接跟AVGSAL</p>
-<pre><code class="sq"> SELECT DEPTNO,AVG(SAL) AVGSAL FROM EMP GROUP BY DEPTNO HAVING AVG(SAL) = (SELECT MAX(AVGSAL) from  (SELECT DEPTNO,AVG(SAL) AVGSAL FROM EMP GROUP BY DEPTNO));</code></pre>
-<h2 id="–-6、取得平均薪水最高的部门的部门名称"><a href="#–-6、取得平均薪水最高的部门的部门名称" class="headerlink" title="– 6、取得平均薪水最高的部门的部门名称"></a>– 6、取得平均薪水最高的部门的部门名称</h2><pre><code class="sql">SELECT DNAME from DEPT where DEPTNO = (SELECT DEPTNO FROM (SELECT * from  (SELECT DEPTNO,AVG(SAL) AVGSAL FROM EMP GROUP BY DEPTNO) t ORDER BY AVGSAL DESC) m where rownum = 1);</code></pre>
-<h2 id="–-7、求平均薪水的等级最低的部门的部门名称"><a href="#–-7、求平均薪水的等级最低的部门的部门名称" class="headerlink" title="– 7、求平均薪水的等级最低的部门的部门名称"></a>– 7、求平均薪水的等级最低的部门的部门名称</h2><p>– 错误解法</p>
-<pre><code class="sql">SELECT DNAME from DEPT where DEPTNO = (SELECT DEPTNO FROM (SELECT * from  (SELECT DEPTNO,AVG(SAL) AVGSAL FROM EMP GROUP BY DEPTNO) t ORDER BY AVGSAL ) m where rownum = 1);</code></pre>
-<p>– 注意平均薪水最低，平均薪水等级一定最低，但是平均薪水不是最低，平均薪水等级也有可能是最低<br>– 所以平均薪水等级最低的有可能是多个，不能通过降序取第一个部门编号，而是取最低等级拿等级做筛选<br>– STEP1 取得所有部门平均薪水的等级</p>
-<pre><code class="sql">SELECT m.*,t.* FROM (SELECT * from  (SELECT DEPTNO,AVG(SAL) AVGSAL FROM EMP GROUP BY DEPTNO) t ORDER BY AVGSAL ) m JOIN SALGRADE t ON m.AVGSAL BETWEEN t.LOSAL AND t.HISAL;</code></pre>
-<p>– STEP2 取得最低的平均薪水的等级</p>
-<pre><code class="sql">SELECT MIN(GRADE) FROM (SELECT * from  (SELECT DEPTNO,AVG(SAL) AVGSAL FROM EMP GROUP BY DEPTNO) t ORDER BY AVGSAL ) m JOIN SALGRADE t ON m.AVGSAL BETWEEN t.LOSAL AND t.HISAL;</code></pre>
-<p>– STEP3 取得平均薪水的等级最低的部门的部门名称</p>
-<pre><code class="sql">SELECT DNAME from DEPT where DEPTNO = (SELECT DEPTNO FROM (SELECT * from  (SELECT DEPTNO,AVG(SAL) AVGSAL FROM EMP GROUP BY DEPTNO) t ORDER BY AVGSAL ) m JOIN SALGRADE t ON m.AVGSAL BETWEEN t.LOSAL AND t.HISAL where GRADE = (SELECT MIN(GRADE) FROM (SELECT * from  (SELECT DEPTNO,AVG(SAL) AVGSAL FROM EMP GROUP BY DEPTNO) t ORDER BY AVGSAL ) m JOIN SALGRADE t ON m.AVGSAL BETWEEN t.LOSAL AND t.HISAL));</code></pre>
-<h2 id="–-8、取得比普通员工-员工代码没有在mgr字段上出现的-的最高薪水还要高的领导人姓名"><a href="#–-8、取得比普通员工-员工代码没有在mgr字段上出现的-的最高薪水还要高的领导人姓名" class="headerlink" title="– 8、取得比普通员工(员工代码没有在mgr字段上出现的)的最高薪水还要高的领导人姓名"></a>– 8、取得比普通员工(员工代码没有在mgr字段上出现的)的最高薪水还要高的领导人姓名</h2><p>– STEP1 取得普通员工</p>
-<pre><code class="sql">SELECT distinct MGR FROM EMP WHERE MGR IS not null;</code></pre>
-<p>– STEP2 取得普通员工最高薪水 not in 在使用时后面括号中的结果要排除null</p>
-<pre><code class="sql">SELECT MAX(SAL) MAXSAL from EMP where EMPNO not in (SELECT distinct MGR FROM EMP WHERE MGR IS not null);</code></pre>
-<p>– STEP3 取得比普通员工(员工代码没有在mgr字段上出现的)的最高薪水还要高的领导人姓名</p>
-<pre><code class="sql">SELECT ENAME from EMP where EMPNO  in (SELECT distinct MGR FROM EMP WHERE MGR IS not null) and SAL &gt; (SELECT MAX(SAL) MAXSAL from EMP where EMPNO not in (SELECT distinct MGR FROM EMP WHERE MGR IS not null));</code></pre>
-<h2 id="–-9、取得薪水最高的前五名员工"><a href="#–-9、取得薪水最高的前五名员工" class="headerlink" title="– 9、取得薪水最高的前五名员工"></a>– 9、取得薪水最高的前五名员工</h2><pre><code class="sql">SELECT * from (SELECT * from EMP  ORDER BY SAL DESC) t WHERE rownum &lt;6;</code></pre>
-<h2 id="–-10、取得薪水最高的第六到第十名员工-mysql使用-limmit-5-5"><a href="#–-10、取得薪水最高的第六到第十名员工-mysql使用-limmit-5-5" class="headerlink" title="– 10、取得薪水最高的第六到第十名员工 mysql使用 limmit 5,5"></a>– 10、取得薪水最高的第六到第十名员工 mysql使用 limmit 5,5</h2><pre><code class="sql">SELECT * from (SELECT * from (SELECT * from (SELECT * from EMP  ORDER BY SAL DESC) t WHERE rownum &lt;11) tt ORDER BY SAL) ttt  WHERE rownum &lt;6;</code></pre>
-<h2 id="–-11、取得最后入职的5名员工"><a href="#–-11、取得最后入职的5名员工" class="headerlink" title="– 11、取得最后入职的5名员工"></a>– 11、取得最后入职的5名员工</h2><pre><code class="sql">SELECT * from (SELECT * from EMP  ORDER BY HIREDATE DESC)WHERE rownum &lt;6;</code></pre>
-<h2 id="–-12、取得每个薪水等级有多少员工"><a href="#–-12、取得每个薪水等级有多少员工" class="headerlink" title="– 12、取得每个薪水等级有多少员工"></a>– 12、取得每个薪水等级有多少员工</h2><p>– STEP1 获得员工等级</p>
-<pre><code class="sql">SELECT s.GRADE,e.* from EMP e join SALGRADE s on e.SAL &gt;= s.LOSAL AND e.SAL &lt;= s.HISAL;</code></pre>
-<p>– STEP2 按员工等级分组计数</p>
-<p>​    </p>
-<pre><code class="sql">SELECT 
-    t.GRADE,COUNT(*) 
-FROM
-    (SELECT s.GRADE,e.* from EMP e join SALGRADE s on e.SAL &gt;= s.LOSAL AND e.SAL &lt;= s.HISAL)t 
-group by  
-    t.GRADE;</code></pre>
-<p>​    </p>
-<h2 id="–-13、面试题"><a href="#–-13、面试题" class="headerlink" title="– 13、面试题"></a>– 13、面试题</h2><h2 id="–-14、列出所有员工及领导的姓名"><a href="#–-14、列出所有员工及领导的姓名" class="headerlink" title="– 14、列出所有员工及领导的姓名"></a>– 14、列出所有员工及领导的姓名</h2><p>– 错误解法:使用join后，会缺少king的信息</p>
-<pre><code class="sql">SELECT A.ENAME,B.ENAME FROM EMP A JOIN EMP B ON A.MGR = B.EMPNO;</code></pre>
-<p>– 正确解法:使用left join后，会保证左边表格的信息的完整性，如果未匹配到信息则以null显示,这样KING的信息正常显示</p>
-<pre><code class="sql">SELECT A.ENAME,B.ENAME FROM EMP A LEFT JOIN EMP B ON A.MGR = B.EMPNO;</code></pre>
-<h2 id="–-15-列出受雇日期早于其直接上级的所有员工的编号-姓名-部门名称"><a href="#–-15-列出受雇日期早于其直接上级的所有员工的编号-姓名-部门名称" class="headerlink" title="– 15.列出受雇日期早于其直接上级的所有员工的编号,姓名,部门名称"></a>– 15.列出受雇日期早于其直接上级的所有员工的编号,姓名,部门名称</h2><p>– 注意此时使用JOIN ,join可以连用</p>
-<pre><code class="sql">SELECT 
-    A.ENAME 员工,B.ENAME 领导,d.DNAME 部门名称,a.HIREDATE 员工受雇日期,b.HIREDATE 领导受雇日期 
-FROM 
-    EMP A 
-JOIN 
-    EMP B 
-ON 
-    A.MGR = B.EMPNO 
-JOIN 
-    DEPT d 
-ON 
-    a.deptno = d.deptno 
-where 
-    A.HIREDATE &lt; B.HIREDATE;
-
-</code></pre>
-<h2 id="–-16、列出部门名称和这些部门的员工信息-同时列出那些没有员工的部门"><a href="#–-16、列出部门名称和这些部门的员工信息-同时列出那些没有员工的部门" class="headerlink" title="– 16、列出部门名称和这些部门的员工信息,同时列出那些没有员工的部门"></a>– 16、列出部门名称和这些部门的员工信息,同时列出那些没有员工的部门</h2><pre><code class="sql">SELECT 
-    a.DNAME,b.*
-FROM
-    DEPT a
-left join
-    EMP b
-on 
-    a.DEPTNO = b.DEPTNO; </code></pre>
-<p>​    </p>
-<h2 id="–-17、列出至少有5个员工的所有部门"><a href="#–-17、列出至少有5个员工的所有部门" class="headerlink" title="– 17、列出至少有5个员工的所有部门"></a>– 17、列出至少有5个员工的所有部门</h2><p>– SETP1 按DEPTNO分组计数</p>
-<pre><code class="sql">SELECT DEPTNO,count(*) from emp group by DEPTNO;</code></pre>
-<p>– SETP2 获取至少5个员工的所有部门</p>
-<pre><code class="sql">SELECT DEPTNO,count(*) from emp group by DEPTNO having count(*)&gt;4;</code></pre>
-<h2 id="–-18、列出薪金比”SMITH”多的所有员工信息"><a href="#–-18、列出薪金比”SMITH”多的所有员工信息" class="headerlink" title="– 18、列出薪金比”SMITH”多的所有员工信息"></a>– 18、列出薪金比”SMITH”多的所有员工信息</h2><p>– SETP1 获取”SMITH”的薪金</p>
-<pre><code class="sql">SELECT SAL from emp WHERE ENAME = &#39;SMITH&#39;;</code></pre>
-<p>– STEP2 列出薪金比”SMITH”多的所有员工信息</p>
-<pre><code class="sql">SELECT * from emp WHERE SAL &gt; (SELECT SAL from emp WHERE ENAME = &#39;SMITH&#39;);</code></pre>
-<h2 id="–-19、列出所有”CLERK”-办事员-的姓名及其部门名称-部门的人数"><a href="#–-19、列出所有”CLERK”-办事员-的姓名及其部门名称-部门的人数" class="headerlink" title="– 19、列出所有”CLERK”(办事员)的姓名及其部门名称,部门的人数"></a>– 19、列出所有”CLERK”(办事员)的姓名及其部门名称,部门的人数</h2><p>– 列出所有”CLERK”(办事员)姓名及其部门名称,部门的人数</p>
-<pre><code class="sql">SELECT 
-    ENAME,DNAME,ENUM 
-from 
-    emp e 
-join 
-    dept d  
-on 
-    e.DEPTNO = d.DEPTNO 
-JOIN  
-    (SELECT DEPTNO,count(*) ENUM from emp group by DEPTNO) t 
-ON 
-    e.DEPTNO = t.DEPTNO   
-WHERE 
-    JOB = &#39;CLERK&#39;;
-
-</code></pre>
-<h2 id="–-20、列出最低薪金大于1500的各种工作及从事此工作的全部雇员人数"><a href="#–-20、列出最低薪金大于1500的各种工作及从事此工作的全部雇员人数" class="headerlink" title="– 20、列出最低薪金大于1500的各种工作及从事此工作的全部雇员人数"></a>– 20、列出最低薪金大于1500的各种工作及从事此工作的全部雇员人数</h2><p>– SETP1 获取各种工作的最低薪金</p>
-<pre><code class="sql">SELECT JOB,MIN(SAL) MINSAL FROM EMP GROUP BY JOB;</code></pre>
-<p>– SETP2 列出最低薪金大于1500的各种工作</p>
-<pre><code class="sql">SELECT JOB MINSAL FROM EMP GROUP BY JOB HAVING MIN(SAL) &gt;1500;</code></pre>
-<p>– SETP2 列出最低薪金大于1500的各种工作及从事此工作的全部雇员人数 按job分组计数后筛选</p>
-<pre><code class="sql">SELECT JOB,COUNT(*) MINSAL FROM EMP GROUP BY JOB HAVING JOB IN (SELECT JOB MINSAL FROM EMP GROUP BY JOB HAVING MIN(SAL) &gt;1500);</code></pre>
-<h2 id="–-21、列出在部门”SALES”-lt-销售部-gt-工作的员工的姓名-假定不知道销售部的部门编号"><a href="#–-21、列出在部门”SALES”-lt-销售部-gt-工作的员工的姓名-假定不知道销售部的部门编号" class="headerlink" title="– 21、列出在部门”SALES”&lt;销售部&gt;工作的员工的姓名,假定不知道销售部的部门编号"></a>– 21、列出在部门”SALES”&lt;销售部&gt;工作的员工的姓名,假定不知道销售部的部门编号</h2><pre><code class="sql">SELECT ename FROM EMP e join DEPT d on e.DEPTNO = d.DEPTNO where dname = &#39;SALES&#39;;</code></pre>
-<h2 id="–-22、列出薪金高于公司平均薪金的所有员工-所在部门-上级领导-雇员的工资等级"><a href="#–-22、列出薪金高于公司平均薪金的所有员工-所在部门-上级领导-雇员的工资等级" class="headerlink" title="– 22、列出薪金高于公司平均薪金的所有员工,所在部门,上级领导,雇员的工资等级"></a>– 22、列出薪金高于公司平均薪金的所有员工,所在部门,上级领导,雇员的工资等级</h2><p>– SETP1 获取公司平均薪金</p>
-<pre><code>SELECT avg(Sal) from emp;</code></pre>
-<p>– SETP2 连接员工，部门，salgrade表</p>
-<pre><code class="sql">SELECT 
-    *
-from 
-    emp a
-left join 
-    emp b
-on 
-    a.mgr = b.EMPNO
-join 
-    DEPT d
-on  
-    a.DEPTNO = d.DNAME
-join 
-    SALGRADE s
-on  
-    a.sal between s.LOSAL and s.HISAL;</code></pre>
-<p>– SETP3 获取薪金高于公司平均薪金的所有员工</p>
-<pre><code class="sql">SELECT 
-    a.ENAME 员工,d.dname 部门,a.ENAME 领导,s.GRADE 等级
-from 
-    emp a
-left join 
-    emp b
-on 
-    a.mgr = b.EMPNO
-join 
-    DEPT d
-on  
-    a.DEPTNO = d.DEPTNO
-join 
-    SALGRADE s
-on  
-    a.sal between s.LOSAL and s.HISAL
-where 
-    a.Sal &gt; (SELECT avg(Sal) from emp);</code></pre>
-<h2 id="–-23、列出与”SCOTT”从事相同工作的所有员工及部门名称"><a href="#–-23、列出与”SCOTT”从事相同工作的所有员工及部门名称" class="headerlink" title="– 23、列出与”SCOTT”从事相同工作的所有员工及部门名称"></a>– 23、列出与”SCOTT”从事相同工作的所有员工及部门名称</h2><p>– SETP1 获取”SCOTT”从事的工作 </p>
-<pre><code class="sql">SELECT JOB FROM EMP WHERE ENAME = &#39;SCOTT&#39;;</code></pre>
-<p>– SETP2 连接人员，部门表</p>
-<pre><code class="sql">SELECT * FROM EMP e left join dept d on e.DEPTNO = d.DEPTNO;</code></pre>
-<p>– SETP3 列出与”SCOTT”从事相同工作的所有员工及部门名称</p>
-<pre><code class="sql">SELECT * FROM EMP e left join dept d on e.DEPTNO = d.DEPTNO where JOB = (SELECT JOB FROM EMP WHERE ENAME = &#39;SCOTT&#39;);</code></pre>
-<h2 id="–-24、列出薪金等于部门30中员工的薪金的其他员工的姓名和薪金"><a href="#–-24、列出薪金等于部门30中员工的薪金的其他员工的姓名和薪金" class="headerlink" title="– 24、列出薪金等于部门30中员工的薪金的其他员工的姓名和薪金"></a>– 24、列出薪金等于部门30中员工的薪金的其他员工的姓名和薪金</h2><p>– SETP1 获取30部门员工和其他部门员工</p>
-<pre><code class="sql">SELECT * FROM EMP where DEPTNO != &#39;30&#39;;
-SELECT * FROM EMP where DEPTNO = &#39;30&#39;;</code></pre>
-<p>– SETP2 列出薪金等于部门30中员工的薪金的其他员工的姓名和薪金</p>
-<pre><code class="sql">SELECT * FROM (SELECT * FROM EMP where DEPTNO != &#39;30&#39;) a join (SELECT * FROM EMP where DEPTNO = &#39;30&#39;) b on a.Sal = b.Sal;</code></pre>
-<h2 id="–-25、列出薪金高于在部门30工作的所有员工的薪金的员工姓名和薪金-部门名称"><a href="#–-25、列出薪金高于在部门30工作的所有员工的薪金的员工姓名和薪金-部门名称" class="headerlink" title="– 25、列出薪金高于在部门30工作的所有员工的薪金的员工姓名和薪金.部门名称"></a>– 25、列出薪金高于在部门30工作的所有员工的薪金的员工姓名和薪金.部门名称</h2><p>– SETP1 获取30部门员工的最高薪资</p>
-<pre><code class="sql">SELECT MAX(SAL) FROM EMP where DEPTNO = &#39;30&#39;;</code></pre>
-<p>– SETP2 列出薪金高于在部门30工作的所有员工的薪金的员工姓名和薪金.部门名称</p>
-<pre><code class="sql">SELECT ENAME,SAL,DNAME FROM EMP E JOIN DEPT D ON E.DEPTNO = D.DEPTNO WHERE SAL &gt; (SELECT MAX(SAL) FROM EMP where DEPTNO = &#39;30&#39;);</code></pre>
-<h2 id="–-26、列出在每个部门工作的员工数量-平均工资和平均服务期限"><a href="#–-26、列出在每个部门工作的员工数量-平均工资和平均服务期限" class="headerlink" title="– 26、列出在每个部门工作的员工数量,平均工资和平均服务期限"></a>– 26、列出在每个部门工作的员工数量,平均工资和平均服务期限</h2><p>– SETP1 连接员工，SALGRADE</p>
-<pre><code class="sql">SELECT 
-   *
-from 
-    emp a
-join 
-    SALGRADE s
-on  
-    a.sal between s.LOSAL and s.HISAL;</code></pre>
-<p>– SETP2 分组并计数</p>
-<pre><code class="sql">SELECT 
-   a.DEPTNO 部门编号,count(*) 员工数,avg(a.sal) 平均工资,avg(a.COMM) 平均服务期限
-from 
-    emp a
-join 
-    SALGRADE s
-on  
-    a.sal between s.LOSAL and s.HISAL
-group by
-    a.DEPTNO;</code></pre>
-<h2 id="–-27、列出所有员工的姓名、部门名称和工资"><a href="#–-27、列出所有员工的姓名、部门名称和工资" class="headerlink" title="– 27、列出所有员工的姓名、部门名称和工资"></a>– 27、列出所有员工的姓名、部门名称和工资</h2><pre><code class="sql">select e.ename 员工姓名,d.dname 部门名称,e.sal 工资 from emp e join dept d on e.DEPTNO = d.DEPTNO;</code></pre>
-<h2 id="–-28、列出所有部门的详细信息和人数"><a href="#–-28、列出所有部门的详细信息和人数" class="headerlink" title="– 28、列出所有部门的详细信息和人数"></a>– 28、列出所有部门的详细信息和人数</h2><pre><code class="sql">SELECT d.*,e.num 人数 from DEPT d join (SELECT DEPTNO,count(*) num from emp group by DEPTNO) e on e.DEPTNO = d.DEPTNO; </code></pre>
-<h2 id="–-29、列出各种工作的最低工资及从事此工作的雇员姓名"><a href="#–-29、列出各种工作的最低工资及从事此工作的雇员姓名" class="headerlink" title="– 29、列出各种工作的最低工资及从事此工作的雇员姓名"></a>– 29、列出各种工作的最低工资及从事此工作的雇员姓名</h2><p>– SETP1 列出各种工作的最低工资</p>
-<pre><code class="sql">SELECT job,min(sal) minsal from emp group by job;</code></pre>
-<p>– SETP2 上表作为临时表与员工表连接</p>
-<pre><code class="sql">SELECT e.job,minsal,e.ename,e.sal FROM EMP e join (SELECT job,min(sal) minsal from emp group by job)a on e.job = a.job where sal = minsal;</code></pre>
-<h2 id="–-30、列出各个部门的MANAGER-领导-的最低薪金"><a href="#–-30、列出各个部门的MANAGER-领导-的最低薪金" class="headerlink" title="– 30、列出各个部门的MANAGER(领导)的最低薪金"></a>– 30、列出各个部门的MANAGER(领导)的最低薪金</h2><p>– SETP1 列出各个部门的MANAGER</p>
-<pre><code class="sql">SELECT distinct b.ename from emp a join emp b on a.MGR = b.EMPNO;  </code></pre>
-<p>– SETP2 列出各个部门的MANAGER的最低薪金</p>
-<pre><code class="sql">SELECT min(sal) from emp where ename in (SELECT distinct b.ename from emp a join emp b on a.MGR = b.EMPNO);</code></pre>
-<h2 id="–-31、列出所有员工的年工资-按年薪从低到高排序"><a href="#–-31、列出所有员工的年工资-按年薪从低到高排序" class="headerlink" title="– 31、列出所有员工的年工资,按年薪从低到高排序"></a>– 31、列出所有员工的年工资,按年薪从低到高排序</h2><pre><code class="sql">SELECT ename,sal*12 from emp order by sal;</code></pre>
-<h2 id="–-32、求出员工领导的薪水超过3000的员工名称与领导名称"><a href="#–-32、求出员工领导的薪水超过3000的员工名称与领导名称" class="headerlink" title="– 32、求出员工领导的薪水超过3000的员工名称与领导名称"></a>– 32、求出员工领导的薪水超过3000的员工名称与领导名称</h2><pre><code class="sql">SELECT a.ename,b.ename,b.sal from emp a join emp b on a.MGR = b.EMPNO where b.sal &gt;=3000;  </code></pre>
-<h2 id="–-33、求出部门名称中-带’S’字符的部门员工的工资合计、部门人数"><a href="#–-33、求出部门名称中-带’S’字符的部门员工的工资合计、部门人数" class="headerlink" title="– 33、求出部门名称中,带’S’字符的部门员工的工资合计、部门人数"></a>– 33、求出部门名称中,带’S’字符的部门员工的工资合计、部门人数</h2><p>– SETP1 求出部门名称中,带’S’字符的部门</p>
-<pre><code class="sql">SELECT deptno from dept where DNAME like &#39;%S%&#39;;</code></pre>
-<p>– SETP2 求出部门名称中,带’S’字符的部门员工的工资合计、部门人数</p>
-<pre><code class="sql">SELECT deptno,count(*),sum(sal) from emp where deptno in (SELECT deptno from dept where DNAME like &#39;%S%&#39;) group by DEPTNO;</code></pre>
-<h2 id="–-34、给任职日期超过30年的员工加薪10"><a href="#–-34、给任职日期超过30年的员工加薪10" class="headerlink" title="– 34、给任职日期超过30年的员工加薪10%"></a>– 34、给任职日期超过30年的员工加薪10%</h2><pre><code class="sql">update emp set sal = sal*1.1 where get_year(to_date(sysdate,&#39;yyyy-MM-dd HH24:mi:ss&#39;),to_date(HIREDATE,&#39;yyyy-MM-dd&#39;)) &gt; 30;</code></pre>
-<p>– 方案二 表的自连接 注意思路</p>
-<pre><code class="sql">select sal from emp where sal not in (SELECT distinct a.sal from emp a join emp b on a.sal &lt; b.sal);</code></pre>
-<p>– 方案三 MAX</p>
-<pre><code class="sql">SELECT MAX(sal) from emp;</code></pre>
-
+          
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
@@ -781,11 +518,28 @@ group by
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/posts/archives/30597.html/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                tech-kuang-linux-01</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
         
           
-            <div class="post-nepre full next">
+            <div class="post-nepre half next">
           
-            <a href="/posts/archives/44545.html/" rel="next">
+            <a href="/posts/archives/42373.html/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
               </div>
@@ -793,7 +547,7 @@ group by
               Next Post</span>
               <div class="info">
                 <h3>
-                冷秋 | 书摘</h3>
+                tech-sql-02</h3>
                 <hr>
               </div>
             </a>
