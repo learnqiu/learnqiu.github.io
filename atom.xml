@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-11T11:17:46.817Z</updated>
+  <updated>2021-03-12T11:46:49.962Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习笔记：NSGA-II</title>
+    <link href="http://example.com/posts/archives/19218.html/"/>
+    <id>http://example.com/posts/archives/19218.html/</id>
+    <published>2021-03-12T08:03:57.000Z</published>
+    <updated>2021-03-12T11:46:49.962Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;学习笔记：NSGA-II算法&quot;&gt;&lt;a href=&quot;#学习笔记：NSGA-II算法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="NSGA-II" scheme="http://example.com/tags/NSGA-II/"/>
+    
+    <category term="遗传算法" scheme="http://example.com/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="pareto" scheme="http://example.com/tags/pareto/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tech-java-02</title>
+    <link href="http://example.com/posts/archives/5041.html/"/>
+    <id>http://example.com/posts/archives/5041.html/</id>
+    <published>2021-03-12T06:58:48.000Z</published>
+    <updated>2021-03-12T07:29:20.569Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-JAVA语言特性&quot;&gt;&lt;a href=&quot;#1-JAVA语言特性&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>01 - JAVA 及计算机相关入门知识点</title>
@@ -437,50 +489,6 @@
     
     
     <category term="hexo博客搭建" scheme="http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对hexo-sakura主题的回到顶部白猫图案进行自定义</title>
-    <link href="http://example.com/posts/archives/40028.html/"/>
-    <id>http://example.com/posts/archives/40028.html/</id>
-    <published>2020-12-20T07:35:28.000Z</published>
-    <updated>2020-12-23T13:47:26.852Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;对hexo-sakura主题的回到顶部白猫图案进行自定义&quot;&gt;&lt;a href=&quot;#对hexo-sakura主题的回到顶部白猫图案进行自定义&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="hexo博客美化" scheme="http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客上可以随便使用图片么？</title>
-    <link href="http://example.com/posts/archives/56930.html/"/>
-    <id>http://example.com/posts/archives/56930.html/</id>
-    <published>2020-12-19T11:51:42.000Z</published>
-    <updated>2020-12-23T13:47:26.716Z</updated>
-    
-    
-    <summary type="html">博客上可以随便使用图片么？</summary>
-    
-    
-    
-    <category term="随想" scheme="http://example.com/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-    <category term="博客如何正确使用图片" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87/"/>
     
   </entry>
   

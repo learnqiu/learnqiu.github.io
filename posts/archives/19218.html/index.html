@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">learnQIU</title>
+  <title itemprop="name">学习笔记：NSGA-II | learnQIU</title>
   
     <link rel="shortcut icon" href="/img/custom/Q.ico">
   
@@ -425,541 +425,216 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 0px;"></div>
-<div id="content" class="site-content">
-  
-  <div class="notice" style="margin-top:60px">
-    <i class="iconfont icon-notification">
-    </i>
-    <div class="notice-content"><!--源码注释冷秋博客开通了-->    
-      <!-- begin learnqiu 20201215 将通知模块换成一言api-->
-      <span id="hitokoto" style="margin-left:5px;"> :D 获取中...</span>
-      <p align="right" id="afrom"></p>
-      <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
-      <script>
-        fetch('https://v1.hitokoto.cn/?c=h')
-          .then(function (res){
-            return res.json();
-          })
-          .then(function (data) {
-            var hitokoto = document.getElementById('hitokoto');
-            var afrom = document.getElementById('afrom');
-            hitokoto.innerText = data.hitokoto;
-            afrom.innerText =  '——【' + data.from + ' ' + data.from_who + '】';
-          })
-          .catch(function (err) {
-            console.error(err);
-          })
-        </script>
-        <!-- end 上面内容替换通知模块-->        
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png);" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
     </div>
-  </div>
-  
-  <div class="top-feature-row">
-  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
-  <i class="fa fa-anchor" aria-hidden="true">
-  </i>
-  于冷秋</h1>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/startdash/wangshiwu.jpg">
-        </div>
-        <div class="info">
-          <h3>冷秋的博客</h3>
-          <p>技术服务</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="http://www.learnqiu.top/posts/archives/36200.html/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/learnqiulogo.png">
-        </div>
-        <div class="info">
-          <h3>冷秋的Vlog</h3>
-          <p>技术服务</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="http://www.learnqiu.top/posts/archives/41181.html/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/learnqiulogo.png">
-        </div>
-        <div class="info">
-          <h3>冷秋的Vlog</h3>
-          <p>技术服务</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      学习笔记：NSGA-II</h1>
+      <p class="entry-census">
+        <span>
+          <a href="learnqiu.top">
+            <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/custom/minecraft.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="learnqiu.top">learnqiu</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-3-12<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+       <!--20201222 开始添加字数统计-->
+       
+         <!--1222安装新增 文章字数统计-->
+<div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <!--1222安装 安装插件npm install hexo-wordcount --save -->
+        <span class="post-count">1.3k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">4分</span>
+      </span>
+    </span>
 </div>
+
+       
+      <!-- 添加完成 --> 		
+    
+    </header>
+  </div>
+
+<div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
-      <i class="fa fa-envira" aria-hidden="true"></i>
-      藏书阁</h1>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="学习笔记：NSGA-II算法"><a href="#学习笔记：NSGA-II算法" class="headerlink" title="学习笔记：NSGA-II算法"></a><strong>学习笔记：NSGA-II算法</strong></h1><p><strong>NSGA-II</strong>：基于 pareto 的改进非支配排序的遗传算法</p>
+<p>进行多目标优化时，通常面临多个目标函数无法同时达到最优的情况，为了解决这一矛盾，引入Pareto-Optimality的概念</p>
+<h2 id="Pareto-Optimality"><a href="#Pareto-Optimality" class="headerlink" title="Pareto-Optimality"></a><strong>Pareto-Optimality</strong></h2><p>通常，多目标优化的一般形式为：</p>
+<p><img src="https://i.loli.net/2021/03/12/7zMTJ3hXaIpykfq.png" alt="image-20210312193740258"></p>
+<p>经过处理，可以化为以下形式：</p>
+<p><img src="https://i.loli.net/2021/03/12/yHEFO9MlskRozj1.png" alt="image-20210312193917666"></p>
+<p>其中</p>
+<p><strong>f1(x),f2(x),…,fn(x)</strong></p>
+<p>为目标函数，其全部都是求最小值的形式</p>
+<p>以下针对两个目标函数进行讨论：</p>
+<p>有几个目标函数便为几维空间，有两个目标函数Time(f1(x)),Cost(f2(x)),</p>
+<p>可以画出图像：</p>
+<p><img src="https://i.loli.net/2021/03/12/zYNd9A7mXp2KeWt.png" alt="image-20210312194023160"></p>
+<p><img src="https://i.loli.net/2021/03/12/POzmEaYpKlFtyA1.png" alt="image-20210312194043832"></p>
+<p>随后引入几个概念：</p>
+<p><strong>非支配解</strong>：假设任何二解S1 及S2 对所有目标而言，S1均优于S2，则我们称S1 支配S2，若S1 的解没有被其他解所支配，则S1 称为非支配解（不受支配解），也称Pareto解</p>
+<p><strong>支配解</strong>：若解S2的所有目标均劣于S1，则称S1优于S2，也称S1支配S2</p>
+<p>，S2为受支配解。</p>
+<p>因此现在的首要任务是寻找解空间里面所有的Pareto解，找到所有Pareto解之后，这些解组成的平面叫做<strong>Pareto前沿面（Non-dominated front）</strong>。在目标函数较多时，前沿面通常为超曲面。</p>
+<h2 id="非支配解排序（Non-dominated-Sorting）"><a href="#非支配解排序（Non-dominated-Sorting）" class="headerlink" title="非支配解排序（Non-dominated Sorting）"></a>非支配解排序（Non-dominated Sorting）</h2><ol>
+<li><p>设所有解的集合为S，现从中找出非支配解集合，记为F1</p>
+</li>
+<li><p>令S=S-F1，从S中再找出非支配解集合，记为F2</p>
+</li>
+<li><p>重复第二步，直到S为空集</p>
+</li>
+</ol>
+<p>将每次找出的非支配解进行排序如下：</p>
+<p><strong>{F1,F2,…,Fn}</strong></p>
+<p>在途中画出Fi集合中对应点，并连线，则构成了n个pareto曲面，分别编号为Non-dominated Front 1，Non-dominated Front 2…</p>
+<p>以上述表格中数据为例：F1={A,B,D,F}, F2={C,E,D}, F3={H,I}</p>
+<p>画出相应图形：</p>
+<p><img src="https://i.loli.net/2021/03/12/GHtKpoiaV5Eylb1.png" alt="image-20210312194146155"></p>
+<p>在第一个前沿面上的解具有最大的适应度，序数越大则适应度越小。序号小的前沿面上的解可以支配序号大的前沿面上的解。</p>
+<h2 id="同一前沿面上解的排序-拥挤度（Crowding-Distances）"><a href="#同一前沿面上解的排序-拥挤度（Crowding-Distances）" class="headerlink" title="同一前沿面上解的排序-拥挤度（Crowding Distances）"></a>同一前沿面上解的排序-拥挤度（Crowding Distances）</h2><p>针对第一个前沿面来说，其中包含了A,B,D,F四个解，如何评判这四个解的适应度大小呢？由此引入了拥挤度的概念。</p>
+<p>拥挤度的计算：</p>
+<ol>
+<li><p>只考虑同一前沿面上的解，设定位于前沿面两端边界点的拥挤度为∞。</p>
+</li>
+<li><p>对于不在两端的点，其拥挤度主要与其相邻两个点有关</p>
+</li>
+</ol>
+<p><img src="https://i.loli.net/2021/03/12/2qmSwM4CHupINXz.png" alt="image-20210312194304152"></p>
+<p><strong>解i 的拥挤距离等于它在同一级相邻的两个解 i-1 与 i+1 总成的矩形的边长之和。</strong></p>
+<p><strong>拥挤度越小则对应该解越重要</strong></p>
+<p>比较通俗的理解：拥挤度越小就说明该解与其他解相似程度不高，保留拥挤度较小的点相当于保存了解的多样性</p>
+<p>所以说，确定解的适应度大小顺序应该先判断该解在哪个前沿面上，如果在同一个前沿面上，则再计算拥挤度进行判断</p>
+<h2 id="与遗传算法结合"><a href="#与遗传算法结合" class="headerlink" title="与遗传算法结合"></a>与遗传算法结合</h2><p>与普通遗传算法步骤大概相同，初始化随机取几个解，进行编码，交叉互换，突变生成子代</p>
+<p><strong>但是，在生成子代后，需要与父代混合，从中挑选出适应度较高的解重新形成子代，再进行新的一轮迭代。</strong></p>
+<p><strong>举例说明：</strong></p>
+<p><strong>1.针对一个两目标优化问题，初始化随机取出10个解记为F，经过计算得到子一代为P</strong></p>
+<p><strong>此时将P,F混合，形成新的解集S</strong></p>
+<p><strong>2.针对S，进行上面所介绍的非支配解排序，计算拥挤度，最终得出这12个解的适应度大小顺序，从中取适应度较大的10个点生成新的子代（维持和父代个数相同），带入算法进行新一轮迭代</strong></p>
+<p>子代父代混合筛选生成新的子代，好像叫做精英策略</p>
+<p><strong>任何启发式算法均有两个方面组成：加快收敛的操作和在收敛过程中保持解的多样性的操作，两种操作相互作用，以至于找到一个合适的收敛速度，减少计算时间，同时避免陷入局部最优</strong></p>
+<p>对于NSGA来说，其规则仍然符合这两个准则：</p>
+<ol>
+<li><p>本算法并不是只取最优的前沿面，而是将所有前沿面均纳入考虑范围内，是为了体现解的多样性，防止陷入局部最优</p>
+</li>
+<li><p>计算拥挤度是为了保存下来相似程度较低的解，保持解空间的多样性</p>
+</li>
+<li><p>使用精英策略是为了加速收敛，更快的除去劣解</p>
+</li>
+</ol>
+<hr>
+<p>以上内容转载自        知乎文章 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/125161075">NSGA2 遗传算法解决多目标优化 </a>      作者:<a target="_blank" rel="noopener" href="https://www.zhihu.com/people/uestc_auto">骑着象拔蚌环游</a></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/donate/AliPayQR1.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/donate/WeChanSQ.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- begin learnqiu: 20201215新增 文章末尾版权信息添加-->
+        
+        <!-- end -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/posts/archives/5041.html/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                tech-java-02</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "5OP5QaruBdEJ4SL0Xx4j3oEk-gzGzoHsz",
+        appKey: "pjqBQAhK38HG6fE4Sg2YHjsw",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-  <div class="post-thumb">
-    <a href="/posts/archives/41181.html/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2021-1-4 20:01</div>
-      <a href="/posts/archives/41181.html/" class="post-title">
-        <h3>致2020</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E5%89%A7%E9%9B%86/">剧集<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/posts/archives/41181.html/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="learnqiu.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/custom/minecraft.jpg" itemprop="image" alt="learnqiu" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="learnqiu.top" itemprop="url" rel="author">learnqiu</a>
+            </h3>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/posts/archives/48313.html/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2021-1-4 19:01</div>
-      <a href="/posts/archives/48313.html/" class="post-title">
-        <h3>转载：将hexo博客部署到CentOS个人云服务器</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo博客搭建<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/posts/archives/48313.html/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/posts/archives/36200.html/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-12-29 16:12</div>
-      <a href="/posts/archives/36200.html/" class="post-title">
-        <h3>晚归记-冷秋的第一个Vlog</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E5%89%A7%E9%9B%86/">剧集<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/posts/archives/36200.html/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/posts/archives/45480.html/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-12-26 22:12</div>
-      <a href="/posts/archives/45480.html/" class="post-title">
-        <h3>2021 考研加油</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E9%9A%8F%E6%83%B3/">随想<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E9%9A%8F%E6%83%B3/">随想</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/posts/archives/45480.html/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/posts/archives/31864.html/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-12-25 17:12</div>
-      <a href="/posts/archives/31864.html/" class="post-title">
-        <h3>对hexo-sakura主题的鼠标指针图案进行自定义</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/">hexo博客美化<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/posts/archives/31864.html/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/posts/archives/48697.html/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-12-23 21:12</div>
-      <a href="/posts/archives/48697.html/" class="post-title">
-        <h3>hexo博客优化记录</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/">hexo博客美化<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/posts/archives/48697.html/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/posts/archives/60549.html/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-12-23 19:12</div>
-      <a href="/posts/archives/60549.html/" class="post-title">
-        <h3>hexo博客踩坑记录</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo博客搭建<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/posts/archives/60549.html/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/posts/archives/4152.html/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-12-21 21:12</div>
-      <a href="/posts/archives/4152.html/" class="post-title">
-        <h3>在实验室追完一部剧之后，我决定写一篇检讨</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E5%89%A7%E9%9B%86/">剧集<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/posts/archives/4152.html/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/posts/archives/51011.html/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-12-21 16:12</div>
-      <a href="/posts/archives/51011.html/" class="post-title">
-        <h3>用Python的you-get工具下载b站视频</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/posts/archives/51011.html/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/posts/archives/46522.html/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-12-21 16:12</div>
-      <a href="/posts/archives/46522.html/" class="post-title">
-        <h3>hexo博客搭建记录</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo博客搭建<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/posts/archives/46522.html/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-
-    </main>
-      <!-- 首页默认取最最新文章集 -->
-    <!-- 
-      <nav class="navigator">
-        
-        <a class="extend prev" rel="prev" href="/">&lt;i class&#x3D;&quot;iconfont icon-back&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">&lt;i class&#x3D;&quot;iconfont icon-right&quot;&gt;&lt;&#x2F;i&gt;</a>
-      </nav>
-     -->
-  </div>
-  
-    <div id="pagination"><a href="/page/3/" class="">Previous</a></div>
-  
+        <hr>
+        <p><i class="iconfont icon-write"></i>冷秋</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
-<!--learnqiu: 20201217新增 加入聊天系统DaoVoice-->
-<!--DaoVoice服务http://blog.daovoice.io/-->
-<!--learnqiu: 20201217新增 加入聊天系统DaoVoice-->
 
-    <script>(function (i, s, o, g, r, a, m) {
-        i['DaoVoiceObject'] = r;
-        i[r] = i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          };
-        i[r].l = 1 * new Date();
-        a = s.createElement(o);
-        m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        a.charset = 'utf-8';
-        m.parentNode.insertBefore(a, m);
-      })(window, document, 'script', ('https:' === document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/e83fcbf4.js", 'daovoice');
-      daovoice('init', {
-        app_id: "e83fcbf4",
-      });
-      daovoice('update');
-    </script>
-  
-  
 
     </div>    
     <div class="ins-search">
