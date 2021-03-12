@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">tech-java-02 | learnQIU</title>
+  <title itemprop="name">学习笔记：JavaSE 基础知识 | learnQIU</title>
   
     <link rel="shortcut icon" href="/img/custom/Q.ico">
   
@@ -435,7 +435,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      tech-java-02</h1>
+      学习笔记：JavaSE 基础知识</h1>
       <p class="entry-census">
         <span>
           <a href="learnqiu.top">
@@ -459,7 +459,7 @@
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
         <!--1222安装 安装插件npm install hexo-wordcount --save -->
-        <span class="post-count">390字</span>
+        <span class="post-count">1.2k字</span>
       </span>
     </span>
 
@@ -468,7 +468,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">4分</span>
       </span>
     </span>
 </div>
@@ -487,15 +487,59 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="1-JAVA语言特性"><a href="#1-JAVA语言特性" class="headerlink" title="1.JAVA语言特性"></a>1.JAVA语言特性</h2><p><strong>简单性</strong>：底层是C++实现，但是JAVA不需要操作指针，且为单继承，简单很多</p>
+          <h1 id="学习笔记：JavaSE-基础知识"><a href="#学习笔记：JavaSE-基础知识" class="headerlink" title="学习笔记：JavaSE 基础知识"></a>学习笔记：JavaSE 基础知识</h1><h2 id="Java-开发环境搭建"><a href="#Java-开发环境搭建" class="headerlink" title="Java 开发环境搭建"></a>Java 开发环境搭建</h2><h3 id="1-Java基本特性"><a href="#1-Java基本特性" class="headerlink" title="1.Java基本特性"></a>1.Java基本特性</h3><p><strong>简单性</strong>：底层是C++实现，但是JAVA不需要操作指针，且为单继承，简单很多</p>
 <p><strong>面向对象</strong>：JAVA提供了封装、继承、多态机制</p>
 <p><strong>健壮性</strong>：JAVA有GC机制</p>
 <p><strong>跨平台</strong>：JVM屏蔽了操作系统间的差异。一次编译，到处运行。</p>
-<h2 id="2-JDK-JRE-JVM之间的关系"><a href="#2-JDK-JRE-JVM之间的关系" class="headerlink" title="2.JDK,JRE,JVM之间的关系"></a>2.JDK,JRE,JVM之间的关系</h2><p><strong>JDK</strong>:JAVA软件开发工具包，开发人员必须安装的，不同操作系统需要安装不同的的JDK，安装完成后会自动安装对应系统的JRE和JVM。</p>
+<h3 id="2-JDK-JRE-JVM之间的关系"><a href="#2-JDK-JRE-JVM之间的关系" class="headerlink" title="2.JDK,JRE,JVM之间的关系"></a>2.JDK,JRE,JVM之间的关系</h3><p><strong>JDK</strong>:JAVA软件开发工具包，开发人员必须安装的，不同操作系统需要安装不同的的JDK，安装完成后会自动安装对应系统的JRE和JVM。</p>
 <p><strong>JRE</strong>:JAVA运行时环境，包含了运行JVM标准实现和JAVA核心类库</p>
 <p><strong>JVM</strong>:JAVA虚拟机，用于java跨平台。</p>
-<h2 id="3-JAVA程序的加载和运行"><a href="#3-JAVA程序的加载和运行" class="headerlink" title="3.JAVA程序的加载和运行"></a>3.JAVA程序的加载和运行</h2><p>分为<strong>编译</strong>和<strong>运行</strong>两个阶段，可以在不同的操作系统分别进行编译和运行，一次编译，到处运行。</p>
-<p>程序员编写的.java结尾的文件称为JAVA源文件，使用JDK中的javac.exe程序可以对源文件进行编译操作，程序有语法错误则编译失败，编译成功则生成一个或多个.class文件，称为<strong>字节码文件</strong>。字节码文件不是二进制文件，否则操作系统就可以进行识别执行了。生成的字节码文件，可通过JRE中的java.exe程序进行执行，在运行阶段，首先类加载器会将字节码文件加载到JVM中，JVM将字节码文件解释称为可以供操作系统解释执行的二进制文件。</p>
+<h3 id="3-JAVA程序的加载和运行"><a href="#3-JAVA程序的加载和运行" class="headerlink" title="3.JAVA程序的加载和运行"></a>3.JAVA程序的加载和运行</h3><p>分为<strong>编译</strong>和<strong>运行</strong>两个阶段，可以在不同的操作系统分别进行编译和运行，一次编译，到处运行。</p>
+<p>程序员编写的.java结尾的文件称为JAVA源文件，使用<strong>JDK中的javac.exe</strong>程序可以对源文件进行编译操作，程序有语法错误则编译失败，编译成功则生成一个或多个.class文件，称为<strong>字节码文件</strong>。<strong>字节码文件不是二进制文件</strong>，否则操作系统就可以进行识别执行了。生成的字节码文件，可通过<strong>JRE中的java.exe</strong>程序进行执行，在运行阶段，首先类加载器会将字节码文件加载到JVM中，JVM将字节码文件解释称为可以供操作系统解释执行的二进制文件。</p>
+<h3 id="4-JDK的bin目录"><a href="#4-JDK的bin目录" class="headerlink" title="4.JDK的bin目录"></a>4.JDK的bin目录</h3><p>​    bin目录下存放的都是运行Java程序相关的命令。</p>
+<p><img src="https://i.loli.net/2021/03/12/Rgk7nz6VAUtL8vK.png" alt="image-20210312201945476"></p>
+<p>图中包含 java.exe 和 javac.exe的安装位置</p>
+<h3 id="5-编写第一个程序"><a href="#5-编写第一个程序" class="headerlink" title="5.编写第一个程序"></a>5.编写第一个程序</h3><p>新建一个文件HelloWorld.java。写入如下内容。</p>
+<pre><code class="java">public class HelloWorld&#123;
+    public static void main(String[] args)&#123;
+        System.out.println(&quot;Hello World&quot;);
+    &#125;
+&#125;</code></pre>
+<p><strong>程序编译及运行操作</strong></p>
+<p><img src="https://i.loli.net/2021/03/12/P7IOBlsNcUJz81k.png" alt="image-20210312203939922"></p>
+<p>将java源文件放到jdk/bin目录，可以直接运行javac命令，说明<strong>windows 操作系统默认是从当前所在的路径下查找可执行命令文件的</strong></p>
+<p>-》将javac.exe所在路径添加到系统的环境变量中</p>
+<p><strong>windows 操作系统到底是如何搜索命令文件的呢？</strong></p>
+<p>​        实际上它会先在当前路径下找，找不到的时候会自动去环境变量path 的路径中查找，找到则执行该命令，找不到则在DOS 窗口中提示错误信息。</p>
+<p>执行java命令时，只能用 <strong>Java+类名</strong>的方式，如：java HelloWorld</p>
+<p>执行后，启动类加载器，类加载器将.class字节码文件装载到JVM中。</p>
+<p><strong>关于Java命令</strong></p>
+<p><strong>1.默认情况下类加载器只从当前路径下查找；</strong></p>
+<p><strong>2.当设置环境变量classpath=E:\的时候，类加载器只去E:\目录下加载class 文件了，不再从当前目录下加载，也不会去其它目录下加载；</strong></p>
+<p><strong>3.若配置为classpath=.;xxxx.jar，它表示的含义是类加载器可以从当前路径下加载，也可以去指定的jar 包中加载字节码文件了</strong></p>
+<p>所以一般执行时，都先用cd命令切换到字节码所在的路径，在进行java命令的执行。</p>
+<h3 id="6-Java的注释的三种方式"><a href="#6-Java的注释的三种方式" class="headerlink" title="6.Java的注释的三种方式"></a>6.Java的注释的三种方式</h3><p>Java 语言的注释包括三种方式，它们分别是：</p>
+<p><strong>第一种：单行注释</strong>，语法格式如下：</p>
+<pre><code class="java">// 单行注释，两个正斜杠后面的内容被注释</code></pre>
+<p><strong>第二种：多行注释</strong>，语法格式如下：</p>
+<pre><code class="java">/*
+* 这里的注释信息为多行注释：
+* 第1 行注释信息
+* 第2 行注释信息
+*/</code></pre>
+<p><strong>第三种：javadoc 注释。</strong></p>
+<p>注意：对于javadoc 注释来说，这里的注释会被JDK bin 目录下的javadoc.exe 命令解析并生成帮助文档（生成帮助文档后期做项目的时候大家会接触到的）。</p>
+<pre><code>/**
+* 这里的信息是javadoc 注释
+* @author 作者名字
+* @version 版本号
+* @since 自从哪个版本号开始就存在了
+*/</code></pre>
+<p>注意：对于javadoc 注释来说，这里的注释会被JDK bin 目录下的<strong>javadoc.exe 命令解析并生成帮助文档</strong>（生成帮助文档后期做项目的时候大家会接触的）。</p>
+<p>7.public class 和 class的区别（掌握）</p>
+<p>1）一个java 源文件中可以定义多个class，并且在编译的时候一个class 会对应编译生成一个class 字节码文件。</p>
+<p>2）如果定义public class的类，只能定义一个，并且要求此类名必须和java源文件名保持一致。</p>
+<p>3）任何一个class中都可以设定程序入口，也就是说任何一个class中都可以写main方法（主方法）,想从哪个入口进去执行，则让类加载器先加载对应的类即可。</p>
 
         </div>
         <!-- .entry-content -->
