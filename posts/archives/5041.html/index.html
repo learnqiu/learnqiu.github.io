@@ -459,7 +459,7 @@
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
         <!--1222安装 安装插件npm install hexo-wordcount --save -->
-        <span class="post-count">1.2k字</span>
+        <span class="post-count">2.2k字</span>
       </span>
     </span>
 
@@ -468,7 +468,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
+        <span class="post-count">7分</span>
       </span>
     </span>
 </div>
@@ -487,7 +487,7 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="学习笔记：JavaSE-基础知识"><a href="#学习笔记：JavaSE-基础知识" class="headerlink" title="学习笔记：JavaSE 基础知识"></a>学习笔记：JavaSE 基础知识</h1><h2 id="Java-开发环境搭建"><a href="#Java-开发环境搭建" class="headerlink" title="Java 开发环境搭建"></a>Java 开发环境搭建</h2><h3 id="1-Java基本特性"><a href="#1-Java基本特性" class="headerlink" title="1.Java基本特性"></a>1.Java基本特性</h3><p><strong>简单性</strong>：底层是C++实现，但是JAVA不需要操作指针，且为单继承，简单很多</p>
+          <h1 id="学习笔记：JavaSE-基础知识"><a href="#学习笔记：JavaSE-基础知识" class="headerlink" title="学习笔记：JavaSE 基础知识"></a>学习笔记：JavaSE 基础知识</h1><h2 id="一、Java-开发环境搭建"><a href="#一、Java-开发环境搭建" class="headerlink" title="一、Java 开发环境搭建"></a>一、Java 开发环境搭建</h2><h3 id="1-Java基本特性"><a href="#1-Java基本特性" class="headerlink" title="1.Java基本特性"></a>1.Java基本特性</h3><p><strong>简单性</strong>：底层是C++实现，但是JAVA不需要操作指针，且为单继承，简单很多</p>
 <p><strong>面向对象</strong>：JAVA提供了封装、继承、多态机制</p>
 <p><strong>健壮性</strong>：JAVA有GC机制</p>
 <p><strong>跨平台</strong>：JVM屏蔽了操作系统间的差异。一次编译，到处运行。</p>
@@ -536,10 +536,70 @@
 * @since 自从哪个版本号开始就存在了
 */</code></pre>
 <p>注意：对于javadoc 注释来说，这里的注释会被JDK bin 目录下的<strong>javadoc.exe 命令解析并生成帮助文档</strong>（生成帮助文档后期做项目的时候大家会接触的）。</p>
-<p>7.public class 和 class的区别（掌握）</p>
-<p>1）一个java 源文件中可以定义多个class，并且在编译的时候一个class 会对应编译生成一个class 字节码文件。</p>
+<h2 id="7-public-class-和-class的区别（掌握）"><a href="#7-public-class-和-class的区别（掌握）" class="headerlink" title="7.public class 和 class的区别（掌握）"></a>7.public class 和 class的区别（掌握）</h2><p>1）一个java 源文件中可以定义多个class，并且在编译的时候一个class 会对应编译生成一个class 字节码文件。</p>
 <p>2）如果定义public class的类，只能定义一个，并且要求此类名必须和java源文件名保持一致。</p>
 <p>3）任何一个class中都可以设定程序入口，也就是说任何一个class中都可以写main方法（主方法）,想从哪个入口进去执行，则让类加载器先加载对应的类即可。</p>
+<h2 id="二、标识符与关键字"><a href="#二、标识符与关键字" class="headerlink" title="二、标识符与关键字"></a>二、标识符与关键字</h2><h3 id="1-标识符含义"><a href="#1-标识符含义" class="headerlink" title="1.标识符含义"></a>1.标识符含义</h3><p>标识符是指用来标识某个实体的一个符号，用于给变量、常量、函数、语句<br>块等命名。如下：</p>
+<ul>
+<li>类名，例如：Student 学生类、User 用户类、Product 商品类、Order 订单类等。</li>
+<li>接口名，例如：Runable 可运行的、Comparable 可比较的等。</li>
+<li>变量名，例如：name 名字、age 年龄、birth 生日、length 长度等。</li>
+<li>方法名，例如：login 登录、logout 登出、eat 吃、drink 喝等。</li>
+<li>常量名，例如：LOGIN_SUCCESS、ACCESS_TOKEN 等。</li>
+</ul>
+<h3 id="2-标识符命名规则（掌握）"><a href="#2-标识符命名规则（掌握）" class="headerlink" title="2.标识符命名规则（掌握）"></a>2.标识符命名规则（掌握）</h3><ul>
+<li>标识符<strong>只能由数字、字母、下划线“_”、美元符号“$”组成</strong>，不能含有其它符号。</li>
+<li>标识符<strong>不能以数字开始</strong>。</li>
+<li>java 关键字和保留字不能作为标识符。</li>
+<li>标识符严格区分大小写。</li>
+<li>标识符理论上没有长度限制。</li>
+</ul>
+<p>注意：<strong>汉字也是合法的标识符</strong>，比如：字</p>
+<h3 id="3-标识符命名规范（掌握）"><a href="#3-标识符命名规范（掌握）" class="headerlink" title="3.标识符命名规范（掌握）"></a>3.标识符命名规范（掌握）</h3><ul>
+<li>见名知意</li>
+<li>驼峰命名方式</li>
+<li>类名、接口名<strong>首字母大写</strong>，后面每个单词首字母大写，这是遵守驼峰命名方式的；</li>
+<li>变量名、方法名<strong>首字母小写</strong>，后面每个单词首字母大写，这也是遵守驼峰命名方式的；</li>
+<li><strong>常量名全部大写</strong>，单词和单词之间使用“_”衔接，为了表示清楚含义，不要怕单词长，例如：INT_MAX_VALUE 则表示int 类型最大值</li>
+</ul>
+<h3 id="4-关键字"><a href="#4-关键字" class="headerlink" title="4.关键字"></a>4.关键字</h3><p>关键字指编程语言中事先定义的，有特殊意义的单词。java中所有关键字都是小写的英语单词。比如：public、class、static、void 等。不需要死记硬背，编程过程中逐渐会认识。</p>
+<h2 id="三、变量"><a href="#三、变量" class="headerlink" title="三、变量"></a>三、变量</h2><h3 id="1-字面量（理解）"><a href="#1-字面量（理解）" class="headerlink" title="1.字面量（理解）"></a>1.字面量（理解）</h3><p><strong>字面量就是数据/数值</strong>。生活中每天都会接触到数据，软件其实就是为了解决现实生活当中的问题，处理生活当中的数据，Java程序通过字面量来表示数据。</p>
+<p>Java规定：</p>
+<p><strong>字符型字面量必须用半角单引号括起来</strong> ，比如’a’,’中‘</p>
+<p><strong>字符串型字面量必须使用半角双引号括起来</strong>，比如“中国“</p>
+<h3 id="2-变量（理解）"><a href="#2-变量（理解）" class="headerlink" title="2.变量（理解）"></a>2.变量（理解）</h3><p><strong>变量是内存中存储数据最基本的单元</strong></p>
+<p><strong>变量三要素：数据类型、变量名、存储的值</strong></p>
+<p><img src="https://i.loli.net/2021/03/13/bd5fWMLtK8iksVD.png" alt="image-20210313134754047"></p>
+<h3 id="3-使用变量（掌握）"><a href="#3-使用变量（掌握）" class="headerlink" title="3.使用变量（掌握）"></a>3.<strong>使用变量（掌握）</strong></h3><p><strong>语法格式：</strong> </p>
+<p>​                 数据类型 变量名；</p>
+<p><strong>变量赋值：</strong></p>
+<p>​                变量名= 值；</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>在同一个大括号当中不能同时多个同名的变量</li>
+<li>变量必须先声明，然后才能使用</li>
+</ul>
+<h3 id="4-变量分类（了解）"><a href="#4-变量分类（了解）" class="headerlink" title="4.变量分类（了解）"></a><strong>4.变量分类（了解）</strong></h3><p>变量根据声明的位置不同，可分为<strong>局部变量和成员变量</strong></p>
+<p><strong>局部变量</strong>：在方法体中声明以及方法的每一个参数都是局部变量</p>
+<p><strong>成员变量</strong>：在方法体外，类体内声明的变量称为成员变量</p>
+<ul>
+<li>成员变量声明时如果使用static关键字修饰的为静态成员变量，简称<strong>静态变量</strong></li>
+<li>如果没有static关键字修饰的则为实例成员变量，简称<strong>实例变量</strong></li>
+</ul>
+<h3 id="5-变量作用域"><a href="#5-变量作用域" class="headerlink" title="5.变量作用域"></a>5.变量作用域</h3><p><strong>变量的作用域就是变量的有效范围。</strong>、</p>
+<p><strong>口诀</strong>：出了大括号就不认识了</p>
+<h2 id="四、数据类型"><a href="#四、数据类型" class="headerlink" title="四、数据类型"></a>四、数据类型</h2><h3 id="1-数据类型概述（理解）"><a href="#1-数据类型概述（理解）" class="headerlink" title="1.数据类型概述（理解）"></a>1.数据类型概述（理解）</h3><p>数据类型的作用就是<strong>决定程序运行阶段该给变量分配多大的内存空间</strong>。</p>
+<p>数据类型分为<strong>基本数据类型</strong>和<strong>引用数据类型</strong>。</p>
+<p>基本数据类型分为4类8种：</p>
+<ul>
+<li>第1 类：<strong>整数型</strong>（不带小数的数字）：byte,short,int,long</li>
+<li>第2 类：<strong>浮点型</strong>（带小数的数字）：float,double</li>
+<li>第3 类：<strong>字符型</strong>（文字，单个字符）：char</li>
+<li>第4 类：<strong>布尔型</strong>（真和假）：boolean</li>
+</ul>
+<p>字符串属于引用数据类型。</p>
+<p>八种基本数据类型详细信息如下：</p>
+<p><img src="https://i.loli.net/2021/03/13/lqXx7hODKY4kLwH.png" alt="image-20210313141052276"></p>
 
         </div>
         <!-- .entry-content -->
