@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-12T11:56:28.433Z</updated>
+  <updated>2021-03-20T12:07:29.332Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,108 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习笔记：JavaWeb</title>
+    <link href="http://example.com/posts/archives/39768.html/"/>
+    <id>http://example.com/posts/archives/39768.html/</id>
+    <published>2021-03-20T11:37:55.000Z</published>
+    <updated>2021-03-20T12:07:29.332Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;学习笔记：JavaWeb&quot;&gt;&lt;a href=&quot;#学习笔记：JavaWeb&quot; class=&quot;headerlink&quot; title=&quot;学习笔记：JavaWeb&quot;&gt;&lt;/a&gt;学习笔记：JavaWeb&lt;/h1&gt;&lt;h2 id=&quot;1-基本概念&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="JavaWeb" scheme="http://example.com/tags/JavaWeb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学习笔记：网络编程</title>
+    <link href="http://example.com/posts/archives/50819.html/"/>
+    <id>http://example.com/posts/archives/50819.html/</id>
+    <published>2021-03-18T06:33:13.000Z</published>
+    <updated>2021-03-20T11:29:00.355Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;网络编程&quot;&gt;&lt;a href=&quot;#网络编程&quot; class=&quot;headerlink&quot; title=&quot;网络编程&quot;&gt;&lt;/a&gt;网络编程&lt;/h1&gt;&lt;h2 id=&quot;1-1-概述&quot;&gt;&lt;a href=&quot;#1-1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.1</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="计算机网络" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遗传算法求解车间调度问题（附MATLAB代码）</title>
+    <link href="http://example.com/posts/archives/11111.html/"/>
+    <id>http://example.com/posts/archives/11111.html/</id>
+    <published>2021-03-17T07:35:57.000Z</published>
+    <updated>2021-03-17T08:50:52.496Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;遗传算法操作流程&quot;&gt;&lt;a href=&quot;#遗传算法操作流程&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="遗传算法" scheme="http://example.com/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="车间调度问题" scheme="http://example.com/tags/%E8%BD%A6%E9%97%B4%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试相关</title>
+    <link href="http://example.com/posts/archives/18618.html/"/>
+    <id>http://example.com/posts/archives/18618.html/</id>
+    <published>2021-03-17T05:47:49.000Z</published>
+    <updated>2021-03-17T05:54:08.292Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;作者：shopee新加坡内推&lt;br&gt;链接：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="面试" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>学习笔记：NSGA-II</title>
@@ -393,104 +495,6 @@
     
     
     <category term="hexo博客美化" scheme="http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo博客踩坑记录</title>
-    <link href="http://example.com/posts/archives/60549.html/"/>
-    <id>http://example.com/posts/archives/60549.html/</id>
-    <published>2020-12-23T11:22:01.000Z</published>
-    <updated>2021-01-04T12:00:50.184Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;hexo博客踩坑记录&quot;&gt;&lt;a href=&quot;#hexo博客踩坑记录&quot; class=&quot;headerlink&quot; title=&quot;hexo博客踩坑记录&quot;&gt;&lt;/a&gt;hexo博客踩坑记录&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="hexo博客搭建" scheme="http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在实验室追完一部剧之后，我决定写一篇检讨</title>
-    <link href="http://example.com/posts/archives/4152.html/"/>
-    <id>http://example.com/posts/archives/4152.html/</id>
-    <published>2020-12-21T13:34:10.000Z</published>
-    <updated>2020-12-23T13:47:26.735Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;在实验室追完一部剧之后，我决定写一篇检讨&quot;&gt;&lt;a href=&quot;#在实验室追完一部剧之后，我决定写一篇检讨&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="生活" scheme="http://example.com/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-    <category term="剧集" scheme="http://example.com/tags/%E5%89%A7%E9%9B%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用Python的you-get工具下载b站视频</title>
-    <link href="http://example.com/posts/archives/51011.html/"/>
-    <id>http://example.com/posts/archives/51011.html/</id>
-    <published>2020-12-21T08:47:42.000Z</published>
-    <updated>2020-12-23T13:47:26.955Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;用Python的you-get工具下载b站视频&quot;&gt;&lt;a href=&quot;#用Python的you-get工具下载b站视频&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>hexo博客搭建记录</title>
-    <link href="http://example.com/posts/archives/46522.html/"/>
-    <id>http://example.com/posts/archives/46522.html/</id>
-    <published>2020-12-21T08:11:12.000Z</published>
-    <updated>2021-03-09T13:41:41.734Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;1-hexo博客搭建记录&quot;&gt;&lt;a href=&quot;#1-hexo博客搭建记录&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="hexo博客搭建" scheme="http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
