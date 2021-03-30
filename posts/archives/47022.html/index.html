@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">讯飞面经 | learnQIU</title>
+  
+    <link rel="shortcut icon" href="/img/custom/Q.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <!--去掉引用 20201223使用fancybox <link rel="stylesheet" href="/css/zoom.css" media="all"> -->
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "冷秋";
+  mashiro_option.author_name = "冷秋";
+  mashiro_option.site_url = "https://www.learnqiu.top";
+  mashiro_option.v_appId = "5OP5QaruBdEJ4SL0Xx4j3oEk-gzGzoHsz";
+  mashiro_option.v_appKey = "pjqBQAhK38HG6fE4Sg2YHjsw";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://i.loli.net/2020/12/19/iDyzT2xQ1CeOMSH.jpg,https://i.loli.net/2020/12/24/sgdHX3WzflNymKL.png".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+  <!--learnqiu: 20201215新增 添加标题恶搞-->
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/hititle.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="learnQIU" type="application/atom+xml">
+</head>
+
+<!-- learnqiu 20201215加入 鼠标特效、背景特效 -->
+<!-- 鼠标滑动出现星星飘带 --><script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/xuehua.js"></script>
+<!-- 点击出现爱心 --><!-- 未启用 <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script> -->
+<!-- 背景樱花飘落 --><!-- 未启用 <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script> -->
+<!-- learnqiu 20201215加入 禁用某些按钮 目前测试无效果 -->
+<!-- <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/noSomeKey.js"></script> -->
+<!-- learnqiu 20201215加入 画板娘 -->
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<!-- learnqiu 20201215 加入预加载 -->
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<!-- learnqiu 20201215 添加计数 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a target="_blank" rel="noopener" href="https://www.learnqiu.top">
+          <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/minecraft.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>while(!dead) { study(); }</p>
+        <!-- learnqiu 20201215加入 今日诗词 -->
+        <!-- 未启用 <p id="jinrishici-sentence">正在加载今日诗词....</p>
+        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
+        <!-- 添加上面的两句 -->
+        <div class="top-social_v2">
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="/" target="_blank" class="social-github" title="sina">
+                    <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/social/sina.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="/" target="_blank" class="social-github" title="wangyiyun">
+                    <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="/" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="/" target="_blank" class="social-github" title="email">
+                    <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/social/email.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono"></span>
+            <span class="shironeko"><!--冷秋--></span>
+          </a>
+          <a target="_blank" rel="noopener" href="https://www.learnqiu.top"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.4.5/img/custom/sitelogo2.png"></a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E7%94%9F%E6%B4%BB/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E8%B5%84%E6%BA%90/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E9%9A%8F%E6%83%B3/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E8%BD%AC%E8%BD%BD/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/">
+                          <i class="fa fa-tag" aria-hidden="true"></i>
+                          标签
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/">
+                          <i class="fa fa-bookmark" aria-hidden="true"></i>
+                          分类
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/%E6%82%A6%E8%AF%BB/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/%E5%9B%BE%E9%9B%86/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/gallery/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          相册
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/shuoshuo/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-commenting-o fa-commenting" aria-hidden="true"></i>
+                    说说
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png);" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      讯飞面经</h1>
+      <p class="entry-census">
+        <span>
+          <a href="learnqiu.top">
+            <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/custom/minecraft.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="learnqiu.top">learnqiu</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-3-28<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+       <!--20201222 开始添加字数统计-->
+       
+         <!--1222安装新增 文章字数统计-->
+<div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <!--1222安装 安装插件npm install hexo-wordcount --save -->
+        <span class="post-count">9.5k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">35分</span>
+      </span>
+    </span>
+</div>
+
+       
+      <!-- 添加完成 --> 		
+    
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="讯飞面经"><a href="#讯飞面经" class="headerlink" title="讯飞面经"></a><strong>讯飞面经</strong></h1><p>作者：好圆<br>链接：<a target="_blank" rel="noopener" href="https://www.nowcoder.com/discuss/605305?channel=-1&amp;source_id=profile_follow_post_nctrack">https://www.nowcoder.com/discuss/605305?channel=-1&amp;source_id=profile_follow_post_nctrack</a><br>来源：牛客网</p>
+<h2 id="面经01"><a href="#面经01" class="headerlink" title="面经01"></a>面经01</h2><p>  <strong>1.OSI七层模型介绍</strong> </p>
+<p>​     OSI七层模型是国际标准化组织（ISO）制定的一个用于计算机或通讯系统间互联的标准体系</p>
+<p><img src="https://i.loli.net/2021/03/29/RBFzs9CSiw7vYnM.png" alt="image-20210329090806979"></p>
+<p><img src="https://i.loli.net/2021/03/29/UZhFOy8wCJxSN6k.png" alt="image-20210329090855798"></p>
+<p><strong>应用层</strong>：为计算机用户<strong>提供应用接口</strong>，也为用户直接<strong>提供各种网络服务</strong>。</p>
+<p><strong>表示层</strong>：提供各种用于<strong>应用层数据的编码和转换</strong>功能,确保一个系统的应用层发送的数据能被另一个系统的应用层识别。</p>
+<p><strong>会话层</strong>：就是负责<strong>建立、管理和终止表示层实体之间的通信会话</strong>。</p>
+<p><strong>传输层</strong>：建立了<strong>主机端到端的链接</strong>。</p>
+<p><strong>网络层</strong>：通过<strong>IP寻址来建立两个节点之间的连接</strong>。</p>
+<p><strong>数据链路层</strong> ：<strong>将比特组合成字节,再将字节组合成帧</strong>,使用链路层地址 (以太网使用MAC地址)来访问介质,并进行差错检测。</p>
+<p><strong>物理层</strong> ： 实际<strong>最终信号的传输</strong>是通过物理层实现的。</p>
+<p>  <strong>2.Java八种基本数据类型</strong> </p>
+<p>​     byte、short、int、long、float、double、boolean、char</p>
+<p><img src="https://i.loli.net/2021/03/29/cmEWlG5y1YesoCF.png" alt="image-20210329091729040"></p>
+<p>  <strong>3.Java常用的容器类介绍</strong> </p>
+<p>​          Java 集合框架主要包括两种类型的容器，一种是集合（Collection），存储一个元素集合，另一种是图（Map），存储键/值对映射。</p>
+<p> <strong>Collection</strong>：一个独立元素的序列，这些元素都服从一条或者多条规则。</p>
+<p>​                            (<strong>list有序可重复，set无序不可重复</strong>)</p>
+<p> <strong>Map</strong>：一组成对的“键值对”对象，允许你使用键来查找值。</p>
+<p><strong>继承结构图</strong></p>
+<p><img src="https://i.loli.net/2021/03/29/uWyRbEaz24c7xpP.png" alt="image-20210329094244703"></p>
+<p><img src="https://i.loli.net/2021/03/29/EYMhBHZ5Kp9cxRf.png" alt="image-20210329094315156"></p>
+<p><strong>遍历方法</strong></p>
+<pre><code class="java">import java.util.*;
+
+public class Test&#123;
+ public static void main(String[] args) &#123;
+     List&lt;String&gt; list=new ArrayList&lt;String&gt;();
+     list.add(&quot;Hello&quot;);
+     list.add(&quot;World&quot;);
+     list.add(&quot;HAHAHAHA&quot;);
+     //第一种遍历方法使用 For-Each 遍历 List
+     for (String str : list) &#123;            //也可以改写 for(int i=0;i&lt;list.size();i++) 这种形式
+        System.out.println(str);
+     &#125;
+
+     //第二种遍历，把链表变为数组相关的内容进行遍历
+     String[] strArray=new String[list.size()];
+     list.toArray(strArray);
+     for(int i=0;i&lt;strArray.length;i++) //这里也可以改写为  for(String str:strArray) 这种形式
+     &#123;
+        System.out.println(strArray[i]);
+     &#125;
+
+    //第三种遍历 使用迭代器进行相关遍历
+     Iterator&lt;String&gt; ite=list.iterator();
+     while(ite.hasNext())//判断下一个元素之后有值
+     &#123;
+         System.out.println(ite.next());
+     &#125;
+ &#125;
+&#125;</code></pre>
+<pre><code class="java">import java.util.*;
+
+public class Test&#123;
+     public static void main(String[] args) &#123;
+      Map&lt;String, String&gt; map = new HashMap&lt;String, String&gt;();
+      map.put(&quot;1&quot;, &quot;value1&quot;);
+      map.put(&quot;2&quot;, &quot;value2&quot;);
+      map.put(&quot;3&quot;, &quot;value3&quot;);
+
+      //第一种：普遍使用，二次取值
+      System.out.println(&quot;通过Map.keySet遍历key和value：&quot;);
+      for (String key : map.keySet()) &#123;
+       System.out.println(&quot;key= &quot;+ key + &quot; and value= &quot; + map.get(key));
+      &#125;
+
+      //第二种
+      System.out.println(&quot;通过Map.entrySet使用iterator遍历key和value：&quot;);
+      Iterator&lt;Map.Entry&lt;String, String&gt;&gt; it = map.entrySet().iterator();
+      while (it.hasNext()) &#123;
+       Map.Entry&lt;String, String&gt; entry = it.next();
+       System.out.println(&quot;key= &quot; + entry.getKey() + &quot; and value= &quot; + entry.getValue());
+      &#125;
+
+      //第三种：推荐，尤其是容量大时
+      System.out.println(&quot;通过Map.entrySet遍历key和value&quot;);
+      for (Map.Entry&lt;String, String&gt; entry : map.entrySet()) &#123;
+       System.out.println(&quot;key= &quot; + entry.getKey() + &quot; and value= &quot; + entry.getValue());
+      &#125;
+
+      //第四种
+      System.out.println(&quot;通过Map.values()遍历所有的value，但不能遍历key&quot;);
+      for (String v : map.values()) &#123;
+       System.out.println(&quot;value= &quot; + v);
+      &#125;
+     &#125;
+&#125;</code></pre>
+<p><strong>如何使用比较器</strong></p>
+<p>TreeSet和TreeMap的按照排序顺序来存储元素. 然而，这是通过比较器来精确定义按照什么样的排序顺序</p>
+<p>使用 <strong>Java Comparator</strong>‘</p>
+<p><strong>4.HashMap结构</strong>  </p>
+<ul>
+<li><p>引申到数组和<a href="">链表</a>操作的时间复杂度  </p>
+<p>无序数组</p>
+<p><img src="https://i.loli.net/2021/03/29/aurTU9jKIzNxv8W.png" alt="image-20210329101319296"></p>
+<p>有序数组</p>
+<p><img src="https://i.loli.net/2021/03/29/ySDLpVTOl93FoRB.png" alt="image-20210329101353481"></p>
+<p>有序链表（失去了链表插入快的特性）</p>
+<p><img src="https://i.loli.net/2021/03/29/jbLZsyFU97oK5nP.png" alt="image-20210329101415510"></p>
+<p>无序链表</p>
+<p><img src="https://i.loli.net/2021/03/29/W73OKNbCaTmFsxQ.png" alt="image-20210329101455402"></p>
+</li>
+<li><p>如何解决哈希冲突  </p>
+</li>
+</ul>
+<p>HashMap根据名称可知，其实现方法与Hash表有密切关系。</p>
+<p><strong>数组</strong>：采用<strong>一段连续的存储单元来存储数据</strong>。对于指定下标的查找，时间复杂度为O(1)；通过给定值进行查找，需要遍历数组，逐一比对给定关键字和数组元素，时间复杂度为O(n)，当然，对于有序数组，则可采用二分查找，插值查找，斐波那契查找等方式，可将查找复杂度提高为O(logn)；对于一般的插入删除操作，涉及到数组元素的移动，其平均复杂度也为O(n)</p>
+<p><strong>线性链表</strong>：对于链表的新增，删除等操作（在找到指定操作位置后），仅需处理结点间的引用即可，时间复杂度为O(1)，而查找操作需要遍历链表逐一进行比对，复杂度为O(n)</p>
+<p><strong>二叉树</strong>：对一棵相对平衡的有序二叉树，对其进行插入，查找，删除等操作，平均复杂度均为O(logn)。</p>
+<p><strong>哈希表</strong>：相比上述几种数据结构，在哈希表中进行添加，删除，查找等操作，<strong>性能十分之高</strong>，不考虑哈希冲突的情况下，仅需一次定位即可完成，时间复杂度为O(1)**，接下来我们就来看看哈希表是如何实现达到惊艳的常数阶O(1)的。</p>
+<p><strong>哈希表原理</strong></p>
+<p>数据结构的物理存储结构只有两种：<strong>顺序存储结构和链式存储结构</strong>（像栈，队列，树，图等是从逻辑结构去抽象的，映射到内存中，也这两种物理组织形式），而在上面我们提到过，在数组中根据下标查找某个元素，一次定位就可以达到，哈希表利用了这种特性，哈希表的主干就是数组。<br>　　比如我们要新增或查找某个元素，我们通过把当前<strong>元素的关键字，通过某个函数映射到数组中的某个位置</strong>，通过数组下标一次定位就可完成操作。<br>　　 location = hash(关键字)<br>其中，<strong>hash函数设计的优劣直接影响整体的性能</strong>。</p>
+<p><strong>哈希冲突</strong></p>
+<p>哈希算法存在一个缺点就是哈希冲突。进行数据存储时，我们通过对关键字进行hash时得到的地址已经存储过数据了，这时就会出现哈希冲突。哈希冲突的解决方案有多种:<strong>开放定址法</strong>（发生冲突，继续寻找下一块未被占用的存储地址），<strong>再散列函数法</strong>，<strong>建立公共溢出区法</strong>，<strong>链地址法</strong>，而HashMap即是采用了链地址法，也就是数组+链表的方式。</p>
+<p>hashMap工作原理，put,get,hashcode,equal</p>
+<p><img src="https://i.loli.net/2021/03/29/Z9WyRSUhKpGP6oq.png" alt="image-20210329100027705"></p>
+<p>发生哈希冲突并且size大于阈值的时候，需要进行<strong>数组扩容，扩容时，需要新建一个长度为之前数组2倍的新的数组</strong>，然后将当前的Entry数组中的元素全部传输过去，扩容后的新数组长度为之前的2倍，所以扩容相对来说是个耗资源的操作。</p>
+<p><strong>查找算法</strong></p>
+<ul>
+<li><p><strong>1. 顺序查找</strong></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/maybe2030/p/4715035.html#_label1"><strong>2. 二分查找</strong></a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/maybe2030/p/4715035.html#_label2"><strong>3. 插值查找</strong></a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/maybe2030/p/4715035.html#_label3"><strong>4. 斐波那契查找</strong></a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/maybe2030/p/4715035.html#_label4"><strong>5. 树表查找</strong></a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/maybe2030/p/4715035.html#_label5"><strong>6. 分块查找</strong></a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/maybe2030/p/4715035.html#_label6"><strong>7. 哈希查找</strong></a></p>
+</li>
+</ul>
+<ul>
+<li><p>什么时候发生死锁  </p>
+<p> 死锁是指这样一种情况：多个线程同时被阻塞，它们中的一个或者全部在等待某个资源被释放或者是都是处于等待而无法被唤醒时，由于线程被无限地阻塞，因此程序不能正常终止。</p>
+<p>产生死锁的必要条件：</p>
+<p><strong>互斥条件</strong>：在一段时间内某资源仅为一进程所占用。<br><strong>请求和保持条件</strong>：当进程因请求资源而阻塞时，对已获得的资源保持不放。<br><strong>不剥夺条件</strong>：进程已获得的资源在未使用完之前，不能剥夺，只能在使用完时由自己释放。<br><strong>循环等待条件</strong>：在发生死锁时，必然存在一个进程–资源的环形链。</p>
+</li>
+<li><p> 锁类型</p>
+<ul>
+<li>可重入锁：在执行对象中所有同步方法不用再次获得锁</li>
+<li>可中断锁：在等待获取锁过程中可中断</li>
+<li>公平锁： 按等待获取锁的线程的等待时间进行获取，等待时间长的具有优先获取锁权利</li>
+<li>读写锁：对资源读取和写入的时候拆分为2部分处理，读的时候可以多线程一起读，写的时候必须同步地写</li>
+</ul>
+</li>
+<li><p>synchronied与Lock区别</p>
+<p><img src="https://i.loli.net/2021/03/29/t3GN8wYaClTdVco.png" alt="image-20210329103705348"></p>
+<p><strong>5.Java多线程</strong> </p>
+</li>
+<li><p>线程池的种类</p>
+<ul>
+<li>   newCachedThreadPool创建一个可缓存线程池程</li>
+<li>   newFixedThreadPool 创建一个定长线程池</li>
+<li>   newScheduledThreadPool 创建一个周期性执行任务的线程池</li>
+<li>   newSingleThreadExecutor 创建一个单线程化的线程池</li>
+</ul>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/weichi7549/article/details/108300621">https://blog.csdn.net/weichi7549/article/details/108300621</a></p>
+</li>
+<li><p>多线程几种方法</p>
+<p><strong>1.继承Thread类，重写run方法<br>2.实现Runnable接口，重写run方法，实现Runnable接口的实现类的实例对象作为Thread构造函数的target<br>3.通过Callable和FutureTask创建线程<br>4.通过线程池创建线程</strong> </p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/java_zyq/article/details/87917734">https://blog.csdn.net/java_zyq/article/details/87917734</a></p>
+<p><strong>6.JVM相关</strong> </p>
+<p>JVM内存分区 </p>
+<p><img src="https://i.loli.net/2021/03/29/FmYbpcwsJlg7M92.png" alt="image-20210329105042969"></p>
+</li>
+</ul>
+<p>​    <strong>方法区</strong>：JVM方法区是用于保存已经被虚拟机加载的类元信息（包括类的版本、字段、方法、接口和父类等信息）、运行时常量信息(static、final定义的常量)、字符串常量信息(String a=”dfc”)。</p>
+<p><strong>虚拟机栈</strong>：栈这部分区域主要是用于线程运行方法的区域，此区域属于线程私有的空间，每一个线程创建后都会申请一个自己单独的栈空间，每一个方法的调用都会对应着一个栈帧。</p>
+<p><strong>本地方法栈</strong>：由于java需要与一些底层系统如操作系统或某些硬件交换信息时的情况，这个时候就需要通过调用native本地方法来实现，本地方法栈和虚拟机栈功差不多，区别在于本地方法栈是虚拟机调用native方法时使用的。</p>
+<p><strong>程序计数器</strong>：程序计数器是一块较小的内存空间，它的作用可以看做是当前线程所执行的字节码的行号指示器，程序计数器记录着某个线程当前执行指令的位置，此区域属于线程隔离区。</p>
+<p><strong>堆</strong>：堆内存主要是用来存放创建的对象数据，此区域属于<strong>线程共享区</strong>对于开发人员来说这块区域是我们关注的比较多，因为很多优化都是针对这块区域来进行的，为了能更清楚的描述堆里的数据和分区信息，所以会结合垃圾回收的一些机制来描述这块内存区域。<br><strong>堆-&gt;新生代和老年代划分机制</strong>：堆内存主要是用来存放我们运行过程中创建的对象数据，根据对象所生存时间长短的特性在逻辑上分为 新生代和老年代。</p>
+<p>堆-&gt;<strong>Eden区和 Survior 划分机制</strong>:所以为了减少这种空间碎片，我们就使用了另一种方式，把新生代分为了Eden 区和Survior 区，在进行垃圾回收时，先把存活的对象复制到 Survior 区，然后再对Eden区统一进行清理，这样的话Eden区每次GC过后都是留下的一片连续的空间</p>
+<p><img src="https://i.loli.net/2021/03/29/c4vmZrxJ9kAgeus.png" alt="image-20210329105901991"></p>
+<p><img src="https://i.loli.net/2021/03/29/9rw5lzQBxNfuhDp.png" alt="image-20210329105912683"></p>
+<p><strong>堆-&gt;S1 区和S2区划分机制</strong>:上面我们把新生代划分为Eden区和Survior区后，空间碎片问题好像改善了很多，因为这样解决了Eden区的空间碎片问题，但是这样的话我们忽略了一个问题，空间碎片问题Survior 区也会存在，因为进行GC时，我们Survior 区也会有垃圾对象，所以每次GC也会对Survior 区进行标记清除，那么这样的话Survior 区也同样会出现不连续的空间。</p>
+<p><img src="https://i.loli.net/2021/03/29/Kbvre3fplXOWAqI.png" alt="image-20210329110051117"></p>
+<p><img src="https://i.loli.net/2021/03/29/rSD5ytsdoV9JRQp.png" alt="image-20210329110124363"></p>
+<p>最后经过了一些特定区域职责划分后，堆内存划分为 老年代、新生代，新生代又划分为Eden区、s1区、s2区域。</p>
+<p><img src="https://i.loli.net/2021/03/29/W4MZNLjYS6ie8Q2.png" alt="image-20210329110156149"></p>
+<p>   <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/111370230">https://zhuanlan.zhihu.com/p/111370230</a></p>
+<p>  <strong>7.重写和重载</strong> </p>
+<p><img src="https://i.loli.net/2021/03/29/vYwePpoHJ6MScL2.png" alt="image-20210329110506211"></p>
+<p><a target="_blank" rel="noopener" href="https://www.pianshen.com/article/18371043326/">https://www.pianshen.com/article/18371043326/</a></p>
+<p>  <strong>8.面向对象的特点</strong><br>      <a target="_blank" rel="noopener" href="https://blog.csdn.net/web874418927/article/details/50725994">https://blog.csdn.net/web874418927/article/details/50725994</a></p>
+<ul>
+<li><p>三大基本特征 </p>
+<p>封装,继承,多态 </p>
+<p><strong>封装</strong>：也就是把客观事物封装成抽象的类，并且类可以把自己的数据和方法只让可信的类或者对象操作，对不可信的进行信息隐藏。</p>
+<p><strong>继承</strong>：可以让某个类型的对象获得另一个类型的对象的属性的方法。</p>
+<p><strong>多态</strong>：一个类实例的相同方法在不同情形有不同表现形式。</p>
+</li>
+<li><p>五大基本原则 </p>
+<p>  单一职责原则、开放封闭原则、替换原则、依赖原则、接口分离原则</p>
+<ul>
+<li><strong>开闭原则</strong>：对拓展开放，对修改关闭。</li>
+<li><strong>里氏代换原则</strong>：可以实现子父类互相替换；</li>
+<li><strong>依赖反转原则</strong>：针对接口编程，实现开闭原则的基础；</li>
+<li><strong>接口隔离原则</strong>：降低耦合度，接口单独设计，互相隔离；</li>
+<li><strong>单一职责原则</strong>：一个类的功能要单一，不能包罗万象。</li>
+</ul>
+<p><strong>9.普通方法和构造方法区别</strong>   </p>
+<p>1、构造方法的名字必须与定义他的类名完全相同，没有返回类型，甚至连void也没有。</p>
+<p>2、类中必定有构造方法，若不写，系统自动添加无参构造方法。接口不允许被实例化，所以接口中没有构造方法。</p>
+<p>3、不能被static、final、synchronized、abstract和native修饰。</p>
+<p>4、构造方法在初始化对象时自动执行,一般不能显式地直接调用、当同一个类存在多个构造方法时，java编译系统会自动按照初始化时最后面括号的参数个数以及参数类型来自动一一对应。完成构造函数的调用。</p>
+<p>5、构造方法分为两种：无参构造方法 有参构造方法。</p>
+</li>
+</ul>
+<p>​      <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_34779181/article/details/114043567">https://blog.csdn.net/weixin_34779181/article/details/114043567</a></p>
+<p>  <strong>10.SQL相关</strong> </p>
+<ul>
+<li><p>索引失效的情况</p>
+<p>1、like的模糊查询以%开头<br>2、条件中用or，即使其中有条件带索引，也不会使用索引查询<br>3、查询条件如果是字符串，不加引号会使索引失效<br>4、not null 不会使用索引， is null 会使用索引<br>5、使用 &lt;&gt; 或者!=<br>6、in not in<br>7、在索引列上使用计算</p>
+<p>避免索引失效</p>
+<p>避免使用*通配符“%”或者“_”作为查询字符串的第一个字符<br>在设计表时，把索引列设置为NOT NULL<br>Where子句中避免在索引列上使用计算<br>索引列上进行函数操作，索引失效<br>用&gt;= 代替 &gt; 尽量不使用 &lt;&gt; 或者!=<br>使用EXISTS代替 in 用not EXISTS 代替 not in</p>
+</li>
+<li><p>like中百分号%的位置 </p>
+<p>“%” 可用于定义通配符（模式中缺少的字母）</p>
+<pre><code class="sql">LIKE &#39;N%&#39;  以 &quot;N&quot; 开始
+LIKE &#39;%g&#39;  以 &quot;g&quot; 结尾
+LIKE &#39;%lon%&#39;  包含 &quot;lon&quot; 
+NOT LIKE &#39;%lon%&#39;  不包含 &quot;lon&quot; 
+LIKE &#39;_eorge&#39;     第一个字符之后是 &quot;eorge&quot;
+LIKE &#39;C_r_er&#39;     以 &quot;C&quot; 开头，然后是一个任意字符，然后是 &quot;r&quot;，然后是任意字符，然后是 &quot;er&quot;
+LIKE &#39;[ALN]%&#39;     以 &quot;A&quot; 或 &quot;L&quot; 或 &quot;N&quot; 开头
+LIKE &#39;[!ALN]%&#39;    不以 &quot;A&quot; 或 &quot;L&quot; 或 &quot;N&quot; 开头</code></pre>
+<p><img src="https://i.loli.net/2021/03/29/LHC7lcBXwGvD5KO.png" alt="image-20210329133716307"></p>
+</li>
+<li><p>外键相关 </p>
+<pre><code class="sql">CREATE TABLE Orders
+(
+Id_O int NOT NULL,
+OrderNo int NOT NULL,
+Id_P int,
+PRIMARY KEY (Id_O),
+FOREIGN KEY (Id_P) REFERENCES Persons(Id_P)
+)
+DROP FOREIGN KEY fk_PerOrders</code></pre>
+</li>
+<li><p>数据库三大范式 </p>
+<p>列不可再分</p>
+<p>属性完全依赖于主键</p>
+<p>不产生传递依赖</p>
+<p>​        三大范式只是一般设计数据库的基本理念，可以建立冗余较小、结构合理的数据库。如果有特殊情况，当然要特殊对待，数据库设计最重要的是看需求跟性能，<strong>需求&gt;性能&gt;表结构</strong>。所以不能一味的去追求范式建立数据库。实际情况会出现以空间换时间的情况。</p>
+</li>
+<li><p>左连接和右连接 </p>
+<p>左连接 where只影向右表，右连接where只影响左表。 </p>
+<p><strong>inner join</strong>：理解为“有效连接”，两张表中都有的数据才会显示</p>
+<p><strong>left join</strong>：理解为“有左显示”，比如on a.field=b.field，则显示a表中存在的全部数据及a\b中都有的数据，A中有、B没有的数据以null显示 </p>
+<p><strong>right join</strong>：理解为“有右显示”，比如on a.field=b.field，则显示B表中存在的全部数据及a\b中都有的数据，B中有、A没有的数据以null显示 </p>
+<p> <strong>full join</strong>：理解为“全连接”，两张表中所有数据都显示，实际就是inner +(left-inner)+(right-inner) </p>
+</li>
+</ul>
+<p>  <strong>11.Redis常见数据类型</strong> </p>
+<p>  <strong>Redis介绍</strong></p>
+<p>  ​        一个开源的使用 ANSI C 语言编写、遵守 BSD 协议、支持网络、可基于内存、分布式、可选持久性的key-value <strong>键值对存储系统</strong>，是跨平台的<strong>非关系型数据库</strong>。</p>
+<p>  ​       Redis 通常被称为<strong>数据结构服务器</strong>，因为值（value）可以是字符串(String)、哈希(Hash)、列表(list)、集合(sets)和有序集合(sorted sets)等类型。</p>
+<p>  ​        Redis有着更为复杂的数据结构，Redis运行在内存中但是可以持久化到磁盘</p>
+<p>  <strong>Java中使用Redis</strong></p>
+<p>  安装 Java redis 驱动-&gt; <a target="_blank" rel="noopener" href="https://static.runoob.com/download/jedis-2.9.0.jar">jedis-2.9.0.jar</a></p>
+<p>  <strong>连接 redis服务</strong></p>
+<pre><code class="java">import redis.clients.jedis.Jedis;
+
+public class RedisJava &#123;
+    public static void main(String[] args) &#123;
+        //连接本地的 Redis 服务
+        Jedis jedis = new Jedis(&quot;localhost&quot;);
+        // 如果 Redis 服务设置来密码，需要下面这行，没有就不需要
+        // jedis.auth(&quot;123456&quot;); 
+        System.out.println(&quot;连接成功&quot;);
+        //查看服务是否运行
+        System.out.println(&quot;服务正在运行: &quot;+jedis.ping());
+    &#125;
+&#125;</code></pre>
+<p>  <strong>Redis Java String(字符串) /List(列表)/Keys实例</strong></p>
+<pre><code class="java">import redis.clients.jedis.Jedis;
+
+public class RedisStringJava &#123;
+    public static void main(String[] args) &#123;
+        //连接本地的 Redis 服务
+        Jedis jedis = new Jedis(&quot;localhost&quot;);
+        System.out.println(&quot;连接成功&quot;);
+
+        //设置 redis 字符串数据
+        jedis.set(&quot;runoobkey&quot;, &quot;www.runoob.com&quot;);
+        // 获取存储的数据并输出
+        System.out.println(&quot;redis 存储的字符串为: &quot;+ jedis.get(&quot;runoobkey&quot;));
+
+        //存储数据到列表中
+        jedis.lpush(&quot;site-list&quot;, &quot;Runoob&quot;);
+        jedis.lpush(&quot;site-list&quot;, &quot;Google&quot;);
+        jedis.lpush(&quot;site-list&quot;, &quot;Taobao&quot;);
+        // 获取存储的数据并输出
+        List&lt;String&gt; list = jedis.lrange(&quot;site-list&quot;, 0 ,2);
+        for(int i=0; i&lt;list.size(); i++) &#123;
+            System.out.println(&quot;列表项为: &quot;+list.get(i));
+        &#125;
+
+
+        // 获取数据并输出  Keys
+        Set&lt;String&gt; keys = jedis.keys(&quot;*&quot;); 
+        Iterator&lt;String&gt; it=keys.iterator() ;   
+        while(it.hasNext())&#123;   
+            String key = it.next();   
+            System.out.println(key);  
+    &#125;
+&#125;</code></pre>
+<p>  <strong>12.Spring相关</strong> </p>
+<ul>
+<li><p>MyBatis介绍 </p>
+<p>  MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。</p>
+</li>
+<li><p>SpringBoot介绍 </p>
+<p> Spring是Java企业版（Java Enterprise Edition，JEE，也称J2EE）的轻量级代替品。无需开发重量级的EnterpriseJavaBean（EJB），Spring为企业级Java开发提供了一种相对简单的方法，通过依赖注入和面向切面编程，用简单的Java对象（Plain Old Java Object，POJO）实现了EJB的功能。</p>
+<p> 1.使用Spring的IOC容器,将对象之间的依赖关系交给Spring,降低组件之间的耦合性,让我们更专注于应用逻辑<br> 2.可以提供众多服务,事务管理,WS等。<br> 3.AOP的很好支持,方便面向切面编程。<br> 4.对主流的框架提供了很好的集成支持,如Hibernate,Struts2,JPA等<br> 5.Spring DI机制降低了业务对象替换的复杂性。<br> 6.Spring属于低侵入,代码污染极低。<br> 7.Spring的高度可开放性,并不强制依赖于Spring,开发者可以自由选择Spring部分或全部</p>
+</li>
+<li><p>Spring的缺点</p>
+<ul>
+<li>   虽然Spring的组件代码是轻量级的，但它的<strong>配置却是重量级的</strong>.所有这些配置都代表了开发时的损耗。</li>
+<li>  <strong>项目的依赖管理</strong>也是一件<strong>耗时耗力</strong>的事情。</li>
+<li>  <strong>jsp中要写很多代码、控制器过于灵活,缺少一个公用控制器</strong></li>
+<li>  <strong>Spring不支持分布式</strong>,这也是EJB仍然在用的原因之一。</li>
+</ul>
+</li>
+<li><p><strong>SpringBoot解决上述Spring的缺点</strong></p>
+<p>​        SpringBoot对上述Spring的缺点进行的改善和优化，基于约定优于配置的思想，可以让开发人员不必在配置与逻辑业务之间进行思维的切换，全身心的投入到逻辑业务的代码编写中，从而大大提高了开发的效率，一定程度上缩短了项目周期。</p>
+</li>
+</ul>
+<p>  <strong>SpringBoot的特点</strong></p>
+<p>  为基于Spring的开发提供<strong>更快的入门体验</strong></p>
+<p>  <strong>开箱即用，没有代码生成，也无需XML配置</strong>。同时也可以修改默认值来满足特定的需求</p>
+<p>  提供了一些大型项目中常见的非功能性特性，如嵌入式服务器、安全、指标，健康检测、外部配置等</p>
+<p>  SpringBoot<strong>不是对Spring功能上的增强，而是提供了一种快速使用Spring的方式</strong></p>
+<p>  <strong>SpringBoot的核心功能</strong></p>
+<p>  <strong>起步依赖</strong><br>   起步依赖本质上是一个Maven项目对象模型（Project Object Model，POM），定义了对其他库的传递依<br>   赖，这些东西加在一起即支持某项功能。<br>   简单的说，<strong>起步依赖就是将具备某种功能的坐标打包到一起，并提供一些默认的功能</strong>。</p>
+<p>  <strong>自动配置</strong><br>   Spring Boot的<strong>自动配置是一个运行时（更准确地说，是应用程序启动时）的过程</strong>，考虑了众多因素，才决定Spring配置应该用哪个，不该用哪个。该过程是Spring自动完成的。</p>
+<ul>
+<li><p>MVC结构的解释 </p>
+<p>MVC 模式代表 <strong>Model-View-Controller（模型-视图-控制器） 模式</strong>。这种模式<strong>用于应用程序的分层开发</strong>。</p>
+<ul>
+<li><strong>Model（模型）</strong> - 模型代表一个<strong>存取数据的对象或 JAVA POJO</strong>。<strong>它也可以带有逻辑，在数据变化时更新控制器。</strong></li>
+<li><strong>View（视图）</strong> - 视图代表模型<strong>包含的数据的可视化</strong>。</li>
+<li><strong>Controller（控制器）</strong> - <strong>控制器作用于模型和视图上</strong>。它<strong>控制数据流向模型对象</strong>，<strong>并在数据变化时更新视图</strong>。<strong>它使视图与模型分离开。</strong></li>
+</ul>
+</li>
+<li><p>控制反转和依赖注入 </p>
+<p>Spring框架的人一定都会听过Spring的**IoC(控制反转) 、DI(依赖注入)**这两个概念</p>
+<p><strong>IoC(控制反转)</strong>:是一种设计思想，在Java开发中,<strong>Ioc意味着将你设计好的对象交给容器控制，而不是传统的在你的对象内部直接控制。</strong></p>
+<p>​        ●谁控制谁，控制什么：传统Java SE程序设计，我们直接在对象内部通过new进行创建对象，是程序主动去创建依赖对象；而IoC是有专门一个容器来创建这些对象，即由Ioc容器来控制对象的创建；*<strong>*谁控制谁？当然是IoC容器控制了对象；控制什么？那就是主要控制了外部资源获取（不只是对象包括比如文件等）\</strong>。**</p>
+<p>　　●为何是反转，哪些方面反转了：有反转就有正转，传统应用程序是由我们自己在对象中主动控制去直接获取依赖对象，也就是正转；而反转则是由容器来帮忙创建及注入依赖对象；为何是反转？<strong>因为由容器帮我们查找及注入依赖对象，对象只是被动的接受依赖对象，所以是反转；哪些方面反转了？依赖对象的获取被反转了。</strong></p>
+<p><img src="https://i.loli.net/2021/03/29/1vSy4AGEOUCsXak.png" alt="image-20210329144046440"></p>
+<p><img src="https://i.loli.net/2021/03/29/t7UumGZ3lkD1cLA.png" alt="image-20210329144101989"></p>
+<p>　    IoC 不是一种技术，只是一种思想，一个重要的面向对象编程的法则，它能指导我们如何设计出<strong>松耦合、更优良</strong>的程序。传统应用程序都是由我们在类内部主动创建依赖对象，从而导致类与类之间高耦合，难于测试；有了IoC容器后，把创建和查找依赖对象的控制权交给了容器，由容器进行注入组合对象，所以对象与对象之间是 松散耦合，这样也方便测试，利于功能复用，更重要的是使得程序的整个体系结构变得非常灵活。</p>
+<p>　　其实<strong>IoC对编程带来的最大改变不是从代码上，而是从思想上，发生了“主从换位”的变化。应用程序原本是老大，要获取什么资源都是主动出击，但是在IoC/DI思想中，应用程序就变成被动的了，被动的等待IoC容器来创建并注入它所需要的资源了。</strong></p>
+<p>　　<strong>IoC很好的体现了面向对象设计法则之一—— 好莱坞法则：“别找我们，我们找你”；即由IoC容器帮对象找相应的依赖对象并注入，而不是由对象主动去找。</strong></p>
+</li>
+</ul>
+<p>  <strong>依赖注入</strong></p>
+<p>  ​        <strong>组件之间依赖关系</strong>由容器在运行期决定，形象的说，即<strong>由容器动态的将某个依赖关系注入到组件之中</strong>。<strong>依赖注入的目的并非为软件系统带来更多功能，而是为了提升组件重用的频率，并为系统搭建一个灵活、可扩展的平台。</strong>通过依赖注入机制，我们只需要通过简单的配置，而无需任何代码就可指定目标需要的资源，完成自身的业务逻辑，而不需要关心具体的资源来自何处，由谁实现。</p>
+<p>  　　理解DI的关键是：“谁依赖谁，为什么需要依赖，谁注入谁，注入了什么”，那我们来深入分析一下：</p>
+<p>  　　●谁依赖于谁：当然是<strong>应用程序依赖于IoC容器</strong>；</p>
+<p>  　　●为什么需要依赖：<strong>应用程序需要IoC容器来提供对象需要的外部资源</strong>；</p>
+<p>  　　●谁注入谁：很明显是<strong>IoC容器注入应用程序某个对象，应用程序依赖的对象</strong>；</p>
+<p>  　　●注入了什么：就是<strong>注入某个对象所需要的外部资源（包括对象、资源、常量数据）</strong>。</p>
+<p>  ​        <strong>IoC和DI</strong>由什么<strong>关系</strong>呢？其实它们<strong>是同一个概念的不同角度描述</strong>，由于控制反转概念比较含糊（可能只是理解为容器控制对象这一个层面，很难让人想到谁来维护对象关系），所以2004年大师级人物Martin Fowler又给出了一个新的名字：“依赖注入”，相对IoC 而言，“依赖注入”明确描述了“被注入对象依赖IoC容器配置依赖对象”。</p>
+<ul>
+<li>依赖注入的常见方式 </li>
+</ul>
+<p> <strong>构造方法注入</strong></p>
+<p>如果只有一个有参数的构造方法并且参数类型与注入的bean的类型匹配，那就会注入到该构造方法中。</p>
+<p><strong>Setter注入</strong></p>
+<p>在XML中写入，然后在set方法中注入。</p>
+<p><strong>基于注解的注入</strong></p>
+<p>@Autowired（自动注入）修饰符有三个属性：Constructor，byType，byName。默认按照byType注入。</p>
+<h2 id="面经02"><a href="#面经02" class="headerlink" title="面经02"></a>面经02</h2><p> 作者：煎饼果子这个名字已经被占用了<br>链接：<a target="_blank" rel="noopener" href="https://www.nowcoder.com/discuss/621122?channel=-1&amp;source_id=profile_follow_post_nctrack">https://www.nowcoder.com/discuss/621122?channel=-1&amp;source_id=profile_follow_post_nctrack</a><br>来源：牛客网</p>
+<p>时间 ： 20min </p>
+<p>  plus: 我卡着点进来了 进来的时候面试官已经进来了(QAQ) </p>
+<ol>
+<li><p>自我介绍 说道使用springboot  <a href="">redis</a>之类 </p>
+</li>
+<li><p>springboot启动过程说一下</p>
+<p>1.新建module,在主程序类加入断点,启动springboot。</p>
+<p>2.首先进入SpringAplication类run方法。</p>
+<p>3.run方法新建SpringApplication对象。</p>
+<p>4.SpringApplication对象的run方法。</p>
+<p>5.run方法首先创建并启动计时监控类。</p>
+</li>
+<li><p>SpringBootApplication注解由哪几个注解组成 </p>
+<p>@<strong>Configuration</strong>： 用于定义一个配置类</p>
+<p>@<strong>EnableAutoConfiguration</strong> ：Spring Boot会自动根据你jar包的依赖来自动配置项目。</p>
+<p>@<strong>ComponentScan</strong>： 告诉Spring 哪个packages 的用注解标识的类 会被spring自动扫描并且装入bean容器。</p>
+</li>
+<li><p>Redis缓存击穿，如何解决(不懂) </p>
+<p>缓存击穿，是指对那些会失效的key有高并发的请求，然后在失效的那一瞬间，高并发请求来了，读不到redis的值，全都会把请求打到数据库，导致数据库压力过大</p>
+<p><strong>解决方案</strong><br>1、分布式锁<br>当发现缓存失效的时候，先使用setnx设置分布式锁，只有获取锁成功的那个线程可以查数据库并回写缓存。</p>
+<p>优点：能解决问题。</p>
+<p><strong>缺点：</strong><br>1、如果不支持原子操作的话，这个setnx的分布式锁可能会发生死锁。<br>2、性能一般</p>
+<p>2、本地锁<br>同上，只是使用本地锁，解决死锁问题。</p>
+<p>优点：没有死锁问题</p>
+<p>缺点：有多少个机器实例，最多就有多少个“查数据库然后回写redis”的操作</p>
+<p>3、软过期<br>把过期时间写在value中，当读到的时候，发现过期的时候，立马更新过期时间，然后再读数据库、回写。</p>
+<p>优点：没有死锁问题</p>
+<p>缺点：所谓的“立马”更新过期时间，其实也不是原子性的，高并发的时候会有大量的线程认为过期，然后去读数据库。其实也没完全解决大量查数据库的问题，只是减少了查数据库的量。</p>
+</li>
+<li><p>用的是哪个版本的jdk ? 答1.8     问 ：说一下1.8的新特性 </p>
+<ul>
+<li><strong>Lambda表达式</strong></li>
+<li><strong>函数式接口</strong></li>
+<li>*<strong>方法引用和构造器调用</strong></li>
+<li><strong>Stream API</strong></li>
+<li><strong>接口中的默认方法和静态方法</strong></li>
+<li><strong>新时间日期API</strong></li>
+</ul>
+</li>
+</ol>
+<ol start="6">
+<li>jvm垃圾收集  参数设置  如何打印线程堆栈信息 性能调优做过么(没做过) 、</li>
+</ol>
+<p>   <strong>垃圾回收算法</strong></p>
+<p>   1、标记-清除算法（Mark-Sweep）</p>
+<p>   2、复制算法（Copying）（针对新生代）</p>
+<p>   3、标记-整理算法（Mark-Compact）（针对老年代）</p>
+<p>   4、分代收集算法（Generational Collection）</p>
+<p>   <strong>垃圾收集器</strong></p>
+<p>   1、Serial收集器（用于新生代）</p>
+<p>   2、ParNew收集器（新生代）</p>
+<p>   3、Parallel Scavenge收集器（“吞吐量优先”收集器）（新生代）</p>
+<p>   4、Serial Old收集器（老年代）</p>
+<p>   5、Parallel Old收集器（老年代）</p>
+<p>   6、CMS收集器（Concurrent Mark Sweep）</p>
+<p>   7、G1收集器（Garbage First）</p>
+<p>   <strong>参数总结</strong></p>
+<p>   UseSerialG<br>   虚拟机运行在client模式下的默认值，打开此开关后，使用Serial+SerialOld的收集器组合进行内存回收。</p>
+<p>   UserParNewGC<br>   使用ParNew+Serial Old的收集器组合进行内存回收</p>
+<p>   UserConMarkSweepGC：<br>   使用ParNew+CMS+Serial Old的收集器组合进行内存回收。Serial Old收集器将作为CMC收集器出现Concurrent Mode Fail失败后的后被收集处理器使用</p>
+<p>   UserParallelGC：<br>   虚拟机运行在client模式下的默认值，使用Parallel Scavenge+Serial Old<br>   （ps MarkSweep）的收集器组合进行内存回收</p>
+<p>   UserParallelOldGC<br>   使用Parallel+Scavenge+Parallel Old的收集器进行内存回收</p>
+<p>   SurvivorRatio<br>   新生代中Eden区域与Survivior区域的容量比值，默认为8，代表Eden：Survicor = 8:1</p>
+<p>   PretenureSizeThreshold<br>   直接晋升老年代对象的大小，设置这个参数后，大于这个参数的对象将直接在老年代分配。</p>
+<p>   MaxTenuringThreshold<br>   晋升老年代的对象年龄，每个对象在坚持一次Minor GC之后，年龄就增加，当超过这个参数值时就进入老年代</p>
+<p>   UseAdaptiveSizePolicy<br>   动态调整java堆中各个区域的大小以及进入老年代的年龄</p>
+<p>   HandlePromotionFailure<br>   是否允许分配担保失败，即老年代的剩余空间不足以应付新生代的整个Eden和survivor区的所有对象都存活的极端情况</p>
+<p>   ParallelGCThreads<br>   设置并行GC时进行内存回收的线程数</p>
+<p>   GCTimeRatio<br>   GC时间占总时间的比率，默认值为99，即允许百分之一的GC时间，仅在使用Parallel Scavenge收集器时生效</p>
+<p>   MaxGCPauseMills<br>   设置GC的最大停顿时间，仅在使用Parallel Scavenge收集器时生效</p>
+<p>   CMSInitiatingOccupancyFraction<br>   设置CMS收集器在老年代空间被使用多少后触发垃圾收集。默认值为百分之68，仅在使用CMS收集器时生效</p>
+<p>   UseCMSCompactAtFullCollection<br>   设置CMS收集器在完成垃圾收集后是否进行一次内存碎片整理，仅在使用CMS收集器时生效</p>
+<p>   CMSFullGCsBeforeCompaction<br>   设置CMS收集器在进行若干次垃圾收集后在启动一次内存碎片整理。仅在使用CMS收集器时生效</p>
+<ol start="7">
+<li><p>创建多线程和关闭线程的方式 </p>
+<ol>
+<li><p>继承Thread类创建线程</p>
+<p>1】定义Tread类的子类MyThread，并重写run()方法.run()方法的方法体（线程执行体）就是线程要执行的任务。</p>
+<p>2】创建MyThread类的实例</p>
+<p>3】调用子类实例的start()方法来启动线程</p>
+</li>
+<li><p>实现Runnable接口创建线程</p>
+<p>1】定义Runnable接口的实现类，必须重写run(）方法，这个run()方法和Thread中的run()方法一样，是线程的执行体</p>
+<p>2】创建Runnable实现类的实例，并用这个实例作为Thread的target来创建Thread对象，这个Thread对象才是真正的线程对象</p>
+<p>3】调用start()方法</p>
+</li>
+<li><p>使用Callable和Future创建线程</p>
+<p>1】call方法可以有返回值</p>
+<p>2】call()方法可以声明抛出异常</p>
+</li>
+<li><p>使用线程池创建（使用java.util.concurrent.Executor接口）</p>
+<p><strong>继承Thread与实现接口的区别</strong></p>
+<p>1】线程只是实现Runnable或实现Callable接口，还可以继承其他类。</p>
+<p>2】这种方式下，多个线程可以共享一个target对象，非常适合多线程处理同一份资源的情形。</p>
+<p>3】继承Thread类只需要this就能获取当前线程。不需要使用Thread.currentThread()方法</p>
+<p>4】继承Thread类的线程类不能再继承其他父类（Java单继承决定）。</p>
+<p>5】前三种的线程如果创建关闭频繁会消耗系统资源影响性能，而使用线程池可以不用线程的时候放回线程池，用的时候再从线程池取，项目开发中主要使用线程池的方式创建多个线程。</p>
+<p>6】实现接口的创建线程的方式必须实现方法（run()  call()）。</p>
+</li>
+</ol>
+</li>
+<li><p><a href="">排序</a><a href="">算法</a> 冒泡是稳定<a href="">排序</a>么 堆<a href="">排序</a>是稳定<a href="">排序</a>呢 堆<a href="">排序</a>空间复杂度 </p>
+<p>​        选择排序、快速排序、希尔排序、堆排序不是稳定的排序算法，而冒泡排序、插入排序、归并排序和基数排序是稳定的排序算法</p>
+</li>
+<li><p>有什么你比较强的领域我没问的么(答 没有QAQ) </p>
+</li>
+<li><p>没有反问阶段 面试官说面试完毕  等待通知</p>
+</li>
+</ol>
+<h2 id="面经03"><a href="#面经03" class="headerlink" title="面经03"></a>面经03</h2><p>作者：找不到工作就去当网管<br>链接：<a target="_blank" rel="noopener" href="https://www.nowcoder.com/discuss/611171?channel=-1&amp;source_id=profile_follow_post_nctrack">https://www.nowcoder.com/discuss/611171?channel=-1&amp;source_id=profile_follow_post_nctrack</a><br>来源：牛客网</p>
+<p>一面大概三十分钟 </p>
+<p>  jvm的内存模型，垃圾回收策略，类加载机制 </p>
+<p> <strong>垃圾回收策略</strong>-》垃圾回收算法</p>
+<p> <strong>类加载机制</strong> </p>
+<p>Java 的类加载过程可以分为 5 个阶段：<strong>载入、验证、准备、解析和初始化</strong>。这 5 个阶段一般是顺序发生的，但在动态绑定的情况下，解析阶段发生在初始化阶段之后。</p>
+<p>1）Loading（载入）</p>
+<p>​     将字节码从不同的数据源（可能是 class 文件、也可能是 jar 包，甚至网络）转化为二进制字节流加载到内存中，并生成一个代表该类的 <code>java.lang.Class</code> 对象。</p>
+<p>2）Verification（验证）</p>
+<p>​    JVM 会在该阶段对二进制字节流进行校验，只有符合 JVM 字节码规范的才能被 JVM 正确执行。该阶段是保证 JVM 安全的重要屏障，下面是一些主要的检查。</p>
+<p>3）Preparation（准备）、</p>
+<p>​    JVM 会在该阶段对类变量（也称为静态变量，<code>static</code> 关键字修饰的）分配内存并初始化（对应数据类型的默认初始值，如 0、0L、null、false 等）。</p>
+<p>4）Resolution（解析）</p>
+<p>​    该阶段将常量池中的符号引用转化为直接引用。</p>
+<p>5）Initialization（初始化）</p>
+<p>​    该阶段是类加载过程的最后一步。在准备阶段，类变量已经被赋过默认初始值，而在初始化阶段，类变量将被赋值为代码期望赋的值。换句话说，初始化阶段是执行类构造器方法的过程。</p>
+<p><strong>类加载器</strong></p>
+<p>1）启动类加载器（Bootstrap Class-Loader），加载 <code>jre/lib</code> 包下面的 jar 文件，比如说常见的 rt.jar。</p>
+<p>2）扩展类加载器（Extension or Ext Class-Loader），加载 <code>jre/lib/ext</code> 包下面的 jar 文件。</p>
+<p>3）应用类加载器（Application or App Clas-Loader），根据程序的类路径（classpath）来加载 Java 类。</p>
+<p>  <strong>hashmap1.7和1.8区别</strong>，put方法，为什么线程不安全 </p>
+<p>   1.底层结构不一样，1.7是数组+链表，1.8则是数组+链表+红黑树结构;</p>
+<ol start="2">
+<li><p>jdk1.7中当哈希表为空时，会先调用inflateTable()初始化一个数组；而1.8则是直接调用resize()扩容;</p>
+</li>
+<li><p>插入键值对的put方法的区别，1.8中会将节点插入到链表尾部，而1.7中是采用头插；</p>
+</li>
+</ol>
+<p>  <a href="">redis</a>的基本数据类型，数据淘汰策略，哨兵模式，字典表，<a href="">redis</a>的底层 </p>
+<p>  springboot的常用注解，为什么可以自动注入bean </p>
+<p>  <a href="">前端</a>框架了解哪些 </p>
+<p>  跨域问题，九大内置对象（这个就答上了几个，都忘了） </p>
+<p>  mysql的索引有哪些，索引失效情况 </p>
+<p>  es的倒排索引，分片和副本是什么 </p>
+<p>  讲一下冒泡<a href="">排序</a> </p>
+<p>  如何最快查找出两个list集合中重复的数据 </p>
+<p>  最近看过什么书 </p>
+<p>  沟通表达能力怎么样</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/donate/AliPayQR1.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/donate/WeChanSQ.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- begin learnqiu: 20201215新增 文章末尾版权信息添加-->
+        
+        <!-- end -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/posts/archives/30767.html/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                学习笔记：spring-boot</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/posts/archives/25291.html/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                华为面经</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "5OP5QaruBdEJ4SL0Xx4j3oEk-gzGzoHsz",
+        appKey: "pjqBQAhK38HG6fE4Sg2YHjsw",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="learnqiu.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/custom/minecraft.jpg" itemprop="image" alt="learnqiu" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="learnqiu.top" itemprop="url" rel="author">learnqiu</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>冷秋</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 learnqiu<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+
+<!-- //learnqiu：20201216优化-->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <!-- //learnqiu：20201224优化 访客地图-->
+  <div id="qiu-tools" class="site-content">
+    <script type="text/javascript" src="//rf.revolvermaps.com/0/0/5.js?i=5spb8mvksme&amp;m=0&amp;c=ff8a00&amp;cr1=ffffff" async="async"></script>
+  </div>
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.3/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.3/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2020  于冷秋</p>
+    </div>
+    <div class="footer-device">
+    <!-- <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
+        </span>
+      </p>
+    </div> -->
+    <!-- <i class="fa fa-fire" aria-hidden="true"></i> -->
+    <span style="color: #666666;padding-left: 20px;">
+      <i class="fa fa-clock-o" aria-hidden="true"></i>
+      <span id="time" align="center">载入时间中...</span>
+      <script>
+        var now = new Date(); 
+        function createtime() { 
+          var grt= new Date("2020-12-12 15:20:00");//在此处修改你的建站时间
+          now.setTime(now.getTime()+250); 
+          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+          document.getElementById("time").innerHTML = "本站已运行 "+ dnum +" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒";      
+       } 
+       setInterval("createtime()",250);
+      </script>
+
+       <!--不蒜子网页计数器-->
+       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+       <span style="color:#666666;padding-left: 20px;"><i class="fa fa-eye" aria-hidden="true"></i>访问量: <span id="busuanzi_value_site_pv"></span>次</span>
+      </span>
+  </div><!-- .site-info -->
+  <!--天气插件 20201224加入-->
+  <iframe width="350"  height="25" frameborder="0" scrolling="no" hspace="0" src="https://i.tianqi.com/?c=code&id=40"></iframe>  <!--壁纸切换-->
+  <div class="skin-menu no-select" id="mainskin"  style="position: fixed">
+      <div class="theme-controls row-container">
+          <ul class="menu-list">
+              <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+              <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+              <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+              <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+              <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+              <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+              <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+              <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+          </ul>
+      </div>
+      <div class="font-family-controls row-container">
+          <button type="button" class="control-btn-serif selected" data-mode="serif" onclick="mashiro_global.font_control.change_font()">Serif</button>
+          <button type="button" class="control-btn-sans-serif" data-mode="sans-serif" onclick="mashiro_global.font_control.change_font()">Sans Serif</button>
+      </div>
+  </div>   
+  <canvas id="night-mode-cover"></canvas> 
+    <div class="changeSkin-gear no-select">
+      <div class="keys" id="setbtn"> <span id="open-skinMenu"> 切换壁纸 | SCHEME TOOL 
+        &nbsp;<i class="iconfont icon-gear inline-block rotating"></i> </span></div>
+  </div><!--skin.end-->
+</footer>
+
+<!--去掉引用 20201223在footer中添加cdn加速版jQuery引用 -->
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">  
+<!-- fancybox大图查看 需jq -->
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script>
+  $('[data-fancybox="images"]').fancybox({//可选
+    thumbs : {
+      autoStart : true //缩略图
+    }
+  });
+  $('[data-fancybox]').fancybox({//启用函数，必须
+    //protect: true //图片右键不能下载，可选
+  });
+</script>
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<!--去掉引用 20201223使用fancybox <script type="text/javascript" src="/js/zoom.min.js"></script>  -->
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.5/img/custom","name":"prepage01.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.5/img/custom","name":"prepage01.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/minecraft.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">冷秋</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="/" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="/" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="/" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/%E6%8A%80%E6%9C%AF/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E7%94%9F%E6%B4%BB/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E8%B5%84%E6%BA%90/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E9%9A%8F%E6%83%B3/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E8%BD%AC%E8%BD%BD/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/">
+                  <i class="fa fa-tag" aria-hidden="true"></i>
+                  标签
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/">
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  分类
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/%E6%82%A6%E8%AF%BB/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/%E5%9B%BE%E9%9B%86/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+              <li>
+                <a href="/gallery/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  相册
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/shuoshuo/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-commenting-o fa-commenting" aria-hidden="true"></i>
+            说说
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    mini="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>

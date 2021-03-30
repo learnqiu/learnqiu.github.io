@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Category: 技术 | learnQIU</title>
+  <title itemprop="name">C#文件操作类 | learnQIU</title>
   
     <link rel="shortcut icon" href="/img/custom/Q.ico">
   
@@ -425,706 +425,751 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5/img/banner/coding.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-  </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">野生技术协会</h1>
-    <span class="cat-des">
-      <p>Geek – Only for Love</p>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png);" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      C#文件操作类</h1>
+      <p class="entry-census">
+        <span>
+          <a href="learnqiu.top">
+            <img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/custom/minecraft.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="learnqiu.top">learnqiu</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-3-22<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+       <!--20201222 开始添加字数统计-->
+       
+         <!--1222安装新增 文章字数统计-->
+<div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <!--1222安装 安装插件npm install hexo-wordcount --save -->
+        <span class="post-count">3.2k字</span>
+      </span>
     </span>
-  </header>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">16分</span>
+      </span>
+    </span>
 </div>
+
+       
+      <!-- 添加完成 --> 		
+    
+    </header>
+  </div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/44545.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/44545.html/">
-    冷秋 | 书摘</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2021-1-8</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/44545.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/48313.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/48313.html/">
-    转载：将hexo博客部署到CentOS个人云服务器</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2021-1-4</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/48313.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/31864.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/31864.html/">
-    对hexo-sakura主题的鼠标指针图案进行自定义</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-25</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/31864.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/48697.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/48697.html/">
-    hexo博客优化记录</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-23</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/48697.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/60549.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/60549.html/">
-    hexo博客踩坑记录</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-23</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/60549.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/51011.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/51011.html/">
-    用Python的you-get工具下载b站视频</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-21</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/51011.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/46522.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/46522.html/">
-    hexo博客搭建记录</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-21</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/46522.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/40028.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/40028.html/">
-    对hexo-sakura主题的回到顶部白猫图案进行自定义</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-20</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/40028.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/5113.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://i.loli.net/2020/12/19/6UnYTV815ioHwqL.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/5113.html/">
-    Typora实现CMMS图床功能</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-19</div>
-    <p>
-    Typora实现CMMS图床功能</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/5113.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/46779.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://i.loli.net/2020/12/18/aL9SKVOJ8CxtND4.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/46779.html/">
-    Hexo+Typora实现图片插入文章后自动复制到指定文件夹及生成图片代码</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-18</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/46779.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!-- 
-      <nav class="navigator">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
-        <a class="extend prev" rel="prev" href="/categories/%E6%8A%80%E6%9C%AF/page/2/">&lt;i class&#x3D;&quot;iconfont icon-back&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/categories/%E6%8A%80%E6%9C%AF/">1</a><a class="page-number" href="/categories/%E6%8A%80%E6%9C%AF/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/categories/%E6%8A%80%E6%9C%AF/page/4/">4</a><a class="extend next" rel="next" href="/categories/%E6%8A%80%E6%9C%AF/page/4/">&lt;i class&#x3D;&quot;iconfont icon-right&quot;&gt;&lt;&#x2F;i&gt;</a>
-      </nav>
-     -->
-    
-      <div id="pagination"><a href="/categories/%E6%8A%80%E6%9C%AF/page/4/" class="">Previous</a></div>
-    
-  </div>
+        <div class="entry-content">
+          <h1 id="C-常用文件操作类"><a href="#C-常用文件操作类" class="headerlink" title="C#常用文件操作类"></a>C#常用文件操作类</h1><p><strong>实现代码如下：</strong></p>
+<pre><code class="c#">using System;
+using System.Text;
+using System.Web;
+using System.IO;
+namespace Nsga2ExeclPro
+&#123;
+    /// &lt;summary&gt;
+    /// 文件操作类
+    /// &lt;/summary&gt;
+    public class FileOperate
+    &#123;
+        #region 写文件
+        public void Write_Txt(string FileName, string Content,string suffix = &quot;.txt&quot;)
+        &#123;
+            Encoding code = Encoding.GetEncoding(&quot;gb2312&quot;);
+            //string htmlfilename = HttpContext.Current.Server.MapPath(&quot;Precious\\&quot; + FileName + suffix); //保存文件的路径
+            string htmlfilename = MapPath(&quot;Precious\\&quot; + FileName + suffix); //保存文件的路径
+            string str = Content;
+            StreamWriter sw = null;
+            &#123;
+                try
+                &#123;
+                    sw = new StreamWriter(htmlfilename, false, code);
+                    sw.Write(str);
+                    sw.Flush();
+                &#125;
+                catch &#123; &#125;
+            &#125;
+            sw.Close();
+            sw.Dispose();
+        &#125;
+        #endregion
+        #region 读文件
+        public string Read_Txt(string filename)
+        &#123;
+            Encoding code = Encoding.GetEncoding(&quot;gb2312&quot;);
+            string temp = HttpContext.Current.Server.MapPath(&quot;Precious\\&quot; + filename + &quot;.txt&quot;);
+            string str = &quot;&quot;;
+            if (File.Exists(temp))
+            &#123;
+                StreamReader sr = null;
+                try
+                &#123;
+                    sr = new StreamReader(temp, code);
+                    str = sr.ReadToEnd(); // 读取文件
+                &#125;
+                catch &#123; &#125;
+                sr.Close();
+                sr.Dispose();
+            &#125;
+            else
+            &#123;
+                str = &quot;&quot;;
+            &#125;
+
+            return str;
+        &#125;
+        #endregion
+
+
+        /// &lt;summary&gt;
+                /// 获取文件路径
+                /// &lt;/summary&gt;
+                /// &lt;param name=&quot;strPath&quot;&gt;&lt;/param&gt;
+                /// &lt;returns&gt;&lt;/returns&gt;
+        private string MapPath(string strPath)
+        &#123;
+            if (HttpContext.Current != null)
+            &#123;
+                return HttpContext.Current.Server.MapPath(strPath);
+            &#125;
+            else //非web程序引用             
+            &#123;
+                strPath = strPath.Replace(&quot;/&quot;, &quot;\\&quot;);
+                if (strPath.StartsWith(&quot;\\&quot;))
+                &#123;
+                    strPath = strPath.TrimStart(&#39;\\&#39;);
+                &#125;
+                return System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, strPath);
+            &#125;
+        &#125;
+
+
+        #region 取得文件后缀名
+        /****************************************
+         * 函数名称：GetPostfixStr
+         * 功能说明：取得文件后缀名
+         * 参  数：filename:文件名称
+         * 调用示列：
+         *      string filename = &quot;aaa.aspx&quot;;    
+         *      string s = DotNet.Utilities.FileOperate.GetPostfixStr(filename);    
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 取后缀名
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;filename&quot;&gt;文件名&lt;/param&gt;
+        /// &lt;returns&gt;.gif|.html格式&lt;/returns&gt;
+        public static string GetPostfixStr(string filename)
+        &#123;
+            int start = filename.LastIndexOf(&quot;.&quot;);
+            int length = filename.Length;
+            string postfix = filename.Substring(start, length - start);
+            return postfix;
+        &#125;
+        #endregion
+        #region 写文件
+        /****************************************
+         * 函数名称：WriteFile
+         * 功能说明：当文件不存时，则创建文件，并追加文件
+         * 参  数：Path:文件路径,Strings:文本内容
+         * 调用示列：
+         *      string Path = Server.MapPath(&quot;Default2.aspx&quot;);   
+         *      string Strings = &quot;这是我写的内容啊&quot;;
+         *      DotNet.Utilities.FileOperate.WriteFile(Path,Strings);
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 写文件
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;Path&quot;&gt;文件路径&lt;/param&gt;
+        /// &lt;param name=&quot;Strings&quot;&gt;文件内容&lt;/param&gt;
+        public static void WriteFile(string Path, string Strings)
+        &#123;
+            if (!System.IO.File.Exists(Path))
+            &#123;
+                System.IO.FileStream f = System.IO.File.Create(Path);
+                f.Close();
+                f.Dispose();
+            &#125;
+            System.IO.StreamWriter f2 = new System.IO.StreamWriter(Path, true, System.Text.Encoding.UTF8);
+            f2.WriteLine(Strings);
+            f2.Close();
+            f2.Dispose();
+
+        &#125;
+        #endregion
+        #region 读文件
+        /****************************************
+         * 函数名称：ReadFile
+         * 功能说明：读取文本内容
+         * 参  数：Path:文件路径
+         * 调用示列：
+         *      string Path = Server.MapPath(&quot;Default2.aspx&quot;);   
+         *      string s = DotNet.Utilities.FileOperate.ReadFile(Path);
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 读文件
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;Path&quot;&gt;文件路径&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static string ReadFile(string Path)
+        &#123;
+            string s = &quot;&quot;;
+            if (!System.IO.File.Exists(Path))
+                s = &quot;不存在相应的目录&quot;;
+            else
+            &#123;
+                StreamReader f2 = new StreamReader(Path, System.Text.Encoding.GetEncoding(&quot;gb2312&quot;));
+                s = f2.ReadToEnd();
+                f2.Close();
+                f2.Dispose();
+            &#125;
+            return s;
+        &#125;
+        #endregion
+        #region 追加文件
+        /****************************************
+         * 函数名称：FileAdd
+         * 功能说明：追加文件内容
+         * 参  数：Path:文件路径,strings:内容
+         * 调用示列：
+         *      string Path = Server.MapPath(&quot;Default2.aspx&quot;);  
+         *      string Strings = &quot;新追加内容&quot;;
+         *      DotNet.Utilities.FileOperate.FileAdd(Path, Strings);
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 追加文件
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;Path&quot;&gt;文件路径&lt;/param&gt;
+        /// &lt;param name=&quot;strings&quot;&gt;内容&lt;/param&gt;
+        public static void FileAdd(string Path, string strings)
+        &#123;
+            StreamWriter sw = new StreamWriter(Path, true, Encoding.GetEncoding(&quot;gb2312&quot;));
+            //StreamWriter sw = File.AppendText(Path);
+            sw.Write(strings);
+            sw.Flush();
+            sw.Close();
+            sw.Dispose();
+        &#125;
+        #endregion
+        #region 拷贝文件
+        /****************************************
+         * 函数名称：FileCoppy
+         * 功能说明：拷贝文件
+         * 参  数：OrignFile:原始文件,NewFile:新文件路径
+         * 调用示列：
+         *      string OrignFile = Server.MapPath(&quot;Default2.aspx&quot;);  
+         *      string NewFile = Server.MapPath(&quot;Default3.aspx&quot;);
+         *      DotNet.Utilities.FileOperate.FileCoppy(OrignFile, NewFile);
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 拷贝文件
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;OrignFile&quot;&gt;原始文件&lt;/param&gt;
+        /// &lt;param name=&quot;NewFile&quot;&gt;新文件路径&lt;/param&gt;
+        public static void FileCoppy(string OrignFile, string NewFile)
+        &#123;
+            File.Copy(OrignFile, NewFile, true);
+        &#125;
+        #endregion
+        #region 删除文件
+        /****************************************
+         * 函数名称：FileDel
+         * 功能说明：删除文件
+         * 参  数：Path:文件路径
+         * 调用示列：
+         *      string Path = Server.MapPath(&quot;Default3.aspx&quot;);  
+         *      DotNet.Utilities.FileOperate.FileDel(Path);
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 删除文件
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;Path&quot;&gt;路径&lt;/param&gt;
+        public static void FileDel(string Path)
+        &#123;
+            File.Delete(Path);
+        &#125;
+        #endregion
+        #region 移动文件
+        /****************************************
+         * 函数名称：FileMove
+         * 功能说明：移动文件
+         * 参  数：OrignFile:原始路径,NewFile:新文件路径
+         * 调用示列：
+         *      string OrignFile = Server.MapPath(&quot;../说明.txt&quot;);  
+         *      string NewFile = Server.MapPath(&quot;../../说明.txt&quot;);
+         *      DotNet.Utilities.FileOperate.FileMove(OrignFile, NewFile);
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 移动文件
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;OrignFile&quot;&gt;原始路径&lt;/param&gt;
+        /// &lt;param name=&quot;NewFile&quot;&gt;新路径&lt;/param&gt;
+        public static void FileMove(string OrignFile, string NewFile)
+        &#123;
+            File.Move(OrignFile, NewFile);
+        &#125;
+        #endregion
+        #region 在当前目录下创建目录
+        /****************************************
+         * 函数名称：FolderCreate
+         * 功能说明：在当前目录下创建目录
+         * 参  数：OrignFolder:当前目录,NewFloder:新目录
+         * 调用示列：
+         *      string OrignFolder = Server.MapPath(&quot;test/&quot;);  
+         *      string NewFloder = &quot;new&quot;;
+         *      DotNet.Utilities.FileOperate.FolderCreate(OrignFolder, NewFloder);
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 在当前目录下创建目录
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;OrignFolder&quot;&gt;当前目录&lt;/param&gt;
+        /// &lt;param name=&quot;NewFloder&quot;&gt;新目录&lt;/param&gt;
+        public static void FolderCreate(string OrignFolder, string NewFloder)
+        &#123;
+            Directory.SetCurrentDirectory(OrignFolder);
+            Directory.CreateDirectory(NewFloder);
+        &#125;
+        /// &lt;summary&gt;
+        /// 创建文件夹
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;Path&quot;&gt;&lt;/param&gt;
+        public static void FolderCreate(string Path)
+        &#123;
+            // 判断目标目录是否存在如果不存在则新建之
+            if (!Directory.Exists(Path))
+                Directory.CreateDirectory(Path);
+        &#125;
+        #endregion
+        #region 创建目录
+        public static void FileCreate(string Path)
+        &#123;
+            FileInfo CreateFile = new FileInfo(Path); //创建文件
+            if (!CreateFile.Exists)
+            &#123;
+                FileStream FS = CreateFile.Create();
+                FS.Close();
+            &#125;
+        &#125;
+        #endregion
+        #region 递归删除文件夹目录及文件
+        /****************************************
+         * 函数名称：DeleteFolder
+         * 功能说明：递归删除文件夹目录及文件
+         * 参  数：dir:文件夹路径
+         * 调用示列：
+         *      string dir = Server.MapPath(&quot;test/&quot;); 
+         *      DotNet.Utilities.FileOperate.DeleteFolder(dir);   
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 递归删除文件夹目录及文件
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;dir&quot;&gt;&lt;/param&gt; 
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static void DeleteFolder(string dir)
+        &#123;
+            if (Directory.Exists(dir)) //如果存在这个文件夹删除之
+            &#123;
+                foreach (string d in Directory.GetFileSystemEntries(dir))
+                &#123;
+                    if (File.Exists(d))
+                        File.Delete(d); //直接删除其中的文件            
+                    else
+                        DeleteFolder(d); //递归删除子文件夹
+                &#125;
+                Directory.Delete(dir, true); //删除已空文件夹        
+            &#125;
+        &#125;
+        #endregion
+        #region 将指定文件夹下面的所有内容copy到目标文件夹下面 果目标文件夹为只读属性就会报错。
+        /****************************************
+         * 函数名称：CopyDir
+         * 功能说明：将指定文件夹下面的所有内容copy到目标文件夹下面 果目标文件夹为只读属性就会报错。
+         * 参  数：srcPath:原始路径,aimPath:目标文件夹
+         * 调用示列：
+         *      string srcPath = Server.MapPath(&quot;test/&quot;); 
+         *      string aimPath = Server.MapPath(&quot;test1/&quot;);
+         *      DotNet.Utilities.FileOperate.CopyDir(srcPath,aimPath); 
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 指定文件夹下面的所有内容copy到目标文件夹下面
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;srcPath&quot;&gt;原始路径&lt;/param&gt;
+        /// &lt;param name=&quot;aimPath&quot;&gt;目标文件夹&lt;/param&gt;
+        public static void CopyDir(string srcPath, string aimPath)
+        &#123;
+            try
+            &#123;
+                // 检查目标目录是否以目录分割字符结束如果不是则添加之
+                if (aimPath[aimPath.Length - 1] != Path.DirectorySeparatorChar)
+                    aimPath += Path.DirectorySeparatorChar;
+                // 判断目标目录是否存在如果不存在则新建之
+                if (!Directory.Exists(aimPath))
+                    Directory.CreateDirectory(aimPath);
+                // 得到源目录的文件列表，该里面是包含文件以及目录路径的一个数组
+                //如果你指向copy目标文件下面的文件而不包含目录请使用下面的方法
+                //string[] fileList = Directory.GetFiles(srcPath);
+                string[] fileList = Directory.GetFileSystemEntries(srcPath);
+                //遍历所有的文件和目录
+                foreach (string file in fileList)
+                &#123;
+                    //先当作目录处理如果存在这个目录就递归Copy该目录下面的文件
+                    if (Directory.Exists(file))
+                        CopyDir(file, aimPath + Path.GetFileName(file));
+                    //否则直接Copy文件
+                    else
+                        File.Copy(file, aimPath + Path.GetFileName(file), true);
+                &#125;
+            &#125;
+            catch (Exception ee)
+            &#123;
+                throw new Exception(ee.ToString());
+            &#125;
+        &#125;
+        #endregion
+        #region 获取指定文件夹下所有子目录及文件(树形)
+        /****************************************
+         * 函数名称：GetFoldAll(string Path)
+         * 功能说明：获取指定文件夹下所有子目录及文件(树形)
+         * 参  数：Path:详细路径
+         * 调用示列：
+         *      string strDirlist = Server.MapPath(&quot;templates&quot;);   
+         *      this.Literal1.Text = DotNet.Utilities.FileOperate.GetFoldAll(strDirlist); 
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 获取指定文件夹下所有子目录及文件
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;Path&quot;&gt;详细路径&lt;/param&gt;
+        public static string GetFoldAll(string Path)
+        &#123;
+            string str = &quot;&quot;;
+            DirectoryInfo thisOne = new DirectoryInfo(Path);
+            str = ListTreeShow(thisOne, 0, str);
+            return str;
+        &#125;
+        /// &lt;summary&gt;
+        /// 获取指定文件夹下所有子目录及文件函数
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;theDir&quot;&gt;指定目录&lt;/param&gt;
+        /// &lt;param name=&quot;nLevel&quot;&gt;默认起始值,调用时,一般为0&lt;/param&gt;
+        /// &lt;param name=&quot;Rn&quot;&gt;用于迭加的传入值,一般为空&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static string ListTreeShow(DirectoryInfo theDir, int nLevel, string Rn)//递归目录 文件
+        &#123;
+            DirectoryInfo[] subDirectories = theDir.GetDirectories();//获得目录
+            foreach (DirectoryInfo dirinfo in subDirectories)
+            &#123;
+                if (nLevel == 0)
+                &#123;
+                    Rn += &quot;├&quot;;
+                &#125;
+                else
+                &#123;
+                    string _s = &quot;&quot;;
+                    for (int i = 1; i &lt;= nLevel; i++)
+                    &#123;
+                        _s += &quot;│&amp;nbsp;&quot;;
+                    &#125;
+                    Rn += _s + &quot;├&quot;;
+                &#125;
+                Rn += &quot;&lt;b&gt;&quot; + dirinfo.Name.ToString() + &quot;&lt;/b&gt;&lt;br /&gt;&quot;;
+                FileInfo[] fileInfo = dirinfo.GetFiles();  //目录下的文件
+                foreach (FileInfo fInfo in fileInfo)
+                &#123;
+                    if (nLevel == 0)
+                    &#123;
+                        Rn += &quot;│&amp;nbsp;├&quot;;
+                    &#125;
+                    else
+                    &#123;
+                        string _f = &quot;&quot;;
+                        for (int i = 1; i &lt;= nLevel; i++)
+                        &#123;
+                            _f += &quot;│&amp;nbsp;&quot;;
+                        &#125;
+                        Rn += _f + &quot;│&amp;nbsp;├&quot;;
+                    &#125;
+                    Rn += fInfo.Name.ToString() + &quot; &lt;br /&gt;&quot;;
+                &#125;
+                Rn = ListTreeShow(dirinfo, nLevel + 1, Rn);
+
+            &#125;
+            return Rn;
+        &#125;
+
+        /****************************************
+         * 函数名称：GetFoldAll(string Path)
+         * 功能说明：获取指定文件夹下所有子目录及文件(下拉框形)
+         * 参  数：Path:详细路径
+         * 调用示列：
+         *      string strDirlist = Server.MapPath(&quot;templates&quot;);   
+         *      this.Literal2.Text = DotNet.Utilities.FileOperate.GetFoldAll(strDirlist,&quot;tpl&quot;,&quot;&quot;);
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 获取指定文件夹下所有子目录及文件(下拉框形)
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;Path&quot;&gt;详细路径&lt;/param&gt;
+        ///&lt;param name=&quot;DropName&quot;&gt;下拉列表名称&lt;/param&gt;
+        ///&lt;param name=&quot;tplPath&quot;&gt;默认选择模板名称&lt;/param&gt;
+        public static string GetFoldAll(string Path, string DropName, string tplPath)
+        &#123;
+            string strDrop = &quot;&lt;select name=\&quot;&quot; + DropName + &quot;\&quot; id=\&quot;&quot; + DropName + &quot;\&quot;&gt;&lt;option value=\&quot;\&quot;&gt;--请选择详细模板--&lt;/option&gt;&quot;;
+            string str = &quot;&quot;;
+            DirectoryInfo thisOne = new DirectoryInfo(Path);
+            str = ListTreeShow(thisOne, 0, str, tplPath);
+            return strDrop + str + &quot;&lt;/select&gt;&quot;;
+        &#125;
+        /// &lt;summary&gt;
+        /// 获取指定文件夹下所有子目录及文件函数
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;theDir&quot;&gt;指定目录&lt;/param&gt;
+        /// &lt;param name=&quot;nLevel&quot;&gt;默认起始值,调用时,一般为0&lt;/param&gt;
+        /// &lt;param name=&quot;Rn&quot;&gt;用于迭加的传入值,一般为空&lt;/param&gt;
+        /// &lt;param name=&quot;tplPath&quot;&gt;默认选择模板名称&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static string ListTreeShow(DirectoryInfo theDir, int nLevel, string Rn, string tplPath)//递归目录 文件
+        &#123;
+            DirectoryInfo[] subDirectories = theDir.GetDirectories();//获得目录
+            foreach (DirectoryInfo dirinfo in subDirectories)
+            &#123;
+                Rn += &quot;&lt;option value=\&quot;&quot; + dirinfo.Name.ToString() + &quot;\&quot;&quot;;
+                if (tplPath.ToLower() == dirinfo.Name.ToString().ToLower())
+                &#123;
+                    Rn += &quot; selected &quot;;
+                &#125;
+                Rn += &quot;&gt;&quot;;
+                if (nLevel == 0)
+                &#123;
+                    Rn += &quot;┣&quot;;
+                &#125;
+                else
+                &#123;
+                    string _s = &quot;&quot;;
+                    for (int i = 1; i &lt;= nLevel; i++)
+                    &#123;
+                        _s += &quot;│&amp;nbsp;&quot;;
+                    &#125;
+                    Rn += _s + &quot;┣&quot;;
+                &#125;
+                Rn += &quot;&quot; + dirinfo.Name.ToString() + &quot;&lt;/option&gt;&quot;;
+
+                FileInfo[] fileInfo = dirinfo.GetFiles();  //目录下的文件
+                foreach (FileInfo fInfo in fileInfo)
+                &#123;
+                    Rn += &quot;&lt;option value=\&quot;&quot; + dirinfo.Name.ToString() + &quot;/&quot; + fInfo.Name.ToString() + &quot;\&quot;&quot;;
+                    if (tplPath.ToLower() == fInfo.Name.ToString().ToLower())
+                    &#123;
+                        Rn += &quot; selected &quot;;
+                    &#125;
+                    Rn += &quot;&gt;&quot;;
+                    if (nLevel == 0)
+                    &#123;
+                        Rn += &quot;│&amp;nbsp;├&quot;;
+                    &#125;
+                    else
+                    &#123;
+                        string _f = &quot;&quot;;
+                        for (int i = 1; i &lt;= nLevel; i++)
+                        &#123;
+                            _f += &quot;│&amp;nbsp;&quot;;
+                        &#125;
+                        Rn += _f + &quot;│&amp;nbsp;├&quot;;
+                    &#125;
+                    Rn += fInfo.Name.ToString() + &quot;&lt;/option&gt;&quot;;
+                &#125;
+                Rn = ListTreeShow(dirinfo, nLevel + 1, Rn, tplPath);
+
+            &#125;
+            return Rn;
+        &#125;
+        #endregion
+        #region 获取文件夹大小
+        /****************************************
+         * 函数名称：GetDirectoryLength(string dirPath)
+         * 功能说明：获取文件夹大小
+         * 参  数：dirPath:文件夹详细路径
+         * 调用示列：
+         *      string Path = Server.MapPath(&quot;templates&quot;);
+         *      Response.Write(DotNet.Utilities.FileOperate.GetDirectoryLength(Path));   
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 获取文件夹大小
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;dirPath&quot;&gt;文件夹路径&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static long GetDirectoryLength(string dirPath)
+        &#123;
+            if (!Directory.Exists(dirPath))
+                return 0;
+            long len = 0;
+            DirectoryInfo di = new DirectoryInfo(dirPath);
+            foreach (FileInfo fi in di.GetFiles())
+            &#123;
+                len += fi.Length;
+            &#125;
+            DirectoryInfo[] dis = di.GetDirectories();
+            if (dis.Length &gt; 0)
+            &#123;
+                for (int i = 0; i &lt; dis.Length; i++)
+                &#123;
+                    len += GetDirectoryLength(dis[i].FullName);
+                &#125;
+            &#125;
+            return len;
+        &#125;
+        #endregion
+        #region 获取指定文件详细属性
+        /****************************************
+         * 函数名称：GetFileAttibe(string filePath)
+         * 功能说明：获取指定文件详细属性
+         * 参  数：filePath:文件详细路径
+         * 调用示列：
+         *      string file = Server.MapPath(&quot;robots.txt&quot;); 
+         *      Response.Write(DotNet.Utilities.FileOperate.GetFileAttibe(file));    
+        *****************************************/
+        /// &lt;summary&gt;
+        /// 获取指定文件详细属性
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;filePath&quot;&gt;文件详细路径&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static string GetFileAttibe(string filePath)
+        &#123;
+            string str = &quot;&quot;;
+            System.IO.FileInfo objFI = new System.IO.FileInfo(filePath);
+            str += &quot;详细路径:&quot; + objFI.FullName + &quot;&lt;br&gt;文件名称:&quot; + objFI.Name + &quot;&lt;br&gt;文件长度:&quot; + objFI.Length.ToString() + &quot;字节&lt;br&gt;创建时间&quot; + objFI.CreationTime.ToString() + &quot;&lt;br&gt;最后访问时间:&quot; + objFI.LastAccessTime.ToString() + &quot;&lt;br&gt;修改时间:&quot; + objFI.LastWriteTime.ToString() + &quot;&lt;br&gt;所在目录:&quot; + objFI.DirectoryName + &quot;&lt;br&gt;扩展名:&quot; + objFI.Extension;
+            return str;
+        &#125;
+        #endregion
+
+    &#125;
+&#125;</code></pre>
+<hr>
+<p>本文转载自 <a target="_blank" rel="noopener" href="https://www.jb51.net/article/62797.htm">C#封装的常用文件操作类实例</a></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/donate/AliPayQR1.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.6.2/img/custom/donate/WeChanSQ.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- begin learnqiu: 20201215新增 文章末尾版权信息添加-->
+        
+        <!-- end -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/posts/archives/8727.html/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                C# 使用NPOI操作excel工具类</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/posts/archives/41889.html/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                NGSA-2 建模相关</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "5OP5QaruBdEJ4SL0Xx4j3oEk-gzGzoHsz",
+        appKey: "pjqBQAhK38HG6fE4Sg2YHjsw",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="learnqiu.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/custom/minecraft.jpg" itemprop="image" alt="learnqiu" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="learnqiu.top" itemprop="url" rel="author">learnqiu</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>冷秋</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
 
-<!-- 
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/44545.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/44545.html/">
-    冷秋 | 书摘</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2021-1-8</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/44545.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/48313.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/48313.html/">
-    转载：将hexo博客部署到CentOS个人云服务器</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2021-1-4</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/48313.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/31864.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/31864.html/">
-    对hexo-sakura主题的鼠标指针图案进行自定义</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-25</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/31864.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/48697.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/48697.html/">
-    hexo博客优化记录</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-23</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/48697.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/60549.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/60549.html/">
-    hexo博客踩坑记录</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-23</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/60549.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/51011.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/51011.html/">
-    用Python的you-get工具下载b站视频</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-21</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/51011.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/46522.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/46522.html/">
-    hexo博客搭建记录</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-21</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/46522.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/40028.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/learnqiu/learnqiucdn@1.5.7/img/other/image-404.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/40028.html/">
-    对hexo-sakura主题的回到顶部白猫图案进行自定义</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-20</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/40028.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/5113.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://i.loli.net/2020/12/19/6UnYTV815ioHwqL.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/5113.html/">
-    Typora实现CMMS图床功能</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-19</div>
-    <p>
-    Typora实现CMMS图床功能</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/5113.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/posts/archives/46779.html/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://i.loli.net/2020/12/18/aL9SKVOJ8CxtND4.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/posts/archives/46779.html/">
-    Hexo+Typora实现图片插入文章后自动复制到指定文件夹及生成图片代码</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-12-18</div>
-    <p>
-    </p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/posts/archives/46779.html/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
 
- -->
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
